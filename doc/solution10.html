@@ -1,0 +1,1735 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第十章</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="第十一章" href="solution11.html" />
+    <link rel="prev" title="第九章" href="solution9.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  章节
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution1.html">
+   第一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution2.html">
+   第二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution3.html">
+   第三章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution4.html">
+   第四章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution5.html">
+   第五章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution6.html">
+   第六章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution7.html">
+   第七章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution8.html">
+   第八章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution9.html">
+   第九章
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   第十章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution11.html">
+   第十一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution12.html">
+   第十二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution13.html">
+   第十三章
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solution10.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、太阳辐射数据的时序分析
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、水果销量分析
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prophet">
+   三、使用Prophet进行时序预测
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>第十章</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、太阳辐射数据的时序分析
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、水果销量分析
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prophet">
+   三、使用Prophet进行时序预测
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove_input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>第十章<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>零、练一练<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请尝试在pd.Timestamp()中传入其他格式的时刻字符串，如：“20210901”、“2021-09-01”等，体会该构造方法的灵活性。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;20210901&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timestamp(&#39;2021-09-01 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;2021-09-01&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timestamp(&#39;2021-09-01 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请分别将如下格式的时间戳列表转为正确的时序Series格式。</p>
+<ul class="simple">
+<li><p>[&quot;0901 2021&quot;, &quot;0902 2021&quot;, &quot;0903 2021&quot;]</p></li>
+<li><p>[&quot;21-9-1 8-35-50&quot;, &quot;21-9-2 9-25-45&quot;]</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bad_format</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;0901 2021&quot;</span><span class="p">,</span> <span class="s2">&quot;0902 2021&quot;</span><span class="p">,</span> <span class="s2">&quot;0903 2021&quot;</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">bad_format</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%m</span><span class="si">%d</span><span class="s1"> %Y&#39;</span><span class="p">)</span>
+<span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2021-09-01&#39;, &#39;2021-09-02&#39;, &#39;2021-09-03&#39;], dtype=&#39;datetime64[ns]&#39;, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bad_format</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2021-9-1 8-35-50&quot;</span><span class="p">,</span> <span class="s2">&quot;2021-9-2 9-25-45&quot;</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">bad_format</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H-%M-%S&#39;</span><span class="p">)</span>
+<span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2021-09-01 08:35:50&#39;, &#39;2021-09-02 09:25:45&#39;], dtype=&#39;datetime64[ns]&#39;, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>Timestamp对象上定义了1个value属性，其返回的整数值代表了从1970年1月1日零点到给定时间戳相差的纳秒数。同时，pd.Timestamp也支持通过这个整数值来构造时间戳，即它们之间一一对应。请利用这个特性设计1个随机生成给定日期区间内日期序列的函数random_dates(time1, time2, n)，其中time1、time2和n分别指区间左边界、区间右边界和序列元素个数。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_dates</span><span class="p">(</span><span class="n">time1</span><span class="p">,</span> <span class="n">time2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">time1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="mf">1e9</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">time2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="mf">1e9</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="mf">1e9</span><span class="p">)</span>
+<span class="n">random_dates</span><span class="p">(</span><span class="s2">&quot;20200101&quot;</span><span class="p">,</span> <span class="s2">&quot;20200105&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2020-01-04 12:55:11&#39;, &#39;2020-01-02 08:45:52&#39;,
+               &#39;2020-01-02 18:18:35&#39;, &#39;2020-01-04 12:28:57&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在上述构造的Series中，按如下要求选出子序列：</p>
+<ul class="simple">
+<li><p>选出每月前十天中的工作日</p></li>
+<li><p>选出每月的1号、11号和21号以及每月的最后5天</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">365</span><span class="p">),</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2021-01-01&#39;</span><span class="p">,</span><span class="s1">&#39;2021-12-31&#39;</span><span class="p">))</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span>
+<span class="n">s</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-01-01    1
+2021-01-02    1
+2021-01-03    0
+2021-01-04    0
+2021-01-05    1
+Freq: D, dtype: int32
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="p">[(</span><span class="n">idx</span><span class="o">.</span><span class="n">day</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-01-01    1
+2021-01-02    1
+2021-01-03    0
+2021-01-04    0
+2021-01-05    1
+dtype: int32
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="p">[((</span><span class="n">idx</span><span class="o">.</span><span class="n">daysinmonth</span><span class="o">-</span><span class="n">idx</span><span class="o">.</span><span class="n">day</span><span class="o">&lt;=</span><span class="mi">4</span><span class="p">)</span><span class="o">|</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">day</span><span class="o">%</span><span class="k">10</span>==1)).values]
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-01-01    1
+2021-01-11    1
+2021-01-21    0
+2021-01-27    1
+2021-01-28    0
+dtype: int32
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>与时间戳序列类似，时间差序列也可以使用max()、min()和mean()来得到最大时间差、最小时间差以及平均时间差，请基于learn_pandas数据集中的Time_Record列（学生的跑步体侧成绩）解决如下问题：</p>
+<ul class="simple">
+<li><p>最慢的学生花费的秒数是最快学生的几倍？</p></li>
+<li><p>在跑步时间超过及格线4分30秒的学生中（即不及格的学生中），每10秒做一次划分（区间左闭右开），请计算每一个区间（4分30秒至4分40秒、4分40秒至4分50秒、...）的学生人数。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/learn_pandas.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Time_Record</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Time_Record</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Time_Record</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">Time_Record</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5592417061611374
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Time_Record</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Time_Record</span> <span class="o">&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s2">&quot;4m30s&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">((</span><span class="n">s</span> <span class="o">//</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s2">&quot;10s&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 days 00:04:30    15
+0 days 00:04:40    12
+0 days 00:04:50    16
+0 days 00:05:00    18
+0 days 00:05:10    20
+0 days 00:05:20    24
+Name: Time_Record, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>将上述的pd.offsets.BDay(30)改为pd.offsets.BDay(12)，请问2021-09-06和2021-09-05经过如上的操作后结果仍然保持不一致吗？请说明理由。</p>
+</div>
+<p>由于两个日期过了12个工作日之后，都是九月二十二日，因此它们的结果一致：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;20210906&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">offsets</span><span class="o">.</span><span class="n">BDay</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;20210906&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timedelta(&#39;16 days 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;20210905&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">offsets</span><span class="o">.</span><span class="n">BDay</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;20210905&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timedelta(&#39;16 days 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请利用10.1.4节介绍的索引方法，构造与上述bdate_range()结果一致的DatetimeIndex。（练习重点在于使用dt对象和布尔序列的组合，来模拟weekmask和holidays的筛选过程）</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;20210920&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;20211015&#39;</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[((</span><span class="n">s</span><span class="o">&gt;</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;20211007&quot;</span><span class="p">))</span><span class="o">|</span><span class="p">(</span><span class="n">s</span><span class="o">&lt;</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;20211001&quot;</span><span class="p">)))</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2021-09-22&#39;, &#39;2021-09-23&#39;, &#39;2021-09-24&#39;, &#39;2021-09-25&#39;,
+               &#39;2021-09-29&#39;, &#39;2021-09-30&#39;, &#39;2021-10-08&#39;, &#39;2021-10-09&#39;,
+               &#39;2021-10-13&#39;, &#39;2021-10-14&#39;, &#39;2021-10-15&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在日期偏置中我们介绍了CDay，它能够对节假日和部分星期进行筛选。假设现在需要对所有周二以及每月的第一个周末进行过滤，从而进行7个Custom Day的滑窗操作，请仿照上面的例子给出解决方案。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">365</span><span class="p">),</span>
+              <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;20210101&quot;</span><span class="p">,</span><span class="s2">&quot;20211231&quot;</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">999</span><span class="p">)</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span>
+<span class="n">s_cday</span> <span class="o">=</span> <span class="n">s</span><span class="p">[((</span><span class="n">idx</span><span class="o">.</span><span class="n">dayofweek</span><span class="o">!=</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="p">((</span><span class="n">idx</span><span class="o">.</span><span class="n">day</span><span class="o">&gt;</span><span class="mi">7</span><span class="p">)</span><span class="o">|</span><span class="p">((</span><span class="n">idx</span><span class="o">.</span><span class="n">day</span><span class="o">&lt;</span><span class="mi">7</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">day_of_week</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">))))</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">cday_sum</span> <span class="o">=</span> <span class="n">s_cday</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">cday_sum</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span>
+<span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-01-01     1.0
+2021-01-02     1.0
+2021-01-04     2.0
+2021-01-05     2.0
+2021-01-07     2.0
+2021-01-08     7.0
+2021-01-09    12.0
+2021-01-11    17.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>对上述数据每天按照0点至12点、12点至24点进行分组极差计算。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;20210901&quot;</span><span class="p">,</span> <span class="s2">&quot;20210902 23:59:59&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;90min&quot;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">index</span><span class="o">=</span><span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;12H&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-09-01 00:00:00    0.468118
+2021-09-01 12:00:00    0.892627
+2021-09-02 00:00:00    0.958400
+2021-09-02 12:00:00    0.826394
+Freq: 12H, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>对于merge_asof()而言，只需要保证键是有序且可比较的即可，因此整数和浮点的模糊匹配也是可以进行的。请举出1个非时序的例子来说明参数选择对合并结果的影响。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">df1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+    <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">105</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">df2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>9</td>
+      <td>104</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge_asof</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;backward&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+      <td>104</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>一、太阳辐射数据的时序分析<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>现有1份关于太阳辐射的数据集：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch10/solar.csv&#39;</span><span class="p">,</span>
+                 <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span><span class="s1">&#39;Radiation&#39;</span><span class="p">,</span><span class="s1">&#39;Temperature&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Data</th>
+      <th>Time</th>
+      <th>Radiation</th>
+      <th>Temperature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9/29/2016 12:00:00 AM</td>
+      <td>23:55:26</td>
+      <td>1.21</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9/29/2016 12:00:00 AM</td>
+      <td>23:50:23</td>
+      <td>1.21</td>
+      <td>48</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>将Datetime列和Time列合并为1个时间列Datetime，同时把它作为索引后排序。</p></li>
+<li><p>每条记录时间的间隔显然并不一致，请解决如下问题：</p>
+<ul>
+<li><p>找出间隔时间的前3个最大值所对应的3组时间戳。</p></li>
+<li><p>是否存在1个大致的范围，使得绝大多数的间隔时间都落在这个区间中？如果存在，请对此范围内的样本间隔秒数画出直方图，设置bins=50。（直方图的画法可见11.1.1节）</p></li>
+</ul>
+</li>
+<li><p>求如下指标对应的Series：</p>
+<ul>
+<li><p>温度与辐射量的6小时滑动相关系数</p></li>
+<li><p>以三点、九点、十五点、二十一点为分割，该观测所在时间区间的温度均值序列</p></li>
+<li><p>每条观测记录6小时前的辐射量（一般而言不会恰好取到，此时取最近时间戳对应的辐射量）</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch10/solar.csv&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Radiation&#39;</span><span class="p">,</span><span class="s1">&#39;Temperature&#39;</span><span class="p">])</span>
+<span class="n">solar_date</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Data</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;([/|\w]+\s).+&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">solar_date</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">Time</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Data&#39;</span><span class="p">:</span><span class="s1">&#39;Datetime&#39;</span><span class="p">}</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Datetime&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Radiation</th>
+      <th>Temperature</th>
+    </tr>
+    <tr>
+      <th>Datetime</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2016-09-01 00:00:08</th>
+      <td>2.58</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>2016-09-01 00:05:10</th>
+      <td>2.83</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>2016-09-01 00:20:06</th>
+      <td>2.16</td>
+      <td>51</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>2-1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+<span class="n">max_3</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">max_3</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">max_3</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2016-09-29 23:55:26&#39;, &#39;2016-10-01 00:00:19&#39;,
+               &#39;2016-11-29 19:05:02&#39;, &#39;2016-12-01 00:00:02&#39;,
+               &#39;2016-12-05 20:45:53&#39;, &#39;2016-12-08 11:10:42&#39;],
+              dtype=&#39;datetime64[ns]&#39;, name=&#39;Datetime&#39;, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">mask</span><span class="p">((</span><span class="n">s</span><span class="o">&gt;</span><span class="n">s</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">))</span><span class="o">|</span><span class="p">(</span><span class="n">s</span><span class="o">&lt;</span><span class="n">s</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)))</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution10_40_0.png" src="_images/solution10_40_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>3-1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Radiation</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="s1">&#39;6H&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Temperature</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Datetime
+2016-12-31 23:45:04    0.328574
+2016-12-31 23:50:03    0.261883
+2016-12-31 23:55:01    0.262406
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>3-2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Temperature</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;6H&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;03:00:00&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Datetime
+2016-08-31 21:00:00    51.218750
+2016-09-01 03:00:00    50.033333
+2016-09-01 09:00:00    59.379310
+Freq: 6H, Name: Temperature, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>3-3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;-6H&#39;</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Datetime&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge_asof</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">Radiation</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;Datetime&quot;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Datetime</th>
+      <th>Radiation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>32681</th>
+      <td>2016-12-31 17:35:02</td>
+      <td>15.96</td>
+    </tr>
+    <tr>
+      <th>32682</th>
+      <td>2016-12-31 17:40:01</td>
+      <td>11.98</td>
+    </tr>
+    <tr>
+      <th>32683</th>
+      <td>2016-12-31 17:45:04</td>
+      <td>9.33</td>
+    </tr>
+    <tr>
+      <th>32684</th>
+      <td>2016-12-31 17:50:03</td>
+      <td>8.49</td>
+    </tr>
+    <tr>
+      <th>32685</th>
+      <td>2016-12-31 17:55:01</td>
+      <td>5.84</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>二、水果销量分析<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>现有1份2019年每日水果销量记录表：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch10/fruit.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Fruit</th>
+      <th>Sale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2019-04-18</td>
+      <td>Peach</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2019-12-29</td>
+      <td>Peach</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>统计如下指标：</p>
+<ul>
+<li><p>每月上半月（15号及之前）与下半月葡萄销量的比值</p></li>
+<li><p>每月最后一天的生梨销量总和</p></li>
+<li><p>每月最后一天工作日的生梨销量总和</p></li>
+<li><p>每月最后五天的苹果销量均值</p></li>
+</ul>
+</li>
+<li><p>按月计算周一至周日各品种水果的平均记录条数（例如苹果在1月的4个周一记录条数分别为13、10、12和11，则其平均记录条数为11.5），行索引外层为水果名称，内层为月份，列索引为星期。</p></li>
+<li><p>按天计算向前10个工作日窗口的苹果销量均值序列，非工作日的值用上一个工作日的结果填充。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1-1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch10/fruit.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="p">)</span>
+<span class="n">df_grape</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Fruit == &#39;Grape&#39;&quot;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df_grape</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_grape</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span><span class="o">&lt;=</span><span class="mi">15</span><span class="p">,</span>
+                        <span class="s1">&#39;First&#39;</span><span class="p">,</span> <span class="s1">&#39;Second&#39;</span><span class="p">),</span><span class="n">df_grape</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">]</span>
+                        <span class="p">)[</span><span class="s1">&#39;Sale&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="mi">0</span>
+                        <span class="p">)</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">First</span><span class="o">/</span><span class="n">res</span><span class="o">.</span><span class="n">Second</span><span class="p">)</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Month
+1    1.174998
+2    0.968890
+3    0.951351
+4    1.020797
+5    0.931061
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>1-2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">is_month_end</span><span class="p">]</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Fruit == &#39;Pear&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">Sale</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date
+2019-01-31    847
+2019-02-28    774
+2019-03-31    761
+2019-04-30    648
+2019-05-31    616
+Name: Sale, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>1-3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;20190101&#39;</span><span class="p">,</span> <span class="s1">&#39;20191231&#39;</span><span class="p">,</span>
+                    <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;BM&#39;</span><span class="p">))]</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Fruit == &#39;Pear&#39;&quot;</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">Sale</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date
+2019-01-31    60.500000
+2019-02-28    59.538462
+2019-03-29    56.666667
+2019-04-30    64.800000
+2019-05-31    61.600000
+Name: Sale, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>1-4</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_dt</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">target_dt</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Fruit == &#39;Apple&#39;&quot;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)[</span><span class="s1">&#39;Sale&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Month
+1    65.313725
+2    54.061538
+3    59.325581
+4    65.795455
+5    57.465116
+Name: Sale, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">month_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;January&#39;</span><span class="p">,</span><span class="s1">&#39;February&#39;</span><span class="p">,</span><span class="s1">&#39;March&#39;</span><span class="p">,</span><span class="s1">&#39;April&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;June&#39;</span><span class="p">,</span><span class="s1">&#39;July&#39;</span><span class="p">,</span><span class="s1">&#39;August&#39;</span><span class="p">,</span><span class="s1">&#39;September&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;October&#39;</span><span class="p">,</span><span class="s1">&#39;November&#39;</span><span class="p">,</span><span class="s1">&#39;December&#39;</span><span class="p">]</span>
+<span class="n">week_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mon&#39;</span><span class="p">,</span><span class="s1">&#39;Tue&#39;</span><span class="p">,</span><span class="s1">&#39;Wed&#39;</span><span class="p">,</span><span class="s1">&#39;Thu&#39;</span><span class="p">,</span><span class="s1">&#39;Fri&#39;</span><span class="p">,</span><span class="s1">&#39;Sat&#39;</span><span class="p">,</span><span class="s1">&#39;Sum&#39;</span><span class="p">]</span>
+<span class="n">group1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month_name</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">(</span>
+        <span class="n">month_order</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">group2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Fruit</span>
+<span class="n">group3</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="n">week_order</span><span class="p">))</span>
+         <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">(</span>
+         <span class="n">week_order</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">,</span><span class="n">group3</span><span class="p">])[</span><span class="s1">&#39;Sale&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span>
+         <span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>January</th>
+      <th>February</th>
+      <th>March</th>
+      <th>April</th>
+      <th>May</th>
+      <th>June</th>
+      <th>July</th>
+      <th>August</th>
+      <th>September</th>
+      <th>October</th>
+      <th>November</th>
+      <th>December</th>
+    </tr>
+    <tr>
+      <th>Fruit</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Apple</th>
+      <th>Mon</th>
+      <td>46</td>
+      <td>43</td>
+      <td>43</td>
+      <td>47</td>
+      <td>43</td>
+      <td>40</td>
+      <td>41</td>
+      <td>38</td>
+      <td>59</td>
+      <td>42</td>
+      <td>39</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>Tue</th>
+      <td>50</td>
+      <td>40</td>
+      <td>44</td>
+      <td>52</td>
+      <td>46</td>
+      <td>39</td>
+      <td>50</td>
+      <td>42</td>
+      <td>40</td>
+      <td>57</td>
+      <td>47</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>Wed</th>
+      <td>50</td>
+      <td>47</td>
+      <td>37</td>
+      <td>43</td>
+      <td>39</td>
+      <td>39</td>
+      <td>58</td>
+      <td>43</td>
+      <td>35</td>
+      <td>46</td>
+      <td>47</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th>Thu</th>
+      <td>45</td>
+      <td>35</td>
+      <td>31</td>
+      <td>47</td>
+      <td>58</td>
+      <td>33</td>
+      <td>52</td>
+      <td>44</td>
+      <td>36</td>
+      <td>63</td>
+      <td>37</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>Fri</th>
+      <td>32</td>
+      <td>33</td>
+      <td>52</td>
+      <td>31</td>
+      <td>46</td>
+      <td>38</td>
+      <td>37</td>
+      <td>48</td>
+      <td>34</td>
+      <td>37</td>
+      <td>46</td>
+      <td>41</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_apple</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">Fruit</span><span class="o">==</span><span class="s1">&#39;Apple&#39;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span>
+              <span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]))]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">df_apple</span><span class="o">.</span><span class="n">Sale</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+              <span class="n">index</span><span class="o">=</span><span class="n">df_apple</span><span class="o">.</span><span class="n">Date</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="s1">&#39;10D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span>
+              <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;20190101&#39;</span><span class="p">,</span><span class="s1">&#39;20191231&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2019-01-01    189.000000
+2019-01-02    335.500000
+2019-01-03    520.333333
+2019-01-04    527.750000
+2019-01-05    527.750000
+Freq: D, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prophet">
+<h2>三、使用Prophet进行时序预测<a class="headerlink" href="#prophet" title="永久链接至标题">¶</a></h2>
+<p>Prophet是一个用于时序数据预测的工具包，它对于周期性或趋势性的时序数据具有良好的拟合预测能力，通过如下pip命令可进行安装：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge prophet
+</pre></div>
+</div>
+<p>Prophet模型假设目标变量<span class="math notranslate nohighlight">\(y(t)\)</span>可以被分解为三个部分：</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = g(t)+s(t)+h(t)+\epsilon
+\]</div>
+<p>其中，<span class="math notranslate nohighlight">\(g(t)\)</span>为趋势函数，<span class="math notranslate nohighlight">\(s(t)\)</span>为周期函数，<span class="math notranslate nohighlight">\(h(t)\)</span>为节假日效应函数，<span class="math notranslate nohighlight">\(\epsilon\)</span>为随机误差。Prophet默认使用分段线性函数（自动检测分段点）来表示<span class="math notranslate nohighlight">\(g(t)\)</span>的部分，使用有限项傅里叶级数来表示<span class="math notranslate nohighlight">\(s(t)\)</span>部分。<span class="math notranslate nohighlight">\(h(t)\)</span>有关节假日相关的操作请读者自行在官方文档查询相关操作。</p>
+<p>在data/ch10/prophet_ts1.csv中存放了一条时间序列的相关特征，使用matplotlib（第十一章详细介绍）进行可视化后可以发现图10.5的趋势可被分为三段，每段都以年为周期变化：</p>
+<div class="cell tag_remove_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch10/prophet_ts1.csv&quot;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ds&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ds</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input tag_remove_output docutils container">
+</div>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/10-5.svg"><img alt="_images/10-5.svg" src="_images/10-5.svg" width="400px" /></a>
+<p class="caption"><span class="caption-text">图10.5 prophet_ts1数据的时序趋势</span><a class="headerlink" href="#id5" title="永久链接至图片">¶</a></p>
+</div>
+<p>此时，可以用Prophet进行以年（365天）为周期的模型拟合：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prophet</span> <span class="kn">import</span> <span class="n">Prophet</span>
+
+<span class="c1"># 关闭所有预设的周期</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Prophet</span><span class="p">(</span>
+    <span class="n">weekly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">yearly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">daily_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="c1"># 模型可以自动检测分段点，也可以手动添加</span>
+    <span class="c1"># changepoints=[&#39;2003-07-29&#39;, &quot;2010-02-22&quot;],</span>
+<span class="p">)</span>
+<span class="c1"># 人工添加365天的年周期，fourier_order表示傅里叶级数的阶数，参数可调节</span>
+<span class="c1"># 此外，可以添加多种周期性，例如先添加365的年周期，再添加7的周周期</span>
+<span class="c1"># 此时s(t) = s_{year}(t) + s_{week}(t)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_seasonality</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;year_change&#39;</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">fourier_order</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Importing plotly failed. Interactive plots will not work.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;prophet.forecaster.Prophet at 0x151e2add460&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>接着，使用模型对后续四年的情况进行预测：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">future</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">make_future_dataframe</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">365</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">future</span><span class="p">)[[</span><span class="s1">&#39;ds&#39;</span><span class="p">,</span> <span class="s1">&#39;yhat&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+</div>
+</div>
+<p>用红色表示对过去的拟合曲线，用蓝色表示对未来的预测曲线进行绘制，结果如图10.6所示：</p>
+<div class="cell tag_remove_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ds</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">ds</span><span class="p">[:</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">res</span><span class="o">.</span><span class="n">yhat</span><span class="p">[:</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:],</span> <span class="n">res</span><span class="o">.</span><span class="n">yhat</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input tag_remove_output docutils container">
+</div>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/10-6.svg"><img alt="_images/10-6.svg" src="_images/10-6.svg" width="400px" /></a>
+<p class="caption"><span class="caption-text">图10.6 prophet_ts1数据的拟合和预测结果</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
+</div>
+<p>但有些时候数据特征的周期振幅会随着时间变化，例如在data/ch10/prophet_ts2.csv中，越靠后的年份波动性越强，可视化情况如图10.7所示。</p>
+<div class="cell tag_remove_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch10/prophet_ts2.csv&quot;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ds&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ds</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input tag_remove_output docutils container">
+</div>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/10-7.svg"><img alt="_images/10-7.svg" src="_images/10-7.svg" width="400px" /></a>
+<p class="caption"><span class="caption-text">图10.7 prophet_ts2数据的时序趋势</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
+</div>
+<p>默认情况下Prophet使用加法模型，即seasonality_mode参数为“additive”，此时可以将其更改为“multiplicative”，表示乘法模型，即</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = g(t)+g(t)*s(t)+h(t)+\epsilon
+\]</div>
+<p>此时，仿照上述过程进行拟合，对结果仍然用蓝色和红色区分未来预测和历史拟合，可视化效果如图10.8所示：</p>
+<div class="cell tag_remove_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Prophet</span><span class="p">(</span>
+    <span class="n">weekly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">yearly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">daily_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">seasonality_mode</span><span class="o">=</span><span class="s2">&quot;multiplicative&quot;</span>
+<span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_seasonality</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;year_change&#39;</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">fourier_order</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">future</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">make_future_dataframe</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">365</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">future</span><span class="p">)[[</span><span class="s1">&#39;ds&#39;</span><span class="p">,</span> <span class="s1">&#39;yhat&#39;</span><span class="p">]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ds</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">ds</span><span class="p">[:</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">res</span><span class="o">.</span><span class="n">yhat</span><span class="p">[:</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:],</span> <span class="n">res</span><span class="o">.</span><span class="n">yhat</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input tag_remove_output docutils container">
+</div>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="_images/10-8.svg"><img alt="_images/10-8.svg" src="_images/10-8.svg" width="400px" /></a>
+<p class="caption"><span class="caption-text">图10.8 prophet_ts2数据的拟合和预测结果</span><a class="headerlink" href="#id8" title="永久链接至图片">¶</a></p>
+</div>
+<p>在data/ch10/prophet_data.csv中存放了8组从1985年1月至2017年12月的时序特征，完成以下任务：</p>
+<ul class="simple">
+<li><p>以1985年1月至2014年12月为训练集，以2015年1月至2017年12月为验证集，以均方误差（MSE）为评价指标，分别对8组特征选择对应的模型最优参数，可调节的参数包括但不限于分割点changepoints、模型形式seasonality_mode以及通过add_seasonality添加的潜在周期模式。</p></li>
+<li><p>分别对8组时序特征进行预测，预测范围为2018年1月至2021年12月。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<p>此处仅演示Sequence_1+调节fourier_order参数，其余类似：</p>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch10/prophet_data.csv&quot;</span><span class="p">)</span>
+<span class="n">df_seq</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Sequence_1&quot;</span><span class="p">:</span><span class="s2">&quot;y&quot;</span><span class="p">})</span>
+<span class="n">df_seq</span><span class="p">[</span><span class="s2">&quot;ds&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;19850101&quot;</span><span class="p">,</span> <span class="s2">&quot;20171231&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;M&quot;</span><span class="p">)</span>
+<span class="n">df_seq</span> <span class="o">=</span> <span class="n">df_seq</span><span class="p">[[</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_order</span><span class="p">():</span>
+    <span class="n">min_mse</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)</span>
+    <span class="n">order_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+    <span class="n">final_order</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">order_list</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Prophet</span><span class="p">(</span>
+            <span class="n">weekly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">yearly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">daily_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">add_seasonality</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;year_change&#39;</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">fourier_order</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_seq</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">36</span><span class="p">])</span>
+        <span class="n">predict</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_seq</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">36</span><span class="p">:]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">())</span><span class="o">.</span><span class="n">yhat</span>
+        <span class="n">mse</span> <span class="o">=</span> <span class="p">((</span><span class="n">df_seq</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">36</span><span class="p">:]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-</span> <span class="n">predict</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">mse</span> <span class="o">&lt;</span> <span class="n">min_mse</span><span class="p">:</span>
+            <span class="n">final_order</span> <span class="o">=</span> <span class="n">order</span>
+            <span class="n">min_mse</span> <span class="o">=</span> <span class="n">mse</span>
+    <span class="k">return</span> <span class="n">final_order</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Prophet</span><span class="p">(</span>
+    <span class="n">weekly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">yearly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">daily_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_seasonality</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;year_change&#39;</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">fourier_order</span><span class="o">=</span><span class="n">get_order</span><span class="p">())</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;prophet.forecaster.Prophet at 0x151e8bcc2b0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">future</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">make_future_dataframe</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">365</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">future</span><span class="p">)[[</span><span class="s1">&#39;ds&#39;</span><span class="p">,</span> <span class="s1">&#39;yhat&#39;</span><span class="p">]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_seq</span><span class="o">.</span><span class="n">ds</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">ds</span><span class="p">[:</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">res</span><span class="o">.</span><span class="n">yhat</span><span class="p">[:</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:],</span> <span class="n">res</span><span class="o">.</span><span class="n">yhat</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+C:\Users\gyh\miniconda3\envs\final\lib\site-packages\prophet\forecaster.py:896: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  components = components.append(new_comp)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x151803321f0&gt;]
+</pre></div>
+</div>
+<img alt="_images/solution10_82_2.png" src="_images/solution10_82_2.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="solution9.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">第九章</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="solution11.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">第十一章</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 耿远昊<br/>
+    
+        &copy; 版权 2021, 耿远昊.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

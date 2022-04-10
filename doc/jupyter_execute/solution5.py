@@ -1,0 +1,341 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+np.random.seed(0)
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+np.set_printoptions(suppress = True)
+
+
+# # 第五章
+# 
+# ## 零、练一练
+# 
+# ```{admonition} 练一练
+# 除了上述例子之外，请再给出一些长宽表的例子。
+# ```
+# 
+# - 某企业员工当年的各月收入情况表，列索引是月份，行索引是员工ID，那么这张表是收入月份的宽表。如果行索引是员工ID，第一列是月份，第二列是该员工在当月的收入，那么这张表是收入月份的长表。
+# - 某张表的行索引是月份，列索引是城市名，单元格元素是某城市在某月的发电量，那么这张表是城市的宽表。如果行索引是月份，第一列是城市名，第二列是发电量，那么这张表是城市的长表。
+# 
+# ```{admonition} 练一练
+# 如果只选取df的部分行使用pivot，那么结果会如何变化？
+# ```
+
+# In[2]:
+
+
+df = pd.DataFrame({'Class':[1,1,2,2], # 班级
+                   'Name':['A','A','B','B'], # 姓名
+                   'Subject':['Chinese','Math','Chinese','Math'], # 科目
+                   'Grade':[80,75,90,85]}) # 成绩
+
+
+# 表中可能会出现缺失值：
+
+# In[3]:
+
+
+df.iloc[[1,2]].pivot(index='Name', columns='Subject', values='Grade')
+
+
+# 表的形状可能会变化：
+
+# In[4]:
+
+
+df.iloc[[1,3]].pivot(index='Name', columns='Subject', values='Grade')
+
+
+# In[5]:
+
+
+df.iloc[[0,1]].pivot(index='Name', columns='Subject', values='Grade')
+
+
+# In[6]:
+
+
+df.iloc[[0]].pivot(index='Name', columns='Subject', values='Grade')
+
+
+# ```{admonition} 练一练
+# 请修改上表中的元素值以破坏pivot()的唯一性条件，并且在使用pivot()进行强制变形后观察报错信息。
+# ```
+
+# In[7]:
+
+
+df_unpivot = pd.DataFrame({'Class':[1, 1, 2, 2, 1, 1, 2, 2],
+                           'Name':list("AABBAABB"),
+                           'Examination': ['Mid', 'Final', 'Mid', 'Final',
+                           'Mid', 'Final', 'Mid', 'Final'],
+                           'Subject':['Chinese', 'Chinese', 'Chinese', 'Chinese',
+                                      'Math', 'Math', 'Math', 'Math'],
+                           'Grade':[80, 75, 85, 65, 90, 85, 92, 88],
+                           'Rank':[10, 15, 21, 15, 20, 7, 6, 2]})
+
+
+# In[8]:
+
+
+df_unpivot.loc[0,"Subject"] = "Math"
+df_unpivot.pivot(index = ['Class', 'Name'],
+                 columns = ['Subject','Examination'],
+                 values = ['Grade','Rank'])
+
+
+# ```{admonition} 练一练
+# 在上面的边际汇总例子中，行或列的汇总为新表中行元素或者列元素的平均值，而总体的汇总为新表中4个元素的平均值。这种关系一定成立吗？若不成立，请给出1个例子来说明。
+# ```
+# 
+# 不一定成立，例如：
+
+# In[9]:
+
+
+df = pd.DataFrame({'Name':list("AAAABBBBBBAAB"),
+                   'Subject':['Chinese', 'Chinese', 'Math', 'Math',
+                              'Chinese', 'Chinese', 'Math', 'Math',
+                              'Math', "Chinese", "Chinese", "Chinese", "Math"],
+                   'Grade':[90, 80, 70, 90, 75, 85, 80, 100, 0, 0, 30, 40, 20]})
+df.pivot_table(
+    index='Name', columns='Subject', values='Grade',
+    aggfunc='mean', margins='True')
+
+
+# ```{admonition} 练一练
+# 在上例中，若想把考试类型（Examination）的Mid和Final转到行索引，Subject中的Chinese和Math保留在列索引上，应当如何操作？
+# ```
+
+# In[10]:
+
+
+df = pd.DataFrame({'Class':[1,2],'Name':['A', 'B'],
+                   'Mid_Chinese':[80, 85], 'Mid_Math':[70, 80],
+                   'Final_Chinese':[90, 75], 'Final_Math':[95, 85]})
+df
+
+
+# 方法一：
+
+# In[11]:
+
+
+temp = df.rename(columns=lambda x: "_".join(x.split("_")[::-1]) if "_" in x else x)
+res = pd.wide_to_long(temp, stubnames=['Math', 'Chinese'],
+                      i=['Class', 'Name'], j='Examination',
+                      sep='_', suffix='.+').rename_axis("Subject", axis=1)
+res
+
+
+# 方法二：
+
+# In[12]:
+
+
+temp = pd.wide_to_long(df, stubnames=['Mid', 'Final'],
+                       i=['Class', 'Name'], j='Subject',
+                       sep='_', suffix='.+')
+temp.columns.name = "Examiniation"
+res = temp.unstack(-1).stack(0)
+res
+
+
+# ```{admonition} 练一练
+# 第3章中提到的swaplevel()和reorder_levels()是长宽表变形函数吗？为什么？
+# ```
+# 
+# 不是，这两个函数是统一索引内部的层级交换，stack()和unstack()是行列索引间的层级交换，而5.1节的4个长宽表变形函数是索引与列的交换。
+# 
+# 
+# ```{admonition} 练一练
+# 结合unstack()和reorder_levels()，将行索引的第二层插入至列索引的最外层
+# ```
+
+# In[13]:
+
+
+df = pd.DataFrame(np.ones((4,2)),
+                  index = pd.Index([('A', 'cat', 'big'),
+                                    ('A', 'dog', 'small'),
+                                    ('B', 'cat', 'big'),
+                                    ('B', 'dog', 'small')]),
+                  columns=['col_1', 'col_2'])
+df.unstack(1).reorder_levels([1,0], axis=1)
+
+
+# ```{admonition} 练一练
+# 请自行构造一个unstack()因违背唯一性要求而报错的例子。
+# ```
+
+# In[14]:
+
+
+pd.DataFrame([[0,0]], columns=pd.Index([(0,0),(0,0)])).stack()
+
+
+# ```{admonition} 练一练
+# 在2.2.2节中提到df.T能够将DataFrame转置，而转置是一种特殊的索引变形，请仅用unstack和stack实现转置功能。
+# ```
+
+# In[15]:
+
+
+n_row_index = df.index.nlevels
+n_col_index = df.columns.nlevels
+df.stack(list(range(n_col_index))).unstack(list(range(n_row_index)))
+
+
+# ## 一、某连锁店的库存统计
+# 
+# 某连锁店总共有5个大区仓库（First_Area），每个大区仓库内有若干子区仓库（Child_Area），在data/ch5/storage.csv中记录了从2010年至2017年各子区仓库中不同货品（Type）的存量（Storage），其中“Year”、“First_Area”、“Child_Area”和“Type”已为依次排序状态。
+
+# In[16]:
+
+
+df = pd.read_csv("data/ch5/area_storage.csv")
+df.head()
+
+
+# - 将数据转为如下格式，其中“First_Area”、“Child_Area”和“Type”三列已为依次排序状态。
+
+# In[17]:
+
+
+df_ = df.sort_values(['First_Area','Child_Area','Type'],ignore_index=True)
+res = df_.pivot(
+    index=['First_Area','Child_Area','Type'],
+    columns='Year', values='Storage'
+).reset_index().rename_axis(columns={'Year':''})
+res.head()
+
+
+# - 将上一问中的结果恢复为原表。
+# - 按First_Area分别统计每年的库存量总和，并分别将First_Area和Year作为列索引和行索引，要求分别使用pivot_table()函数与groupby+unstack()两种不同的策略实现，并体会变形和分组之间的联系。
+# 
+# ```text
+# 【解答】
+# ```
+# 
+# - 1
+
+# In[18]:
+
+
+df_ = df.sort_values(['First_Area','Child_Area','Type'],ignore_index=True)
+res = df_.pivot(
+    index=['First_Area','Child_Area','Type'],
+    columns='Year', values='Storage'
+).reset_index().rename_axis(columns={'Year':''})
+res.head()
+
+
+# - 2
+
+# In[19]:
+
+
+res_melted = res.melt(id_vars = ['First_Area','Child_Area','Type'],
+                      value_vars = res.columns[-8:],
+                      var_name = 'Year',
+                      value_name = 'Storage').dropna(subset=['Storage'])
+res_melted = res_melted[df.columns].sort_values(
+    ["Year",'First_Area','Child_Area','Type'],
+    ignore_index=True).astype({'Year':'int64', 'Storage':'int64'})
+res_melted.equals(df)
+
+
+# - 3
+
+# In[20]:
+
+
+df_method1 = df.pivot_table(index='Year', columns='First_Area',values='Storage', aggfunc='sum')
+df_method1
+
+
+# In[21]:
+
+
+df_method2 = df.groupby(['First_Area', 'Year'])['Storage'].sum()
+df_method2 = df_method2.to_frame().unstack(0).droplevel(0,axis=1)
+df_method2
+
+
+# ## 二、整理某地区的化石燃料数据
+# 
+# 在data/ch5/fossil_fuel.txt中存放了某地2020年各月化石燃料资源的消耗量和生产量。
+
+# In[22]:
+
+
+df = pd.read_table("data/ch5/fossil_fuel.txt", header=None)
+
+
+# 请将上表整理成如下格式，其中“日期”、“统计类别”和“资源名称”三列为已依次排序状态。
+
+# In[23]:
+
+
+df.iloc[0, 2::2] = df.iloc[0, 1::2]
+res = pd.DataFrame(
+    df.iloc[4:, 1:].values,
+    index=pd.Series(df.iloc[4:, 0], name="日期"),
+    columns=pd.MultiIndex.from_arrays(df.iloc[:3, 1:].values, names=df.iloc[:3, 0])
+).unstack().reset_index().rename(columns={0:"数值"})
+res = res.sort_values(["日期", "统计类别", "资源名称"]).reset_index(drop=True)
+res.head()
+
+
+# ```text
+# 【解答】
+# ```
+
+# In[24]:
+
+
+df.iloc[0, 2::2] = df.iloc[0, 1::2]
+res = pd.DataFrame(
+    df.iloc[4:, 1:].values,
+    index=pd.Series(df.iloc[4:, 0], name="日期"),
+    columns=pd.MultiIndex.from_arrays(df.iloc[:3, 1:].values, names=df.iloc[:3, 0])
+).unstack().reset_index().rename(columns={0:"数值"})
+res = res.sort_values(["日期", "统计类别", "资源名称"]).reset_index(drop=True)
+res.head()
+
+
+# ## 三、特殊的wide_to_long()方法
+# 
+# 从功能上看，melt()方法应当属于wide_to_long()的一种特殊情况，即stubnames只有一类。请使用wide_to_long()生成melt()一节中的df_melted。（提示：对列名增加适当的前缀）
+# 
+# ```text
+# 【解答】
+# ```
+
+# In[25]:
+
+
+df = pd.DataFrame({'Class':[1,2],
+                   'Name':['A', 'B'],
+                   'Chinese':[80, 90],
+                   'Math':[80, 75]})
+
+
+# In[26]:
+
+
+df = df.rename(columns={'Chinese':'pre_Chinese', 'Math':'pre_Math'})
+pd.wide_to_long(df,
+                stubnames=['pre'],
+                i = ['Class', 'Name'],
+                j='Subject',
+                sep='_',
+                suffix='.+').reset_index().rename(columns={'pre':'Grade'})
+

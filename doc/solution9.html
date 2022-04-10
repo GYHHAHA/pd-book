@@ -1,0 +1,1553 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第九章</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="第十章" href="solution10.html" />
+    <link rel="prev" title="第八章" href="solution8.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  章节
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution1.html">
+   第一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution2.html">
+   第二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution3.html">
+   第三章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution4.html">
+   第四章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution5.html">
+   第五章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution6.html">
+   第六章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution7.html">
+   第七章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution8.html">
+   第八章
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   第九章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution10.html">
+   第十章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution11.html">
+   第十一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution12.html">
+   第十二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution13.html">
+   第十三章
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solution9.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、统计未出现的类别
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、钻石数据的类别构造
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   三、有序类别下的逻辑斯蒂回归
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>第九章</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、统计未出现的类别
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、钻石数据的类别构造
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   三、有序类别下的逻辑斯蒂回归
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove_input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>第九章<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>零、练一练<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请构造一个无序类别元素构成的序列，通过cat对象完成增删改查的操作。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    A
+1    B
+2    C
+3    D
+dtype: category
+Categories (4, object): [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">add_categories</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    A
+1    B
+2    C
+3    D
+dtype: category
+Categories (5, object): [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">remove_categories</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    A
+1    B
+2    C
+3    D
+dtype: category
+Categories (4, object): [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">rename_categories</span><span class="p">({</span><span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;E&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    A
+1    B
+2    C
+3    E
+dtype: category
+Categories (4, object): [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;E&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请构造两组因不同原因（索引不一致和Series类别不一致）而导致无法比较的有序类别Series。</p>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\ops\common.py:70,</span> in <span class="ni">_unpack_zerodim_and_defer.&lt;locals&gt;.new_method</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>             <span class="k">return</span> <span class="bp">NotImplemented</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="n">other</span> <span class="o">=</span> <span class="n">item_from_zerodim</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">70</span> <span class="k">return</span> <span class="n">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\arraylike.py:40,</span> in <span class="ni">OpsMixin.__eq__</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="nd">@unpack_zerodim_and_defer</span><span class="p">(</span><span class="s2">&quot;__eq__&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cmp_method</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">eq</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\series.py:5614,</span> in <span class="ni">Series._cmp_method</span><span class="nt">(self, other, op)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5611</span> <span class="n">res_name</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">get_op_result_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5613</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Series</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indexed_same</span><span class="p">(</span><span class="n">other</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">5614</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Can only compare identically-labeled Series objects&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5616</span> <span class="n">lvalues</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span>
+<span class="g g-Whitespace">   </span><span class="mi">5617</span> <span class="n">rvalues</span> <span class="o">=</span> <span class="n">extract_array</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">extract_numpy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">extract_range</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: Can only compare identically-labeled Series objects
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">add_categories</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">add_categories</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\ops\common.py:70,</span> in <span class="ni">_unpack_zerodim_and_defer.&lt;locals&gt;.new_method</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>             <span class="k">return</span> <span class="bp">NotImplemented</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="n">other</span> <span class="o">=</span> <span class="n">item_from_zerodim</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">70</span> <span class="k">return</span> <span class="n">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\arraylike.py:40,</span> in <span class="ni">OpsMixin.__eq__</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="nd">@unpack_zerodim_and_defer</span><span class="p">(</span><span class="s2">&quot;__eq__&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cmp_method</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">eq</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\series.py:5620,</span> in <span class="ni">Series._cmp_method</span><span class="nt">(self, other, op)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5617</span> <span class="n">rvalues</span> <span class="o">=</span> <span class="n">extract_array</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">extract_numpy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">extract_range</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5619</span> <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">5620</span>     <span class="n">res_values</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">comparison_op</span><span class="p">(</span><span class="n">lvalues</span><span class="p">,</span> <span class="n">rvalues</span><span class="p">,</span> <span class="n">op</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5622</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_construct_result</span><span class="p">(</span><span class="n">res_values</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">res_name</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\ops\array_ops.py:269,</span> in <span class="ni">comparison_op</span><span class="nt">(left, right, op)</span>
+<span class="g g-Whitespace">    </span><span class="mi">260</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">261</span>             <span class="s2">&quot;Lengths must match to compare&quot;</span><span class="p">,</span> <span class="n">lvalues</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">rvalues</span><span class="o">.</span><span class="n">shape</span>
+<span class="g g-Whitespace">    </span><span class="mi">262</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="k">if</span> <span class="n">should_extension_dispatch</span><span class="p">(</span><span class="n">lvalues</span><span class="p">,</span> <span class="n">rvalues</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">265</span>     <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">rvalues</span><span class="p">,</span> <span class="p">(</span><span class="n">Timedelta</span><span class="p">,</span> <span class="n">BaseOffset</span><span class="p">,</span> <span class="n">Timestamp</span><span class="p">))</span> <span class="ow">or</span> <span class="n">right</span> <span class="ow">is</span> <span class="n">NaT</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">266</span>     <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_object_dtype</span><span class="p">(</span><span class="n">lvalues</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">267</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">268</span>     <span class="c1"># Call the method on lvalues</span>
+<span class="ne">--&gt; </span><span class="mi">269</span>     <span class="n">res_values</span> <span class="o">=</span> <span class="n">op</span><span class="p">(</span><span class="n">lvalues</span><span class="p">,</span> <span class="n">rvalues</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span> <span class="k">elif</span> <span class="n">is_scalar</span><span class="p">(</span><span class="n">rvalues</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isna</span><span class="p">(</span><span class="n">rvalues</span><span class="p">):</span>  <span class="c1"># TODO: but not pd.NA?</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span>     <span class="c1"># numpy does not like comparisons vs None</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span>     <span class="k">if</span> <span class="n">op</span> <span class="ow">is</span> <span class="n">operator</span><span class="o">.</span><span class="n">ne</span><span class="p">:</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\ops\common.py:70,</span> in <span class="ni">_unpack_zerodim_and_defer.&lt;locals&gt;.new_method</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>             <span class="k">return</span> <span class="bp">NotImplemented</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="n">other</span> <span class="o">=</span> <span class="n">item_from_zerodim</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">70</span> <span class="k">return</span> <span class="n">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\final\lib\site-packages\pandas\core\arrays\categorical.py:150,</span> in <span class="ni">_cat_compare_op.&lt;locals&gt;.func</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span> <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Categoricals can only be compared if &#39;categories&#39; are the same.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_categories_match_up_to_permutation</span><span class="p">(</span><span class="n">other</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">150</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordered</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">categories</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span>     <span class="c1"># both unordered and different order</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span>     <span class="n">other_codes</span> <span class="o">=</span> <span class="n">recode_for_categories</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>         <span class="n">other</span><span class="o">.</span><span class="n">codes</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">categories</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>     <span class="p">)</span>
+
+<span class="ne">TypeError</span>: Categoricals can only be compared if &#39;categories&#39; are the same.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>一、统计未出现的类别<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>crosstab()函数是一种特殊的变形函数。在默认参数下，它能够对两个列中元素组合出现的频数进行统计汇总：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">],</span>
+                   <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">]})</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>B</th>
+      <th>cat</th>
+      <th>dog</th>
+    </tr>
+    <tr>
+      <th>A</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>但事实上，有些列存储的是分类变量，列中并不一定包含所有的类别，此时如果想要对这些未出现的类别在crosstab()结果中也进行汇总，则可以指定dropna参数为False：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">add_categories</span><span class="p">(</span><span class="s1">&#39;sheep&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">B</span><span class="p">,</span> <span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>B</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>sheep</th>
+    </tr>
+    <tr>
+      <th>A</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>请实现1个带有dropna参数的my_crosstab()函数来完成上面的功能。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_crosstab</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">dropna</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s1</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;category&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">dropna</span><span class="p">:</span>
+        <span class="n">idx1</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">idx1</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">s2</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;category&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">dropna</span><span class="p">:</span>
+        <span class="n">idx2</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">idx2</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">idx1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">idx2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">idx1</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">idx2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">s1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">s2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">],</span>
+                   <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">]})</span>
+<span class="n">df</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">add_categories</span><span class="p">(</span><span class="s1">&#39;sheep&#39;</span><span class="p">)</span>
+<span class="n">my_crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
+<span class="n">my_crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">B</span><span class="p">,</span> <span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>B</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>sheep</th>
+    </tr>
+    <tr>
+      <th>A</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>二、钻石数据的类别构造<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>现有一份关于钻石的数据集，其中carat、cut、clarity和price分别表示克拉重量、切割质量、纯净度和价格：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch9/diamonds.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>clarity</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.23</td>
+      <td>Ideal</td>
+      <td>SI2</td>
+      <td>326</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.21</td>
+      <td>Premium</td>
+      <td>SI1</td>
+      <td>326</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.23</td>
+      <td>Good</td>
+      <td>VS1</td>
+      <td>327</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>分别对df.cut在object类型和category类型下使用nunique()函数，并比较它们的性能。</p></li>
+<li><p>钻石的切割质量可以分为五个等级，由次到好分别是Fair、Good、Very Good、Premium、Ideal，纯净度有八个等级，由次到好分别是I1、SI2、SI1、VS2、VS1、VVS2、VVS1、IF，请对切割质量按照由好到次的顺序排序，相同切割质量的钻石，按照纯净度进行由次到好的排序。</p></li>
+<li><p>分别采用两种不同的方法，把cut和clarity这两列按照由好到次的顺序，映射到从0到n-1的整数，其中n表示类别的个数。</p></li>
+<li><p>对每克拉的价格分别按照分位数（q=[0.2, 0.4, 0.6, 0.8]）与[1000, 3500, 5500, 18000]割点进行分箱得到五个类别Very Low、Low、Mid、High、Very High，并把按这两种分箱方法得到的category序列依次添加到原表中。</p></li>
+<li><p>在第4问中按整数分箱得到的序列中，是否出现了所有的类别？如果存在没有出现的类别请把该类别删除。</p></li>
+<li><p>对第4问中按分位数分箱得到的序列，求序列元素所在区间的左端点值和长度。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch9/diamonds.csv&#39;</span><span class="p">)</span>
+<span class="n">s_obj</span><span class="p">,</span> <span class="n">s_cat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cut</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">cut</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="o">-</span><span class="n">n</span> <span class="mi">30</span> <span class="n">s_obj</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.57 ms ± 161 µs per loop (mean ± std. dev. of 7 runs, 30 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="o">-</span><span class="n">n</span> <span class="mi">30</span> <span class="n">s_cat</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>403 µs ± 22.5 µs per loop (mean ± std. dev. of 7 runs, 30 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">cut</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cut</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">([</span>
+        <span class="s1">&#39;Fair&#39;</span><span class="p">,</span> <span class="s1">&#39;Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Very Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Premium&#39;</span><span class="p">,</span> <span class="s1">&#39;Ideal&#39;</span><span class="p">],</span><span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">clarity</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clarity</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">([</span>
+        <span class="s1">&#39;I1&#39;</span><span class="p">,</span> <span class="s1">&#39;SI2&#39;</span><span class="p">,</span> <span class="s1">&#39;SI1&#39;</span><span class="p">,</span> <span class="s1">&#39;VS2&#39;</span><span class="p">,</span> <span class="s1">&#39;VS1&#39;</span><span class="p">,</span> <span class="s1">&#39;VVS2&#39;</span><span class="p">,</span> <span class="s1">&#39;VVS1&#39;</span><span class="p">,</span> <span class="s1">&#39;IF&#39;</span><span class="p">],</span><span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;cut&#39;</span><span class="p">,</span> <span class="s1">&#39;clarity&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>clarity</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>315</th>
+      <td>0.96</td>
+      <td>Ideal</td>
+      <td>I1</td>
+      <td>2801</td>
+    </tr>
+    <tr>
+      <th>535</th>
+      <td>0.96</td>
+      <td>Ideal</td>
+      <td>I1</td>
+      <td>2826</td>
+    </tr>
+    <tr>
+      <th>551</th>
+      <td>0.97</td>
+      <td>Ideal</td>
+      <td>I1</td>
+      <td>2830</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>clarity</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>47407</th>
+      <td>0.52</td>
+      <td>Fair</td>
+      <td>IF</td>
+      <td>1849</td>
+    </tr>
+    <tr>
+      <th>49683</th>
+      <td>0.52</td>
+      <td>Fair</td>
+      <td>IF</td>
+      <td>2144</td>
+    </tr>
+    <tr>
+      <th>50126</th>
+      <td>0.47</td>
+      <td>Fair</td>
+      <td>IF</td>
+      <td>2211</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">cut</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cut</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">cut</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">clarity</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clarity</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">clarity</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1"># 方法一：利用cat.codes</span>
+<span class="n">df</span><span class="o">.</span><span class="n">cut</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cut</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+<span class="n">clarity_cat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clarity</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
+<span class="c1"># 方法二：使用replace映射</span>
+<span class="n">df</span><span class="o">.</span><span class="n">clarity</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clarity</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">clarity_cat</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">clarity_cat</span><span class="p">)))))</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>clarity</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.23</td>
+      <td>0</td>
+      <td>6</td>
+      <td>326</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.21</td>
+      <td>1</td>
+      <td>5</td>
+      <td>326</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.23</td>
+      <td>3</td>
+      <td>3</td>
+      <td>327</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>4</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">point</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">infty</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3500</span><span class="p">,</span> <span class="mi">5500</span><span class="p">,</span> <span class="mi">18000</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">infty</span><span class="p">]</span>
+<span class="n">avg</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">carat</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;avg_cut&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">point</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Very Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Mid&#39;</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;Very High&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;avg_qcut&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Very Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Mid&#39;</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;Very High&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>clarity</th>
+      <th>price</th>
+      <th>avg_cut</th>
+      <th>avg_qcut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.23</td>
+      <td>0</td>
+      <td>6</td>
+      <td>326</td>
+      <td>Low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.21</td>
+      <td>1</td>
+      <td>5</td>
+      <td>326</td>
+      <td>Low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.23</td>
+      <td>3</td>
+      <td>3</td>
+      <td>327</td>
+      <td>Low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.29</td>
+      <td>1</td>
+      <td>4</td>
+      <td>334</td>
+      <td>Low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.31</td>
+      <td>3</td>
+      <td>6</td>
+      <td>335</td>
+      <td>Low</td>
+      <td>Very Low</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>5</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">avg_cut</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Low&#39;, &#39;Mid&#39;, &#39;High&#39;]
+Categories (5, object): [&#39;Very Low&#39; &lt; &#39;Low&#39; &lt; &#39;Mid&#39; &lt; &#39;High&#39; &lt; &#39;Very High&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">avg_cut</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Very Low&#39;, &#39;Low&#39;, &#39;Mid&#39;, &#39;High&#39;, &#39;Very High&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">avg_cut</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">avg_cut</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">remove_categories</span><span class="p">([</span><span class="s1">&#39;Very Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Very High&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">avg_cut</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    Low
+1    Low
+2    Low
+Name: avg_cut, dtype: category
+Categories (3, object): [&#39;Low&#39; &lt; &#39;Mid&#39; &lt; &#39;High&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>6</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interval_avg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">IntervalIndex</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="p">))</span>
+<span class="n">interval_avg</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    2295.0
+1    2295.0
+2    2295.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interval_avg</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1051.162
+1    1051.162
+2    1051.162
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interval_avg</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1243.838
+1    1243.838
+2    1243.838
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>三、有序类别下的逻辑斯蒂回归<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>逻辑斯蒂回归是经典的分类模型，它将无序的类别作为目标值来进行模型的参数训练。对于有序类别的目标值，虽然我们仍然可以将其作为无序类别来输入模型，但这样做显然损失了类别之间的顺序关系，而有序类别下的逻辑斯蒂回归（Ordinal Logistic Regression）就能够对此类问题进行处理。</p>
+<p>设样本数据为<span class="math notranslate nohighlight">\(X=(x_1,...,x_n),x_i\in R^d(1\leq i \leq n)\)</span>，<span class="math notranslate nohighlight">\(d\)</span>是数据特征的维度，标签值为<span class="math notranslate nohighlight">\(y=(y_1,...,y_n), y_i\in \{C_1,...,C_k\}(1\leq i\leq n)\)</span>，<span class="math notranslate nohighlight">\(C_i\)</span>是有序类别，<span class="math notranslate nohighlight">\(k\)</span>是有序类别的数量，记<span class="math notranslate nohighlight">\(P(y\leq C_0)=0\)</span>。设参数<span class="math notranslate nohighlight">\(w=(w_1,...,w_d),\theta=(\theta_0,\theta_1,...,\theta_k)\)</span>，其中<span class="math notranslate nohighlight">\(\theta_0=-\infty,\theta_k=\infty\)</span>，则OLR模型为：</p>
+<div class="math notranslate nohighlight">
+\[P(y_i\leq C_j\vert x_i)=\frac{1}{1+\exp^{-(\theta_j-w^Tx_i)}}, 1\leq i \leq n, 1\leq j \leq k\]</div>
+<p>由此可得已知<span class="math notranslate nohighlight">\(x_i\)</span>的情况下，<span class="math notranslate nohighlight">\(y_i\)</span>取<span class="math notranslate nohighlight">\(C_j\)</span>的概率为：</p>
+<div class="math notranslate nohighlight">
+\[P(y_i=C_j\vert x_i) = P(y_i\leq C_j\vert x_i)-P(y_i\leq C_{j-1}\vert x_i), 1\leq j\leq k\]</div>
+<p>从而对数似然方程为：</p>
+<div class="math notranslate nohighlight">
+\[\log L(w,\theta\vert X,y)=\sum_{i=1}^n\sum_{j=1}^k \mathbb{I}_{\{y_i=C_j\}}\log [\frac{1}{1+\exp^{-(\theta_j-w^Tx_i)}}-\frac{1}{1+\exp^{-(\theta_{j-1}-w^Tx_i)}}]\]</div>
+<p>mord包能够对上述OLR模型的参数<span class="math notranslate nohighlight">\(w\)</span>和参数<span class="math notranslate nohighlight">\(\theta\)</span>进行求解，可以使用conda install -c conda-forge mord命令下载。</p>
+<p>首先，我们读取1个目标值为4个有序类别的数据集：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch9/olr.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X1</th>
+      <th>X2</th>
+      <th>X3</th>
+      <th>X4</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.937269</td>
+      <td>-0.991073</td>
+      <td>-0.535304</td>
+      <td>2.004688</td>
+      <td>Fair</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-2.491539</td>
+      <td>-0.707034</td>
+      <td>-1.324849</td>
+      <td>0.782425</td>
+      <td>Bad</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.149041</td>
+      <td>-0.205646</td>
+      <td>0.101816</td>
+      <td>0.530163</td>
+      <td>Good</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.275750</td>
+      <td>0.320831</td>
+      <td>0.699250</td>
+      <td>1.716456</td>
+      <td>Marvellous</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.527534</td>
+      <td>-0.774606</td>
+      <td>0.614202</td>
+      <td>-1.236699</td>
+      <td>Fair</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>已知y中元素的大小关系为“Bad”<span class="math notranslate nohighlight">\(\leq\)</span>“Fair”<span class="math notranslate nohighlight">\(\leq\)</span>“Good”<span class="math notranslate nohighlight">\(\leq\)</span>“Marvellous”，此时先将y转换至有序类别编号：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">([</span><span class="s1">&#39;Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Fair&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Marvellous&#39;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+<span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1
+1    0
+2    2
+3    3
+4    1
+Name: y, dtype: int8
+</pre></div>
+</div>
+</div>
+</div>
+<p>从mord中导入LogisticAT进行参数训练：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mord</span> <span class="kn">import</span> <span class="n">LogisticAT</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticAT</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticAT()
+</pre></div>
+</div>
+</div>
+</div>
+<p>此时，我们就能通过clf.coef_和clf.theta_分别访问<span class="math notranslate nohighlight">\(w\)</span>和<span class="math notranslate nohighlight">\(\theta\)</span>：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span> <span class="c1"># w1, w2, w3, w4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.73109827, 2.82370372, 3.09811977, 2.26793622])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">theta_</span> <span class="c1"># 每一个类别的theta_j</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-4.11366804, -0.15825334,  3.49922219])
+</pre></div>
+</div>
+</div>
+</div>
+<p>从而就能通过predict_proba()方法对每一个样本的特征<span class="math notranslate nohighlight">\(x_i\)</span>计算<span class="math notranslate nohighlight">\(y_i\)</span>属于各个类别的概率，取<span class="math notranslate nohighlight">\(\arg\max\)</span>后即得到输出的类别。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="mi">1</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># 取前五个</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 0, 2, 3, 1], dtype=int64)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>现有1个新的样本点<span class="math notranslate nohighlight">\(x_{new}=[-0.5, 0.3, 0.4, 0.1]\)</span>需要进行预测，请问它的predict_proba()概率预测结果是如何得到的？请写出计算过程。</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]])</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.00382917, 0.16333546, 0.71894644, 0.11388892]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>数据集data/ch9/car.csv中，含有6个与汽车有关的变量：“buying”、“maint”、“doors”、“persons”、“lug_boot”和“safety”分别指购买价格、保养价格、车门数量、车载人数、车身大小和安全等级，需要对汽车满意度指标“accpet”进行建模。汽车满意度是有序类别变量，由低到高可分为“unacc”、“acc”、“good”和“vgood”4个类别。请利用有序类别的逻辑斯蒂回归，利用6个有关变量来构建关于汽车满意度的分类模型。</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch9/car.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>buying</th>
+      <th>maint</th>
+      <th>doors</th>
+      <th>persons</th>
+      <th>lug_boot</th>
+      <th>safety</th>
+      <th>accept</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>vhigh</td>
+      <td>vhigh</td>
+      <td>2</td>
+      <td>2</td>
+      <td>small</td>
+      <td>low</td>
+      <td>unacc</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>vhigh</td>
+      <td>vhigh</td>
+      <td>2</td>
+      <td>2</td>
+      <td>small</td>
+      <td>med</td>
+      <td>unacc</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>vhigh</td>
+      <td>vhigh</td>
+      <td>2</td>
+      <td>2</td>
+      <td>small</td>
+      <td>high</td>
+      <td>unacc</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>vhigh</td>
+      <td>vhigh</td>
+      <td>2</td>
+      <td>2</td>
+      <td>med</td>
+      <td>low</td>
+      <td>unacc</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>vhigh</td>
+      <td>vhigh</td>
+      <td>2</td>
+      <td>2</td>
+      <td>med</td>
+      <td>med</td>
+      <td>unacc</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell tag_remove_input tag_remove_output docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">theta_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">theta_</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">theta_</span><span class="o">+</span><span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">)))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.00382917, 0.16333546, 0.71894644, 0.11388892])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch9/car.csv&quot;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">accept</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">reorder_categories</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;unacc&quot;</span><span class="p">,</span> <span class="s2">&quot;acc&quot;</span><span class="p">,</span> <span class="s2">&quot;good&quot;</span><span class="p">,</span> <span class="s2">&quot;vgood&quot;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticAT</span><span class="p">()</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticAT()
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="solution8.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">第八章</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="solution10.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">第十章</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 耿远昊<br/>
+    
+        &copy; 版权 2021, 耿远昊.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

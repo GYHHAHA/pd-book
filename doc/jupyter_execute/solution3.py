@@ -1,0 +1,328 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+np.random.seed(0)
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+np.set_printoptions(suppress = True)
+
+
+# # 第三章
+# 
+# ## 零、练一练
+# 
+# ```{admonition} 练一练
+# 当两个“*”指代的行元素和列元素在DataFrame的行索引和列索引中都为重复值，此时结果是什么类型？
+# ```
+# 
+# 此时结果是DataFrame
+# 
+# ```{code}
+# df = pd.DataFrame([[1,2],[3,4]], columns=["A"]*2, index=["B"]*2)
+# df.loc["B", "A"]
+# ```
+# 
+# ```{admonition} 练一练
+# 完成以下索引的相关操作：
+# - 选出A学校和B学校的大一女生。
+# - select_dtypes()是一个实用函数，它能够从表中选出或剔除相应类型的列。若要选出所有数值型的列，只需使用.select_dtypes(include='number')；若要剔除所有布尔类型和int64类型的列，只需使用.select_dtypes(exclude=['bool', 'int64'])。请利用布尔列表选择的方法结合DataFrame的dtypes属性在learn_pandas数据集上实现这个功能。
+# ```
+# 
+# - 1
+
+# In[2]:
+
+
+df = pd.read_csv('data/learn_pandas.csv')
+res = df.loc[(df.Grade.isin(["Freshman", "Sophomore"])) & (df.Gender=="Female")]
+res.head()
+
+
+# - 2
+
+# In[3]:
+
+
+df = pd.DataFrame({"A": [1,2,3], "B":[1.5,2.5,3.5], "C":[True]*3, "D": list("abc")})
+df.select_dtypes(exclude=["bool", "int64"])
+
+
+# In[4]:
+
+
+df.loc[:, (df.dtypes!="bool")&(df.dtypes!="int64")]
+
+
+# In[5]:
+
+
+df.select_dtypes(include=["number"])
+
+
+# In[6]:
+
+
+df.loc[:, (df.dtypes=="int32")
+         |(df.dtypes=="int64")
+         |(df.dtypes=="float32")
+         |(df.dtypes=="float64")]
+
+
+# ```{admonition} 练一练
+# 利用query()选出A学校和B学校的大一女生。
+# ```
+
+# In[7]:
+
+
+df = pd.read_csv('data/learn_pandas.csv')
+res = df.query("(Grade in ['Freshman', 'Sophomore']) and"
+               "(Gender == 'Female')")
+res.head()
+
+
+# ```{admonition} 练一练
+# 3.2.1节开头处利用from_product构造了df_multi，请分别利用from_tuples和from_arrays构造一个相同的DataFrame。
+# ```
+# 
+# 只需检查他们构造的索引是否一致
+
+# In[8]:
+
+
+multi_index = pd.MultiIndex.from_product(
+    [list('ABCD'),["Female", "Male"]], names=('School', 'Gender'))
+
+
+# In[9]:
+
+
+multi_index_from_tuples = pd.MultiIndex.from_tuples(
+    [
+        (i, j)
+        for i in list("ABCD")
+        for j in ["Female", "Male"]
+    ],
+    names=('School', 'Gender')
+)
+multi_index_from_tuples.equals(multi_index)
+
+
+# In[10]:
+
+
+multi_index_from_arrays = pd.MultiIndex.from_arrays(
+    [
+        list("AABBCCDD"),
+        ["Female", "Male"] * 4
+    ],
+    names=('School', 'Gender')
+)
+multi_index_from_tuples.equals(multi_index)
+
+
+# ```{admonition} 练一练
+# 尝试在rename_axis()中使用函数完成与例子中一样的功能，即把Upper和Other分别替换为Changed_row和Changed_col。
+# ```
+
+# In[11]:
+
+
+np.random.seed(0)
+L1,L2,L3 = ['A','B'],['a','b'],['alpha','beta']
+mul_index1 = pd.MultiIndex.from_product([L1,L2,L3],
+                names=('Upper', 'Lower','Extra'))
+L4,L5,L6 = ['C','D'],['c','d'],['cat','dog']
+mul_index2 = pd.MultiIndex.from_product([L4,L5,L6],
+                names=('Big', 'Small', 'Other'))
+df_ex = pd.DataFrame(np.random.randint(-9,10,(8,8)),
+                        index=mul_index1,
+                        columns=mul_index2)
+df_ex.head()
+
+
+# In[12]:
+
+
+df_ex.rename_axis(index=lambda x: "Changed_row" if x=="Upper" else x,
+                  columns=lambda x: "Changed_col" if x=="Big" else x,)
+
+
+# ```{admonition} 练一练
+# 将上述df_temp的内层行索引合并到与外层行索引（用下划线连接）后删除内层行索引，即结果表压缩为两层列索引，同时再把外层行索引的索引名重命名为“Big_Other”。
+# ```
+
+# In[13]:
+
+
+df_temp = df_ex.copy()
+new_idx = df_temp.index.map(lambda x: (x[0]+'-'+ x[1]+'-'+ x[2]))
+df_temp.index = new_idx
+new_idx = df_temp.index.map(lambda x:tuple(x.split('-')))
+df_temp.index = new_idx
+df_temp # 构造方式与书上相同
+
+
+# In[14]:
+
+
+df_temp.columns = df_temp.columns.map(lambda x: (x[0]+"_"+x[2], x[1], x[2]))
+df_temp.droplevel(-1, axis=1).rename(columns={"Big": "Big_Other"})
+
+
+# ## 一、实现sample()函数
+# 
+# 如果把DataFrame的每一行看作一个样本，或把每一列看作一个特征，再把整个DataFrame看作总体，想要对样本或特征进行随机抽样就可以用sample()函数。有时在拿到大型数据集后，想要对统计特征进行计算来了解数据的大致分布，但是这很费时间。同时，由于许多统计特征在等概率不放回的简单随机抽样条件下，是总体统计特征的无偏估计，比如样本均值和总体均值，那么就可以先从整张表中抽出一部分来做近似估计。
+# 
+# sample()函数中的主要参数为n、axis、frac、replace和weights，前三个分别是指抽样数量、抽样的方向（0为行、1为列）和抽样比例（0.3则为从总体中抽出30\%的样本）。replace和weights分别是指是否放回和每个样本的抽样相对概率，replace=True则表示有放回抽样。例如，对下面构造的df_sample以value值的相对大小为抽样概率进行有放回抽样，抽样数量为3。
+
+# In[15]:
+
+
+df_sample = pd.DataFrame({'id': list('abcde'), 'value': [1, 2, 3, 4, 90]})
+df_sample
+
+
+# In[16]:
+
+
+df_sample.sample(3, replace = True, weights = df_sample.value)
+
+
+# - 请分别利用loc和iloc来实现带有n、axis和frac参数的sample()函数。
+# - 请结合numpy中的choice()函数在上一问的基础上实现replace参数和weights参数的功能。
+# 
+# ```text
+# 【解答】
+# ```
+
+# In[17]:
+
+
+def sample(df, n=None, frac=None, replace=None, weights=None, random_state=None, axis=None):
+    """
+    n：表示抽样个数
+    frac：抽样比例
+    weights：每个样本抽中的相对概率
+    random_state：随机种子
+    axis：抽样方向（0表示对行进行抽样，1表示对列进行抽样）
+    """
+    temp_df = df.copy()
+    if n != None and frac != None:
+        raise ValueError("输入值n和输入值frac只能存在一个！")
+    if n == None:
+        n = int(df.shape[0] * frac)
+    if isinstance(weights, list):
+        weights = np.array(weights)
+    if not isinstance(weights, np.ndarray):
+        weights = np.ones(df.shape[axis]) / df.shape[axis]
+    idx = np.random.choice(range(df.shape[axis]), size=n, replace=replace, p=weights/weights.sum())
+    return temp_df.iloc[:, idx] if axis else temp_df.iloc[idx]
+
+
+# ## 二、公司员工数据的索引操作
+# 
+# 现有一份公司员工数据集：
+
+# In[18]:
+
+
+df = pd.read_csv('data/ch3/company.csv')
+
+
+# - 分别只使用query()和loc选出年龄不超过四十岁且工作部门为Dairy或Bakery的男性。
+# - 选出员工ID号为奇数所在行的第1、第3和倒数第2列。
+# - 按照以下步骤进行索引操作。
+#   - 把后三列设为索引后交换内外两层
+#   - 恢复中间层索引
+#   - 修改外层索引名为Gender
+#   - 用下划线合并两层行索引
+#   - 把行索引拆分为原状态
+#   - 修改索引名为原表名称
+#   - 恢复默认索引并将列保持为原表的相对位置
+# 
+# - 1
+
+# In[19]:
+
+
+df = pd.read_csv('data/ch3/company.csv')
+dpt = ['Dairy', 'Bakery']
+df.query("(age <= 40)&(department == @dpt)&(gender=='M')").head(3)
+
+
+# - 2
+
+# In[20]:
+
+
+df.iloc[(df.EmployeeID%2==1).values,[0,2,-2]].head()
+
+
+# - 3
+
+# In[21]:
+
+
+df_op = df.copy()
+df_op = df_op.set_index(df_op.columns[-3:].tolist()).swaplevel(0,2,axis=0)
+df_op = df_op.reset_index(level=1)
+df_op = df_op.rename_axis(index={'gender':'Gender'})
+df_op.index = df_op.index.map(lambda x:'_'.join(x))
+df_op.index = df_op.index.map(lambda x:tuple(x.split('_')))
+df_op = df_op.rename_axis(index=['gender', 'department'])
+df_op = df_op.reset_index().reindex(df.columns, axis=1)
+df_op.equals(df)
+
+
+# ## 三、巧克力评价数据的索引操作
+# 
+# 现有一份关于巧克力评价的数据集：
+
+# In[22]:
+
+
+df = pd.read_csv('data/ch3/chocolate.csv')
+
+
+# - 把列索引名中的换行符替换为空格。
+# - 巧克力Rating评分为1至5，每0.25分一档，请选出2.75分及以下且可可含量Cocoa Percent高于中位数的样本。
+# - 选出Review Date在2012年之后且Company Location不属于France、Canada、Amsterdam或Belgium的样本。
+# 
+# - 1
+
+# In[23]:
+
+
+df = pd.read_csv('data/ch3/chocolate.csv')
+df.columns = df.columns.map(lambda x: ' '.join(x.split('\n')))
+df.head()
+
+
+# - 2
+
+# In[24]:
+
+
+df['Cocoa Percent'] = df['Cocoa Percent'].apply(lambda x:float(x[:-1])/100)
+res = df.query('(Rating<3)&(`Cocoa Percent`>`Cocoa Percent`.median())')
+res.head(3)
+
+
+# - 3
+
+# In[25]:
+
+
+res = df.loc[
+    (df["Review Date"]>2012)
+    & ~df["Company Location"].isin(
+        ["France", "Canada", "Amsterdam", "Belgium"])]
+res.head()
+

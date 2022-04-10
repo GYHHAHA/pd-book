@@ -1,0 +1,409 @@
+---
+jupytext:
+  text_representation:
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  name: python3
+---
+
+```{code-cell} ipython3
+:tags: [remove_input]
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+np.random.seed(0)
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+np.set_printoptions(suppress = True)
+```
+
+
+
+
+# 第二章
+
+## 零、练一练
+
+```{admonition} 练一练
+请将上面代码中的index=False删除或设定index=True，对比结果有何差异。
+```
+
+第一列插入了原表的索引。事实上，如果原表索引有名字（index.name）时，列名即索引名。此外，如果原来的表是多级索引（第三章介绍），那么新增的列数即为索引的层数。
+
+```{code-cell} ipython3
+my_table = pd.DataFrame({"A":[1,2]})
+my_table.to_csv("my_csv.csv")
+pd.read_csv("my_csv.csv")
+```
+
+```{code-cell} ipython3
+index = pd.Series(["a", "b"], name="my_index")
+my_table = pd.DataFrame({"A":[1,2]},index=index)
+my_table.to_csv("my_csv.csv")
+pd.read_csv("my_csv.csv")
+```
+
+```{code-cell} ipython3
+index = pd.Index([("A", "B"), ("C", "D")], name=("index_1", "index_0"))
+my_table = pd.DataFrame({"A":[1,2]},index=index)
+my_table.to_csv("my_csv.csv")
+pd.read_csv("my_csv.csv")
+```
+
+```{admonition} 练一练
+在上面的df中，如果data字典中'col_0'键对应的不是列表，而是1个索引与df中索引相同的Series，此时会发生什么？如果它的索引和df的索引不一致，又会发生什么？
+```
+
+当索引一致时，序列的值直接对应填入DataFrame。当索引不一致时且Series中索引值唯一时，当前DataFrame行索引如果在Series中出现，则用Series对应元素填充，否则设为缺失值。若索引值不一致且Series索引值有重复时，直接报错。
+
+```{code-cell} ipython3
+index = ['row_%d'%i for i in range(3)]
+df = pd.DataFrame(
+  data={
+    'col_0': pd.Series([1,2,3], index=index),
+    'col_1':list('abc'),
+    'col_2': [1.2, 2.2, 3.2]
+  },
+  index=index
+)
+df
+```
+
+```{code-cell} ipython3
+df = pd.DataFrame(
+  data={
+    'col_0': pd.Series([1,2,3], index=["row_3","row_2","row_1"]),
+    'col_1':list('abc'),
+    'col_2': [1.2, 2.2, 3.2]
+  },
+  index=index
+)
+df
+```
+
+```{code-cell} ipython3
+:tags: [raises-exception]
+
+df = pd.DataFrame(
+  data={
+    'col_0': pd.Series([1,2,3], index=["row_2","row_1","row_2"]),
+    'col_1':list('abc'),
+    'col_2': [1.2, 2.2, 3.2]
+  },
+  index=index
+)
+df
+```
+
+```{admonition} 练一练
+df['col_0']和df[['col_0']]二者得到的结果类型有什么区别？
+```
+
+前者是Series，后者是DataFrame
+
+```{admonition} 练一练
+给定一个DataFrame，请构造其转置且不得使用“.T”。
+```
+
+```{code-cell} ipython3
+df = pd.DataFrame({"A": [1,2,3], "B": [4,5,6]}, index=list("abc"))
+```
+
+```{code-cell} ipython3
+df_T = pd.DataFrame(df.values.T, index=df.columns, columns=df.index)
+```
+
+```{code-cell} ipython3
+df.T.equals(df_T)
+```
+
+```{admonition} 练一练
+身体质量指数BMI的计算方式是体重（单位为kg）除以身高（单位为m）的平方，请找出具有最高BMI指数对应同学的姓名。
+```
+
+```{code-cell} ipython3
+df = pd.read_csv('data/learn_pandas.csv')
+df.T[(df.Weight / (df.Height/100) ** 2).idxmax()]["Name"]
+```
+
+实际上在学了第三章后，可以直接用loc来索引：
+
+```{code-cell} ipython3
+df.loc[(df.Weight / (df.Height/100) ** 2).idxmax(), "Name"]
+```
+
+```{admonition} 练一练
+在clip()中，超过边界的只能截断为边界值，如果要把超出边界的替换为自定义的值，可以如何做？
+```
+
+```{code-cell} ipython3
+s = pd.Series(np.arange(5))
+s.clip(1, 3)
+```
+
+```{code-cell} ipython3
+small, big = -999, 999
+s.where(s<=3, big).where(s>=1, small)
+```
+
+```{admonition} 练一练
+rolling对象的默认窗口方向都是向下滑动的，某些情况下用户需要逆向滑动的窗口，例如对[1,2,3]设定窗口为2的逆向sum操作，结果为[3,5,NaN]，此时应该如何实现？
+```
+
+```{code-cell} ipython3
+s = pd.Series([1,2,3])
+s[::-1].rolling(2).sum()[::-1]
+```
+
+```{admonition} 练一练
+expanding窗口上也有与rolling窗口类似的apply方法，请用在apply方法中传入自定义函数的方式来完成上述扩张窗口的均值计算操作。
+```
+
+```{code-cell} ipython3
+s = pd.Series([1, 3, 6, 10])
+s.expanding().apply(lambda x: x.mean())
+```
+
+
+## 一、整理某服装店的商品情况
+
+在data/ch2/clothing_store.csv中记录了某服装店商品的信息，每件商品都有一级类别（type_1）、二级类别（type_2）、进价（buy_price）、售价（sale_price）和唯一的商品编号（product_id）。
+
+- 利润指售价与进价之差，求商品的平均利润。
+- 从原表构造一个同长度的Series，索引是商品编号，value中的每个元素是对应位置的商品信息字符串，字符串格式为“商品一级类别为...，二级类别为...，进价和售价分别为...和...。”。
+- 表中有一个商品的二级类别与一级类别明显无法对应，例如一级类别为上衣，但二级类别是拖鞋，请找出这个商品对应的商品编号。
+- 求各二级类别中利润最高的商品编号。
+
+```text
+【解答】
+```
+
+```{code-cell} ipython3
+df = pd.read_csv("data/ch2/clothing_store.csv")
+```
+
+- 1
+
+```{code-cell} ipython3
+(df.sale_price - df.buy_price).mean()
+```
+
+- 2
+
+```{code-cell} ipython3
+# *符号是序列解包，读者如果不熟悉相关内容可在网上查询
+pattern = "商品一级类别为{}，二级类别为{}，进价和售价分别为{:d}和{:d}。"
+res = df.apply(
+    lambda x: pattern.format(*x.values[:-1]), 1)
+res.head()
+```
+
+```{code-cell} ipython
+# 如果不用*符号，可以一个个手动传入，完全等价
+res = df.apply(
+    lambda x: pattern.format(
+        x['type_1'], x['type_2'], x['buy_price'], x['sale_price']
+    ), 1
+)
+res.head()
+```
+
+- 3
+
+通过去重可以发现，最后一个类别显然是错的
+
+```{code-cell} ipython3
+df_dup = df.drop_duplicates(["type_1", "type_2"])
+df_dup
+```
+
+```{code-cell} ipython3
+df_dup.product_id[6023]
+```
+
+- 4
+
+方法一：
+
+```{code-cell} ipython3
+temp = df.copy() # 为了不影响后续代码，先拷贝一份，读者可自行决定是否拷贝
+temp["profit"] = df.sale_price - df.buy_price
+temp.sort_values(
+    ["type_2", "profit"],
+    ascending=[True, False]
+).drop_duplicates("type_2")[["type_2", "product_id"]]
+```
+
+方法二：
+
+```{code-cell} ipython3
+# 使用groupby方法，建议学完第四章后着重理解一下这种方案
+df.set_index("product_id").groupby("type_2")[['sale_price', 'buy_price']].apply(
+    lambda x: (x.iloc[:, 0]-x.iloc[:, 1]).idxmax())
+```
+
+## 二、汇总某课程的学生总评分数
+
+在data/ch2/student_grade.csv中记录了某课程中每位学生学习情况，包含了学生编号、期中考试分数、期末考试分数、回答问题次数和缺勤次数。请注意，在本题中仅允许使用本章中出现过的函数，不得使用后续章节介绍的功能或函数（例如loc和pd.cut()），但读者可在学习完后续章节后，自行再给出基于其他方案的解答。
+
+- 求出在缺勤次数最少的学生中回答问题次数最多的学生编号。
+- 按如下规则计算每位学生的总评：（1）总评分数为百分之四十的期中考试成绩加百分之六十的期末考试成绩（2）每回答一次问题，学生的总评分数加1分，但加分的总次数不得超过10次（3）每缺勤一次，学生的总评分数扣5分（4）当学生缺勤次数高于5次时，总评直接按0分计算（5）总评最高分为100分，最低分为0分。
+- 在表中新增一列“等第”，规定当学生总评低于60分时等第为不及格，总评不低于60分且低于80分时为及格，总评不低于80分且低于90分时为良好，总评不低于90分时为优秀，请统计各个等第的学生比例。
+
+
+```text
+【解答】
+```
+
+```{code-cell} ipython3
+df = pd.read_csv("data/ch2/student_grade.csv")
+```
+
+- 1
+
+方法一：
+
+```{code-cell} ipython3
+s = df.sort_values(list(df.columns[-2:]), ascending=[False, True]).Student_ID
+s[s.index[0]]
+```
+
+方法二：
+
+```{code-cell} ipython3
+# 时间上而言，方法二效率更高，因为方法一需要排序
+temp = df.loc[df.Absence_Times==df.Absence_Times.min()]
+temp = temp.loc[temp.Question_Answering_Times==temp.Question_Answering_Times.max(), "Student_ID"]
+temp.iloc[0]
+```
+
+- 2
+
+```{code-cell} ipython3
+s = df.Mid_Term_Grade * 0.4 + df.Final_Grade * 0.6 
+s += df.Question_Answering_Times.clip(0, 10) - 5 * df.Absence_Times
+s = s.where(df.Absence_Times <= 5, 0).clip(0, 100)
+df["总评"] = s
+df.总评.head()
+```
+
+- 3
+
+方法一：
+
+```{code-cell} ipython3
+grade_dict = {0:"不及格", 1:"及格", 2:"良好", 3:"优秀"}
+# *1是为了把布尔序列转换为数值序列
+df["grade"] = ((df.总评 >= 90)*1 + (df.总评 >= 80)*1 + (df.总评 >= 60)*1).replace(grade_dict)
+df.grade.head()
+```
+
+```{code-cell} ipython3
+df.grade.value_counts(normalize=True)
+```
+
+方法二：
+
+```{code-cell} ipython
+# 与方法一grade生成方法不同，使用apply
+df["grade"] = df.总评.apply(
+    lambda x: "不及格" if x < 60 else
+              "及格" if x < 80 else
+              "良好" if x < 90 else
+              "优秀"
+)
+df.grade.head()
+```
+
+方法三：
+
+```{code-cell} ipython
+# 见第九章第三节
+df["grade"] = pd.cut(
+    df.总评,
+    bins=[0,60,80,90,np.inf],
+    labels=["不及格", "及格", "良好", "优秀"],
+    right=False
+)
+df.grade.head()
+```
+
+## 三、实现指数加权窗口
+
+（1）作为扩张窗口的ewm窗口
+
+在扩张窗口中，用户可以使用各类函数进行历史的累计指标统计，但这些内置的统计函数往往把窗口中的所有元素赋予了同样的权重。事实上，可以给出不同的权重来赋给窗口中的元素，指数加权窗口就是这样一种特殊的扩张窗口。
+
+````{margin}
+```{note}
+这一小节和下面的公式第一行用$w_i*x_i$的写法，原来感觉不太清晰，注意公式上标和下标核对
+```
+````
+
+其中，最重要的参数是alpha，它决定了默认情况下的窗口权重为$w_i = (1 - \alpha)^{t-i}, i\in \{0, 1, ..., t\}$，其中$w_0$表示序列第一个元素$x_0$的权重，$w_t$表示当前元素$x_t$的权重。从权重公式可以看出，离开当前值越远则权重越小，若记原序列为$x$，更新后的当前元素为$y_t$，此时通过加权公式归一化后可知：
+
+$$
+\begin{aligned}
+y_t &=\frac{\sum_{i=0}^{t} w_i x_{i}}{\sum_{i=0}^{t} w_i} \\
+&=\frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
++ (1 - \alpha)^{t} x_{0}}{1 + (1 - \alpha) + (1 - \alpha)^2 + ...
++ (1 - \alpha)^{t}}
+\end{aligned}
+$$
+
+对于Series而言，可以用ewm对象如下计算指数平滑后的序列：
+
+```{code-cell} ipython3
+np.random.seed(0)
+s = pd.Series(np.random.randint(-1,2,30).cumsum())
+s.head()
+```
+
+```{code-cell} ipython3
+s.ewm(alpha=0.2).mean().head()
+```
+
+请用expanding窗口实现。
+
+（2）作为滑动窗口的ewm窗口
+
+从（1）中可以看到，ewm作为一种扩张窗口的特例，只能从序列的第一个元素开始加权。现在希望给定一个限制窗口n，只对包含自身的最近的n个元素作为窗口进行滑动加权平滑。请根据滑窗函数，给出新的$w_i$与$y_t$的更新公式，并通过rolling窗口实现这一功能。
+
+```text
+【解答】
+```
+
+- 1
+
+```{code-cell} ipython3
+def ewm_func(x, alpha=0.2):
+    win = (1 - alpha) ** np.arange(x.shape[0])
+    win = win[::-1]
+    res = (win * x).sum() / win.sum()
+    return res
+```
+
+```{code-cell} ipython3
+s.expanding().apply(ewm_func).head()
+```
+
+- 2
+
+权重为$w_i=(1−\alpha)^{t-i},i\in\{t-n+1,...,t\}$，且$y_t$ 更新如下：
+
+$$
+\begin{aligned}
+y_t &=\frac{\sum_{i=t-n+1}^{t} w_i x_{i}}{\sum_{i=t-n+1}^{t} w_i} \\
+&=\frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
++ (1 - \alpha)^{n-1} x_{t-n+1}}{1 + (1 - \alpha) + (1 - \alpha)^2 + ...
++ (1 - \alpha)^{n-1}}
+\end{aligned}
+$$
+
+事实上，无需对窗口函数进行任何改动，其本身就已经和上述公式完全对应：
+
+```{code-cell} ipython3
+# 假设窗口大小为4
+s.rolling(window=4).apply(ewm_func).head()
+```

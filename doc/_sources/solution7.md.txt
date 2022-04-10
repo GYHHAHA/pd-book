@@ -1,0 +1,246 @@
+---
+jupytext:
+  text_representation:
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  name: python3
+---
+
+```{code-cell} ipython3
+:tags: [remove_input]
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+np.random.seed(0)
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+np.set_printoptions(suppress = True)
+```
+
+# 第七章
+
+## 零、练一练
+
+```{admonition} 练一练
+请检索出身高体重全为缺失值的行。
+```
+
+```{code-cell} ipython3
+df = pd.read_csv('data/learn_pandas.csv',
+    usecols = ['Grade', 'Name', 'Gender',
+               'Height', 'Weight', 'Transfer'])
+df.loc[df[["Weight", "Height"]].isna().all(1)]
+```
+
+```{admonition} 练一练
+将上述Series使用s.fillna(method="bfill")填充，并观察与ffill处理结果的差别。
+```
+
+```{code-cell} ipython3
+s = pd.Series([np.nan, 1, np.nan, np.nan, 2, np.nan], list('aaabcd'))
+s.fillna(method="bfill")
+```
+
+```{admonition} 练一练
+请构造1个缺失值比例为5\%的序列，并用众数进行填充。
+```
+
+```{code-cell} ipython3
+s = pd.Series(np.random.randint(0, 4, 20))
+s[0] = np.nan
+s.head()
+```
+
+```{code-cell} ipython3
+s.fillna(s.value_counts().index[0]).head()
+```
+
+```{admonition} 练一练
+对1个序列以如下规则填充缺失值：如果单独出现的缺失值，就用前后均值填充，如果连续出现的缺失值就不填充，即序列[1, NaN, 3, NaN, NaN]填充后为[1, 2, 3, NaN, NaN]，请利用fillna()函数实现。（提示：利用limit参数）
+```
+
+```{code-cell} ipython3
+s = pd.Series([1, np.nan, 3, np.nan, np.nan])
+forward = s.fillna(method="ffill", limit=1) 
+backward = s.fillna(method="bfill", limit=1)
+res = (forward + backward) / 2
+res
+```
+
+```{admonition} 练一练
+请实现上述interpolate(method="index")的功能，即给定一个索引为整数的Series，返回其索引插值结果。
+```
+
+```{code-cell} ipython3
+def index_interpolate(s):
+    s_former = pd.Series([np.nan]+s.iloc[:-1].values.tolist())
+    s_former.index = [np.nan]+s.index[:-1].tolist()
+    s_latter = pd.Series(s.iloc[1:].values.tolist()+[np.nan])
+    s_latter.index = s.index[1:].tolist()+[np.nan]
+    val = (s.index - s_former.index) * (s_latter.values - s_former.values) / (s_latter.index - s_former.index)
+    s_copy = s.copy()
+    s_copy.loc[s.isna()] = val[s.isna()]
+    return s_copy
+```
+
+```{code-cell} ipython3
+s = pd.Series([0,np.nan,10],index=[0,1,10])
+index_interpolate(s)
+```
+
+````{admonition} 练一练
+请设计一个my_get_dummies()函数，其作用是仅对非缺失值对应行的类别进行独热编码，缺失值对应行的编码结果列全设为缺失值，例如df_nan.category的返回结果如下表所示：
+```text
+      a     b
+0     1     0
+1     0     0
+2     0     1
+3  <NA>  <NA>
+4  <NA>  <NA>
+```
+````
+
+```{code-cell} ipython3
+def my_get_dummies(s):
+    res = pd.get_dummies(s_nan, dummy_na=True)
+    res = res.loc[:, res.columns.notna()]
+    res.loc[(1-res).all(1)] = np.nan
+    return res
+```
+
+```{code-cell} ipython3
+s_nan = pd.Series(['a','a','b',np.nan,np.nan])
+my_get_dummies(s_nan)
+```
+
+
+## 一、缺失数据筛选
+
+
+在data/ch7/missing.csv中存放了1000列数据，请按照如下条件进行数据筛选：
+
+- 选出缺失比例低于50%的列和缺失值个数超过520个的行
+- 选出最大连续缺失值个数超过20的列
+- 若某一列左右两侧的列满足行同时缺失的比例超过10%，则称此列满足缺失对称条件。表中是否存在满足缺失对称条件的列？若存在，请找出所有符合条件的列。
+
+```text
+【解答】
+```
+
+- 1
+
+```{code-cell} ipython3
+df = pd.read_csv("data/ch7/missing.csv")
+res = df.loc[df.isna().sum(1)>520, df.isna().mean()<0.5]
+res.shape
+```
+
+- 2
+
+```{code-cell} ipython3
+def missing_helper(s):
+    temp = s.isna().astype("int").rename("temp_col")
+    temp = pd.concat([s, (temp != temp.shift()).cumsum()], axis=1)
+    return temp[s.isna()].groupby("temp_col").size().max() > 20
+res = df.loc[:, df.apply(missing_helper)]
+res.shape
+```
+
+- 3
+
+```{code-cell} ipython3
+cols = []
+for i in range(1, 999):
+    temp = df.iloc[:,[i-1,i+1]]
+    if temp.isna().all(1).mean() > 0.1:
+        cols.append("f%d"%i)
+len(cols)
+```
+
+## 二、K近邻填充
+
+K近邻是一种监督学习模型，对于分类变量，利用KNN分类模型可以实现其缺失值的插补，思路是度量缺失样本的特征与所有其他样本特征的距离，当给定了模型参数n_neighbors=n时，计算离该样本距离最近的n个样本点中最多的那个类别，并把这个类别作为该样本的缺失预测类别，具体如图7.1所示，未知的类别被预测为黄色：
+
+图中有色点的特征数据提供如下：
+```{code-cell} ipython3
+df = pd.read_excel('data/ch7/color.xlsx')
+df.head(3)
+```
+
+```{figure} ../source/_static/ch7/7-1-knn.svg
+---
+width: 350px
+align: center
+---
+图7.1 KNN分类原理示意图
+```
+
+已知待预测的样本点为$X_1=0.8$、$X_2=−0.2$，那么预测类别可以如下写出：
+
+
+```{code-cell} ipython3
+from sklearn.neighbors import KNeighborsClassifier
+
+clf = KNeighborsClassifier(n_neighbors=6) # 定义分类器
+clf.fit(df.iloc[:,:2].values, df.Color) # 拟合数据
+clf.predict([[0.8, -0.2]]) # 获取未知点的类别
+```
+
+- 7.2.2节介绍的近邻插值和此处介绍的K近邻填充有什么联系？
+- 对于数据集中的缺失特征而言，可以把已有的类别看做有颜色的点，缺失的类别看做需要预测的点，请根据上述方法对data/ch7/audit.csv中的Employment变量进行缺失值填充，字符串变量可用独热编码转为数值变量。
+
+```text
+【解答】
+```
+
+- 1
+
+近邻插值是一维情况下$K=1$的K近邻填充。
+
+- 2
+
+```{code-cell} ipython3
+from sklearn.neighbors import KNeighborsClassifier
+df = pd.read_csv('data/ch7/audit.csv')
+df_num = df[['Age','Income','Hours']].apply(lambda x:(x-x.min())/(x.max()-x.min()))
+df_str = pd.get_dummies(df[['Marital', 'Gender']])
+new_df = pd.concat([df_num, df_str, df.Employment], axis=1)
+X_train = new_df[new_df.Employment.notna()]
+X_test = new_df[new_df.Employment.isna()]
+clf = KNeighborsClassifier(n_neighbors=6)
+clf.fit(X_train.iloc[:,:-1], X_train.Employment)
+predict_res = clf.predict(X_test.iloc[:,:-1])
+df.loc[df.Employment.isna(), 'Employment'] = predict_res
+df.Employment.notna().all()
+```
+
+## 三、条件近邻插值
+
+
+近邻插值使用最近的非缺失值进行填充，但有时候我们需要对最近的元素做一些限制，例如用另一列中和待填充元素相同类别的上一个最近值进行填充。假设现有如下的DataFrame：
+
+```{code-cell} ipython3
+df = pd.DataFrame({
+    "A": [1,2,3,4,np.nan],
+    "B": list("YXZXY")})
+df
+```
+
+若现在需要按照B的类别对A进行近邻填充，那么首先找到缺失值df.iloc[4,0]对应的B列类别为Y，接着寻找距离其最近的上一个Y的所在位置（即第一行），此时使用df.iloc[0,0]的值1.0进行填充。如果A列中获取到的条件近邻值df.iloc[0,0]为也是缺失值，则不进行填充。此外，如果需要填充的值向前无法寻找到同类别的对应行，也不进行填充。
+
+请按照上述规则，对data/ch7/near.csv中的A列进行填充。
+
+```{code-cell} ipython3
+df = pd.read_csv("data/ch7/near.csv")
+df.head()
+```
+
+```text
+【解答】
+```
+
+```{code-cell} ipython3
+res = df.groupby("B")["A"].fillna(method="ffill", limit=1)
+res.head()
+```

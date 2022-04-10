@@ -1,0 +1,2048 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第三章</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="第四章" href="solution4.html" />
+    <link rel="prev" title="第二章" href="solution2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  章节
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution1.html">
+   第一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution2.html">
+   第二章
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   第三章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution4.html">
+   第四章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution5.html">
+   第五章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution6.html">
+   第六章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution7.html">
+   第七章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution8.html">
+   第八章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution9.html">
+   第九章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution10.html">
+   第十章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution11.html">
+   第十一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution12.html">
+   第十二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution13.html">
+   第十三章
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solution3.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample">
+   一、实现sample()函数
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   二、公司员工数据的索引操作
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   三、巧克力评价数据的索引操作
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>第三章</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample">
+   一、实现sample()函数
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   二、公司员工数据的索引操作
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   三、巧克力评价数据的索引操作
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove_input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>第三章<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>零、练一练<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>当两个“*”指代的行元素和列元素在DataFrame的行索引和列索引中都为重复值，此时结果是什么类型？</p>
+</div>
+<p>此时结果是DataFrame</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>完成以下索引的相关操作：</p>
+<ul class="simple">
+<li><p>选出A学校和B学校的大一女生。</p></li>
+<li><p>select_dtypes()是一个实用函数，它能够从表中选出或剔除相应类型的列。若要选出所有数值型的列，只需使用.select_dtypes(include='number')；若要剔除所有布尔类型和int64类型的列，只需使用.select_dtypes(exclude=['bool', 'int64'])。请利用布尔列表选择的方法结合DataFrame的dtypes属性在learn_pandas数据集上实现这个功能。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/learn_pandas.csv&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">Grade</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Freshman&quot;</span><span class="p">,</span> <span class="s2">&quot;Sophomore&quot;</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Gender</span><span class="o">==</span><span class="s2">&quot;Female&quot;</span><span class="p">)]</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>School</th>
+      <th>Grade</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Transfer</th>
+      <th>Test_Number</th>
+      <th>Test_Date</th>
+      <th>Time_Record</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Gaopeng Yang</td>
+      <td>Female</td>
+      <td>158.9</td>
+      <td>46.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/10/5</td>
+      <td>0:04:34</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C</td>
+      <td>Sophomore</td>
+      <td>Xiaojuan Sun</td>
+      <td>Female</td>
+      <td>NaN</td>
+      <td>41.0</td>
+      <td>N</td>
+      <td>2</td>
+      <td>2020/1/3</td>
+      <td>0:04:08</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>D</td>
+      <td>Freshman</td>
+      <td>Xiaoli Qian</td>
+      <td>Female</td>
+      <td>158.0</td>
+      <td>51.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/10/31</td>
+      <td>0:03:47</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Qiang Chu</td>
+      <td>Female</td>
+      <td>162.5</td>
+      <td>52.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/12/12</td>
+      <td>0:03:53</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>D</td>
+      <td>Freshman</td>
+      <td>Changli Zhang</td>
+      <td>Female</td>
+      <td>163.0</td>
+      <td>48.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2020/1/5</td>
+      <td>0:05:13</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;B&quot;</span><span class="p">:[</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">3.5</span><span class="p">],</span> <span class="s2">&quot;C&quot;</span><span class="p">:[</span><span class="kc">True</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)})</span>
+<span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bool&quot;</span><span class="p">,</span> <span class="s2">&quot;int64&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>B</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.5</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.5</td>
+      <td>b</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.5</td>
+      <td>c</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="o">!=</span><span class="s2">&quot;bool&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="o">!=</span><span class="s2">&quot;int64&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>B</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.5</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.5</td>
+      <td>b</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.5</td>
+      <td>c</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>3.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="o">==</span><span class="s2">&quot;int32&quot;</span><span class="p">)</span>
+         <span class="o">|</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="o">==</span><span class="s2">&quot;int64&quot;</span><span class="p">)</span>
+         <span class="o">|</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="o">==</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span>
+         <span class="o">|</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="o">==</span><span class="s2">&quot;float64&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>3.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>利用query()选出A学校和B学校的大一女生。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/learn_pandas.csv&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;(Grade in [&#39;Freshman&#39;, &#39;Sophomore&#39;]) and&quot;</span>
+               <span class="s2">&quot;(Gender == &#39;Female&#39;)&quot;</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>School</th>
+      <th>Grade</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Transfer</th>
+      <th>Test_Number</th>
+      <th>Test_Date</th>
+      <th>Time_Record</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Gaopeng Yang</td>
+      <td>Female</td>
+      <td>158.9</td>
+      <td>46.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/10/5</td>
+      <td>0:04:34</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C</td>
+      <td>Sophomore</td>
+      <td>Xiaojuan Sun</td>
+      <td>Female</td>
+      <td>NaN</td>
+      <td>41.0</td>
+      <td>N</td>
+      <td>2</td>
+      <td>2020/1/3</td>
+      <td>0:04:08</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>D</td>
+      <td>Freshman</td>
+      <td>Xiaoli Qian</td>
+      <td>Female</td>
+      <td>158.0</td>
+      <td>51.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/10/31</td>
+      <td>0:03:47</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Qiang Chu</td>
+      <td>Female</td>
+      <td>162.5</td>
+      <td>52.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/12/12</td>
+      <td>0:03:53</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>D</td>
+      <td>Freshman</td>
+      <td>Changli Zhang</td>
+      <td>Female</td>
+      <td>163.0</td>
+      <td>48.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2020/1/5</td>
+      <td>0:05:13</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>3.2.1节开头处利用from_product构造了df_multi，请分别利用from_tuples和from_arrays构造一个相同的DataFrame。</p>
+</div>
+<p>只需检查他们构造的索引是否一致</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi_index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">(</span>
+    <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCD&#39;</span><span class="p">),[</span><span class="s2">&quot;Female&quot;</span><span class="p">,</span> <span class="s2">&quot;Male&quot;</span><span class="p">]],</span> <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi_index_from_tuples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Female&quot;</span><span class="p">,</span> <span class="s2">&quot;Male&quot;</span><span class="p">]</span>
+    <span class="p">],</span>
+    <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">multi_index_from_tuples</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">multi_index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi_index_from_arrays</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_arrays</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;AABBCCDD&quot;</span><span class="p">),</span>
+        <span class="p">[</span><span class="s2">&quot;Female&quot;</span><span class="p">,</span> <span class="s2">&quot;Male&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span>
+    <span class="p">],</span>
+    <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">multi_index_from_tuples</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">multi_index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>尝试在rename_axis()中使用函数完成与例子中一样的功能，即把Upper和Other分别替换为Changed_row和Changed_col。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">,</span><span class="n">L3</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">],[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],[</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span><span class="s1">&#39;beta&#39;</span><span class="p">]</span>
+<span class="n">mul_index1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">,</span><span class="n">L3</span><span class="p">],</span>
+                <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Upper&#39;</span><span class="p">,</span> <span class="s1">&#39;Lower&#39;</span><span class="p">,</span><span class="s1">&#39;Extra&#39;</span><span class="p">))</span>
+<span class="n">L4</span><span class="p">,</span><span class="n">L5</span><span class="p">,</span><span class="n">L6</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;dog&#39;</span><span class="p">]</span>
+<span class="n">mul_index2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([</span><span class="n">L4</span><span class="p">,</span><span class="n">L5</span><span class="p">,</span><span class="n">L6</span><span class="p">],</span>
+                <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Big&#39;</span><span class="p">,</span> <span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">))</span>
+<span class="n">df_ex</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">)),</span>
+                        <span class="n">index</span><span class="o">=</span><span class="n">mul_index1</span><span class="p">,</span>
+                        <span class="n">columns</span><span class="o">=</span><span class="n">mul_index2</span><span class="p">)</span>
+<span class="n">df_ex</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Big</th>
+      <th colspan="4" halign="left">C</th>
+      <th colspan="4" halign="left">D</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Small</th>
+      <th colspan="2" halign="left">c</th>
+      <th colspan="2" halign="left">d</th>
+      <th colspan="2" halign="left">c</th>
+      <th colspan="2" halign="left">d</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Other</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+    </tr>
+    <tr>
+      <th>Upper</th>
+      <th>Lower</th>
+      <th>Extra</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">A</th>
+      <th rowspan="2" valign="top">a</th>
+      <th>alpha</th>
+      <td>3</td>
+      <td>6</td>
+      <td>-9</td>
+      <td>-6</td>
+      <td>-6</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-5</td>
+      <td>-3</td>
+      <td>3</td>
+      <td>-8</td>
+      <td>-3</td>
+      <td>-2</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">b</th>
+      <th>alpha</th>
+      <td>-4</td>
+      <td>4</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>7</td>
+      <td>-4</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-9</td>
+      <td>9</td>
+      <td>-6</td>
+      <td>8</td>
+      <td>5</td>
+      <td>-2</td>
+      <td>-9</td>
+      <td>-8</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <th>a</th>
+      <th>alpha</th>
+      <td>0</td>
+      <td>-9</td>
+      <td>1</td>
+      <td>-6</td>
+      <td>2</td>
+      <td>9</td>
+      <td>-7</td>
+      <td>-9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_ex</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;Changed_row&quot;</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s2">&quot;Upper&quot;</span> <span class="k">else</span> <span class="n">x</span><span class="p">,</span>
+                  <span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;Changed_col&quot;</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s2">&quot;Big&quot;</span> <span class="k">else</span> <span class="n">x</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Changed_col</th>
+      <th colspan="4" halign="left">C</th>
+      <th colspan="4" halign="left">D</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Small</th>
+      <th colspan="2" halign="left">c</th>
+      <th colspan="2" halign="left">d</th>
+      <th colspan="2" halign="left">c</th>
+      <th colspan="2" halign="left">d</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Other</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+    </tr>
+    <tr>
+      <th>Changed_row</th>
+      <th>Lower</th>
+      <th>Extra</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">A</th>
+      <th rowspan="2" valign="top">a</th>
+      <th>alpha</th>
+      <td>3</td>
+      <td>6</td>
+      <td>-9</td>
+      <td>-6</td>
+      <td>-6</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-5</td>
+      <td>-3</td>
+      <td>3</td>
+      <td>-8</td>
+      <td>-3</td>
+      <td>-2</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">b</th>
+      <th>alpha</th>
+      <td>-4</td>
+      <td>4</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>7</td>
+      <td>-4</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-9</td>
+      <td>9</td>
+      <td>-6</td>
+      <td>8</td>
+      <td>5</td>
+      <td>-2</td>
+      <td>-9</td>
+      <td>-8</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">B</th>
+      <th rowspan="2" valign="top">a</th>
+      <th>alpha</th>
+      <td>0</td>
+      <td>-9</td>
+      <td>1</td>
+      <td>-6</td>
+      <td>2</td>
+      <td>9</td>
+      <td>-7</td>
+      <td>-9</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-9</td>
+      <td>-5</td>
+      <td>-4</td>
+      <td>-3</td>
+      <td>-1</td>
+      <td>8</td>
+      <td>6</td>
+      <td>-5</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">b</th>
+      <th>alpha</th>
+      <td>0</td>
+      <td>1</td>
+      <td>-8</td>
+      <td>-8</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>-6</td>
+      <td>-3</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>2</td>
+      <td>5</td>
+      <td>9</td>
+      <td>-9</td>
+      <td>5</td>
+      <td>-6</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>将上述df_temp的内层行索引合并到与外层行索引（用下划线连接）后删除内层行索引，即结果表压缩为两层列索引，同时再把外层行索引的索引名重命名为“Big_Other”。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_temp</span> <span class="o">=</span> <span class="n">df_ex</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">new_idx</span> <span class="o">=</span> <span class="n">df_temp</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="n">df_temp</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_idx</span>
+<span class="n">new_idx</span> <span class="o">=</span> <span class="n">df_temp</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">tuple</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)))</span>
+<span class="n">df_temp</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_idx</span>
+<span class="n">df_temp</span> <span class="c1"># 构造方式与书上相同</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Big</th>
+      <th colspan="4" halign="left">C</th>
+      <th colspan="4" halign="left">D</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Small</th>
+      <th colspan="2" halign="left">c</th>
+      <th colspan="2" halign="left">d</th>
+      <th colspan="2" halign="left">c</th>
+      <th colspan="2" halign="left">d</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Other</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+      <th>cat</th>
+      <th>dog</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">A</th>
+      <th rowspan="2" valign="top">a</th>
+      <th>alpha</th>
+      <td>3</td>
+      <td>6</td>
+      <td>-9</td>
+      <td>-6</td>
+      <td>-6</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-5</td>
+      <td>-3</td>
+      <td>3</td>
+      <td>-8</td>
+      <td>-3</td>
+      <td>-2</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">b</th>
+      <th>alpha</th>
+      <td>-4</td>
+      <td>4</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>7</td>
+      <td>-4</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-9</td>
+      <td>9</td>
+      <td>-6</td>
+      <td>8</td>
+      <td>5</td>
+      <td>-2</td>
+      <td>-9</td>
+      <td>-8</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">B</th>
+      <th rowspan="2" valign="top">a</th>
+      <th>alpha</th>
+      <td>0</td>
+      <td>-9</td>
+      <td>1</td>
+      <td>-6</td>
+      <td>2</td>
+      <td>9</td>
+      <td>-7</td>
+      <td>-9</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-9</td>
+      <td>-5</td>
+      <td>-4</td>
+      <td>-3</td>
+      <td>-1</td>
+      <td>8</td>
+      <td>6</td>
+      <td>-5</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">b</th>
+      <th>alpha</th>
+      <td>0</td>
+      <td>1</td>
+      <td>-8</td>
+      <td>-8</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>-6</td>
+      <td>-3</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>2</td>
+      <td>5</td>
+      <td>9</td>
+      <td>-9</td>
+      <td>5</td>
+      <td>-6</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_temp</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df_temp</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="n">df_temp</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Big&quot;</span><span class="p">:</span> <span class="s2">&quot;Big_Other&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Big</th>
+      <th>C_cat</th>
+      <th>C_dog</th>
+      <th>C_cat</th>
+      <th>C_dog</th>
+      <th>D_cat</th>
+      <th>D_dog</th>
+      <th>D_cat</th>
+      <th>D_dog</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Small</th>
+      <th>c</th>
+      <th>c</th>
+      <th>d</th>
+      <th>d</th>
+      <th>c</th>
+      <th>c</th>
+      <th>d</th>
+      <th>d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">A</th>
+      <th rowspan="2" valign="top">a</th>
+      <th>alpha</th>
+      <td>3</td>
+      <td>6</td>
+      <td>-9</td>
+      <td>-6</td>
+      <td>-6</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-5</td>
+      <td>-3</td>
+      <td>3</td>
+      <td>-8</td>
+      <td>-3</td>
+      <td>-2</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">b</th>
+      <th>alpha</th>
+      <td>-4</td>
+      <td>4</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>7</td>
+      <td>-4</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-9</td>
+      <td>9</td>
+      <td>-6</td>
+      <td>8</td>
+      <td>5</td>
+      <td>-2</td>
+      <td>-9</td>
+      <td>-8</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">B</th>
+      <th rowspan="2" valign="top">a</th>
+      <th>alpha</th>
+      <td>0</td>
+      <td>-9</td>
+      <td>1</td>
+      <td>-6</td>
+      <td>2</td>
+      <td>9</td>
+      <td>-7</td>
+      <td>-9</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>-9</td>
+      <td>-5</td>
+      <td>-4</td>
+      <td>-3</td>
+      <td>-1</td>
+      <td>8</td>
+      <td>6</td>
+      <td>-5</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">b</th>
+      <th>alpha</th>
+      <td>0</td>
+      <td>1</td>
+      <td>-8</td>
+      <td>-8</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>-6</td>
+      <td>-3</td>
+    </tr>
+    <tr>
+      <th>beta</th>
+      <td>2</td>
+      <td>5</td>
+      <td>9</td>
+      <td>-9</td>
+      <td>5</td>
+      <td>-6</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="sample">
+<h2>一、实现sample()函数<a class="headerlink" href="#sample" title="永久链接至标题">¶</a></h2>
+<p>如果把DataFrame的每一行看作一个样本，或把每一列看作一个特征，再把整个DataFrame看作总体，想要对样本或特征进行随机抽样就可以用sample()函数。有时在拿到大型数据集后，想要对统计特征进行计算来了解数据的大致分布，但是这很费时间。同时，由于许多统计特征在等概率不放回的简单随机抽样条件下，是总体统计特征的无偏估计，比如样本均值和总体均值，那么就可以先从整张表中抽出一部分来做近似估计。</p>
+<p>sample()函数中的主要参数为n、axis、frac、replace和weights，前三个分别是指抽样数量、抽样的方向（0为行、1为列）和抽样比例（0.3则为从总体中抽出30%的样本）。replace和weights分别是指是否放回和每个样本的抽样相对概率，replace=True则表示有放回抽样。例如，对下面构造的df_sample以value值的相对大小为抽样概率进行有放回抽样，抽样数量为3。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sample</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">),</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">90</span><span class="p">]})</span>
+<span class="n">df_sample</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sample</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span> <span class="n">df_sample</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>e</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>请分别利用loc和iloc来实现带有n、axis和frac参数的sample()函数。</p></li>
+<li><p>请结合numpy中的choice()函数在上一问的基础上实现replace参数和weights参数的功能。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">frac</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    n：表示抽样个数</span>
+<span class="sd">    frac：抽样比例</span>
+<span class="sd">    weights：每个样本抽中的相对概率</span>
+<span class="sd">    random_state：随机种子</span>
+<span class="sd">    axis：抽样方向（0表示对行进行抽样，1表示对列进行抽样）</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">temp_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">frac</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;输入值n和输入值frac只能存在一个！&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">frac</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">])</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]),</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">replace</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">weights</span><span class="o">/</span><span class="n">weights</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">temp_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span> <span class="k">if</span> <span class="n">axis</span> <span class="k">else</span> <span class="n">temp_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>二、公司员工数据的索引操作<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>现有一份公司员工数据集：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch3/company.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>分别只使用query()和loc选出年龄不超过四十岁且工作部门为Dairy或Bakery的男性。</p></li>
+<li><p>选出员工ID号为奇数所在行的第1、第3和倒数第2列。</p></li>
+<li><p>按照以下步骤进行索引操作。</p>
+<ul>
+<li><p>把后三列设为索引后交换内外两层</p></li>
+<li><p>恢复中间层索引</p></li>
+<li><p>修改外层索引名为Gender</p></li>
+<li><p>用下划线合并两层行索引</p></li>
+<li><p>把行索引拆分为原状态</p></li>
+<li><p>修改索引名为原表名称</p></li>
+<li><p>恢复默认索引并将列保持为原表的相对位置</p></li>
+</ul>
+</li>
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch3/company.csv&#39;</span><span class="p">)</span>
+<span class="n">dpt</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dairy&#39;</span><span class="p">,</span> <span class="s1">&#39;Bakery&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;(age &lt;= 40)&amp;(department == @dpt)&amp;(gender==&#39;M&#39;)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeID</th>
+      <th>birthdate_key</th>
+      <th>age</th>
+      <th>city_name</th>
+      <th>department</th>
+      <th>job_title</th>
+      <th>gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3611</th>
+      <td>5791</td>
+      <td>1/14/1975</td>
+      <td>40</td>
+      <td>Kelowna</td>
+      <td>Dairy</td>
+      <td>Dairy Person</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3613</th>
+      <td>5793</td>
+      <td>1/22/1975</td>
+      <td>40</td>
+      <td>Richmond</td>
+      <td>Bakery</td>
+      <td>Baker</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3615</th>
+      <td>5795</td>
+      <td>1/30/1975</td>
+      <td>40</td>
+      <td>Nanaimo</td>
+      <td>Dairy</td>
+      <td>Dairy Person</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">EmployeeID</span><span class="o">%</span><span class="k">2</span>==1).values,[0,2,-2]].head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeID</th>
+      <th>age</th>
+      <th>job_title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1319</td>
+      <td>58</td>
+      <td>VP Stores</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1321</td>
+      <td>56</td>
+      <td>VP Human Resources</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1323</td>
+      <td>53</td>
+      <td>Exec Assistant, VP Stores</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1325</td>
+      <td>51</td>
+      <td>Exec Assistant, Legal Counsel</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1329</td>
+      <td>48</td>
+      <td>Store Manager</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_op</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_op</span> <span class="o">=</span> <span class="n">df_op</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">df_op</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span><span class="o">.</span><span class="n">swaplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df_op</span> <span class="o">=</span> <span class="n">df_op</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_op</span> <span class="o">=</span> <span class="n">df_op</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;gender&#39;</span><span class="p">:</span><span class="s1">&#39;Gender&#39;</span><span class="p">})</span>
+<span class="n">df_op</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df_op</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">df_op</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df_op</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">tuple</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)))</span>
+<span class="n">df_op</span> <span class="o">=</span> <span class="n">df_op</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;department&#39;</span><span class="p">])</span>
+<span class="n">df_op</span> <span class="o">=</span> <span class="n">df_op</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_op</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>三、巧克力评价数据的索引操作<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>现有一份关于巧克力评价的数据集：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch3/chocolate.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>把列索引名中的换行符替换为空格。</p></li>
+<li><p>巧克力Rating评分为1至5，每0.25分一档，请选出2.75分及以下且可可含量Cocoa Percent高于中位数的样本。</p></li>
+<li><p>选出Review Date在2012年之后且Company Location不属于France、Canada、Amsterdam或Belgium的样本。</p></li>
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch3/chocolate.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)))</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Company</th>
+      <th>Review Date</th>
+      <th>Cocoa Percent</th>
+      <th>Company Location</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A. Morin</td>
+      <td>2016</td>
+      <td>63%</td>
+      <td>France</td>
+      <td>3.75</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A. Morin</td>
+      <td>2015</td>
+      <td>70%</td>
+      <td>France</td>
+      <td>2.75</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A. Morin</td>
+      <td>2015</td>
+      <td>70%</td>
+      <td>France</td>
+      <td>3.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A. Morin</td>
+      <td>2015</td>
+      <td>70%</td>
+      <td>France</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A. Morin</td>
+      <td>2015</td>
+      <td>70%</td>
+      <td>France</td>
+      <td>3.50</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cocoa Percent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cocoa Percent&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;(Rating&lt;3)&amp;(`Cocoa Percent`&gt;`Cocoa Percent`.median())&#39;</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Company</th>
+      <th>Review Date</th>
+      <th>Cocoa Percent</th>
+      <th>Company Location</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>33</th>
+      <td>Akesson's (Pralus)</td>
+      <td>2010</td>
+      <td>0.75</td>
+      <td>Switzerland</td>
+      <td>2.75</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Akesson's (Pralus)</td>
+      <td>2010</td>
+      <td>0.75</td>
+      <td>Switzerland</td>
+      <td>2.75</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Alain Ducasse</td>
+      <td>2014</td>
+      <td>0.75</td>
+      <td>France</td>
+      <td>2.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Review Date&quot;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2012</span><span class="p">)</span>
+    <span class="o">&amp;</span> <span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Company Location&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span>
+        <span class="p">[</span><span class="s2">&quot;France&quot;</span><span class="p">,</span> <span class="s2">&quot;Canada&quot;</span><span class="p">,</span> <span class="s2">&quot;Amsterdam&quot;</span><span class="p">,</span> <span class="s2">&quot;Belgium&quot;</span><span class="p">])]</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Company</th>
+      <th>Review Date</th>
+      <th>Cocoa Percent</th>
+      <th>Company Location</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>23</th>
+      <td>Acalli</td>
+      <td>2015</td>
+      <td>0.7</td>
+      <td>U.S.A.</td>
+      <td>3.75</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Acalli</td>
+      <td>2015</td>
+      <td>0.7</td>
+      <td>U.S.A.</td>
+      <td>3.75</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Alexandre</td>
+      <td>2017</td>
+      <td>0.7</td>
+      <td>Netherlands</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>Alexandre</td>
+      <td>2017</td>
+      <td>0.7</td>
+      <td>Netherlands</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Alexandre</td>
+      <td>2017</td>
+      <td>0.7</td>
+      <td>Netherlands</td>
+      <td>3.50</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="solution2.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">第二章</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="solution4.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">第四章</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 耿远昊<br/>
+    
+        &copy; 版权 2021, 耿远昊.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

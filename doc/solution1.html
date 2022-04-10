@@ -1,0 +1,974 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第一章</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="第二章" href="solution2.html" />
+    <link rel="prev" title="pandas数据处理与分析 - 参考答案" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  章节
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   第一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution2.html">
+   第二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution3.html">
+   第三章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution4.html">
+   第四章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution5.html">
+   第五章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution6.html">
+   第六章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution7.html">
+   第七章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution8.html">
+   第八章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution9.html">
+   第九章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution10.html">
+   第十章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution11.html">
+   第十一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution12.html">
+   第十二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution13.html">
+   第十三章
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solution1.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、利用列表推导式实现矩阵乘法
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、计算卡方统计量
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   三、统计某商店的月度销量情况
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>第一章</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、利用列表推导式实现矩阵乘法
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、计算卡方统计量
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   三、统计某商店的月度销量情况
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove_input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>第一章<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>零、练一练<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>给定一个包含5个英语单词的列表，请构造1个字典以列表的元素为键，以每个键对应的单词字母个数为值。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;pineapple&quot;</span><span class="p">,</span> <span class="s2">&quot;watermelon&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">en_list</span><span class="p">}</span>
+<span class="n">en_dict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;apple&#39;: 5, &#39;banana&#39;: 6, &#39;peach&#39;: 5, &#39;pineapple&#39;: 9, &#39;watermelon&#39;: 10}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>给定3个二维整数列表<span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span>, <span class="math notranslate nohighlight">\(L_3\)</span>，它们的形状都是<span class="math notranslate nohighlight">\(30\times20\)</span>，即每个列表中包含30个内层列表，并且每一个内层列表中包含20个整数。请利用列表推导式，构造一个形状相同的新列表 <span class="math notranslate nohighlight">\(L_{new}\)</span>，其满足任意一个位置的值是<span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span>, <span class="math notranslate nohighlight">\(L_3\)</span>相应位置的最小值。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="p">[[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)]</span>
+<span class="n">L3</span> <span class="o">=</span> <span class="p">[[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L_new</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">min</span><span class="p">(</span><span class="n">L1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">L2</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">L3</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>对于上面构造的my_list，请选出包含3的整数倍的内层列表。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">any</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="k">3</span>==0 for i in x), my_list))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3, 4, 5], [6], [9]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请用zip函数完成上述例子中enumerate的功能。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;ball&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;eye&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L2</span><span class="p">)),</span> <span class="n">L2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 apple
+1 ball
+2 cat
+3 dog
+4 eye
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>split()函数从功能上更类似于concatenate()的逆操作还是stack()的逆操作？请说明理由。</p>
+</div>
+<p>split()函数更类似于concatenate()的逆操作，首先stack必须由多个尺寸相同的数组来拼接，新产生的维度大小取决于拼接数组的数量，而concatenate的被拼接数组在拼接维度上可以不一致且不会产生新维度。下面的例子更清楚地反映了这组互逆操作的特性：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">arr_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">indices_or_sections</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">arr</span> <span class="o">==</span> <span class="n">arr_new</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请使用repeat函数分别构造两个<span class="math notranslate nohighlight">\(10\times 10\)</span>的数组，第一个数组要求第i行的元素值都为i，第二个数组要求第i列的元素值都为i。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rep_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">arr</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">],</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rep_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:],</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>与Python中字符串的切片类似，numpy数组切片的首末端点以及步长都可以是负数，例如arr是一个大小为<span class="math notranslate nohighlight">\(10\times 5\)</span>的数组，那么arr[-2:-10:-3, 1:-1:2]切片结果的大小为<span class="math notranslate nohighlight">\(3\times 2\)</span>。请给出一些相应的例子，并观察结果是否与预期一致。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.33520861, 0.94048966],
+       [0.47515341, 0.59493803],
+       [0.96884078, 0.86038504]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>-2:-10:-3表示从倒数第2行开始切片，逆向地每3个取一次，直到倒数第10行且不包含倒数第10行，因此即为倒数第8行、倒数第5行和倒数第2行共计三行。列上的切片类似，从第一列开始切片，每两列取一次，直到倒数第一列且不包含倒数第一列，因此即为第2列、第4列共计两列。</p>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>对于如下的数组维度组合，判断使用逐元素运算是否会报错，如果不会请直接写出广播结果的维度：</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1\times 3\times 5\)</span>和<span class="math notranslate nohighlight">\(3\times 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\times 5\times 3\times 4\)</span>和<span class="math notranslate nohighlight">\(1\times 3\times 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\times 2\times 1\times 5\)</span>和<span class="math notranslate nohighlight">\(2\times 5\)</span></p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1\times 3\times 5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\times 5\times 3\times 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\times 2\times 2\times 5\)</span></p></li>
+</ul>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>对于上述price维度的修改，除了使用np.newaxis之外，还可以使用reshape()和expand_dims()来实现，请分别使用这两种方法完成等价操作。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span> <span class="c1"># 假设给定的单价是25、20和30</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">price</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="c1"># newaxis即None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[25],
+       [20],
+       [30]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">price</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[25],
+       [20],
+       [30]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[25],
+       [20],
+       [30]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>仿照上面的例子，给出按年级统计学生总人数的方案，即返回数组的包含3个元素，分别为各年级中所有学校和班级的学生人数之和。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">my_matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>Softmax函数在深度学习的模型设计中有重要应用，对于1维数组<span class="math notranslate nohighlight">\([x_1,...,x_n]\)</span>进行Softmax归一化时，每一个元素被修正为<span class="math notranslate nohighlight">\(\tilde{x}_i={\rm Softmax(x_i)}=\frac{\exp(x_i)}{\sum_{i=1}^n\exp(x_i)}\)</span>。现给定一个二维数组，请对其进行逐行Softmax归一化，且不得使用for循环。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">exp_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">exp_arr</span> <span class="o">/</span> <span class="n">exp_arr</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.31713733, 0.20600401, 0.1951198 , 0.28173886],
+       [0.29176637, 0.16834142, 0.17212601, 0.3677662 ],
+       [0.2104158 , 0.15940809, 0.34149792, 0.28867819],
+       [0.26203081, 0.20632176, 0.18959128, 0.34205615]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>阅读逻辑函数的相关内容，完成下列练习：</p>
+<ul class="simple">
+<li><p>逻辑运算符的优先顺序是怎样的？其左右的数组能够被广播吗？请构造例子说明。</p></li>
+<li><p>给定一个维度为<span class="math notranslate nohighlight">\(m\times n\)</span>的整数数组，请返回一个元素全为0或1的同维度数组，且满足元素取1当且仅当该位置在原数组中的对应元素是原数组中同行元素的最大值。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>优先级从高到低：not(&quot;~&quot;)、and(&quot;&amp;&quot;)、or(“|”)，可以广播</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">False</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">a</span> <span class="o">|</span> <span class="n">a</span> <span class="c1"># 说明not优先级高于or</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">b</span> <span class="o">&amp;</span> <span class="n">b</span> <span class="c1"># 说明not优先级高于and</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span> <span class="o">&amp;</span> <span class="n">b</span> <span class="c1"># 说明and优先级高于or</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="c1"># 广播</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ True,  True],
+       [ True, False]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>方案如下</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">a</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 0, 1, 0, 0],
+       [0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 1],
+       [0, 0, 0, 0, 1],
+       [0, 0, 1, 0, 0]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>利用round函数将上例中的随机矩阵按第1位小数四舍五入取整，依次筛选出矩阵中满足如下条件的行：</p>
+<ul class="simple">
+<li><p>行元素至多有一个1</p></li>
+<li><p>行元素至少有一个0</p></li>
+<li><p>行元素既非全0又非全1</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">my_array</span><span class="o">.</span><span class="n">round</span><span class="p">()</span>
+<span class="n">arr_1</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">arr</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">arr_2</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="o">~</span><span class="n">arr</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+<span class="n">arr_3</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="o">~</span><span class="n">arr</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">arr</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>np.clip(array, min, max)是一种截断函数，对于数组中超过max的值会被截断为max，数组中不足min的值会被截断为min。请用np.where()实现这个函数。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 2, 3, 4, 4])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">arr</span><span class="o">&lt;=</span><span class="mi">4</span><span class="p">,</span> <span class="n">arr</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">arr</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 2, 3, 4, 4])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在上面这个例子中，nonzero()的输入a是1维数组，通过a[np.nonzero(a)]能够取出数组中所有的非零元素值。事实上，nonzero()函数也能够以高维数组作为参数传入，此时其返回值代表了什么含义？a[np.nonzero(a)]仍然能够选出数组中所有的非零元素值吗？请解释理由。</p>
+</div>
+<p>通过查阅文档可知，返回值分别代表了所有非零元素在每一个维度上对应的索引，在1.2.3中我们曾给出了一个通过在相应位置传入同长度列表来索引对应位置元素的例子（见“target[[0, 1], [0, 1], [0, 1]]”），这里的做法是完全一致的：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="c1"># x为所有非零元素在dim=0上的索引，y为所有元素在dim=1上的索引</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>一、利用列表推导式实现矩阵乘法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>记矩阵<span class="math notranslate nohighlight">\(A_{m\times n}\)</span>，矩阵<span class="math notranslate nohighlight">\(B_{n\times p}\)</span>，记<span class="math notranslate nohighlight">\(A\)</span>与<span class="math notranslate nohighlight">\(B\)</span>的矩阵乘法结果为矩阵<span class="math notranslate nohighlight">\(C_{m\times p}\)</span>，此时其第<span class="math notranslate nohighlight">\(i\)</span>行第<span class="math notranslate nohighlight">\(j\)</span>列的元素满足</p>
+<div class="math notranslate nohighlight">
+\[
+C_{ij}=\sum_{k=1}^nA_{ik}B_{kj}
+\]</div>
+<p>在numpy中可以使用“&#64;”符号来进行矩阵乘法：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">@</span> <span class="n">B</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[10, 13],
+       [28, 40]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>请利用列表推导式来实现矩阵乘法。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span>
+        <span class="nb">sum</span><span class="p">(</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="p">]</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[10, 13], [28, 40]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>二、计算卡方统计量<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>设矩阵<span class="math notranslate nohighlight">\(A_{m\times n}\)</span>，记<span class="math notranslate nohighlight">\(B_{ij} = \frac{(\sum_{i=1}^mA_{ij})\times (\sum_{j=1}^nA_{ij})}{\sum_{i=1}^m\sum_{j=1}^nA_{ij}}\)</span>，定义矩阵<span class="math notranslate nohighlight">\(A\)</span>对应的卡方统计量如下</p>
+<div class="math notranslate nohighlight">
+\[
+\chi^2 = \sum_{i=1}^m\sum_{j=1}^n\frac{(A_{ij}-B_{ij})^2}{B_{ij}}
+\]</div>
+<p>请利用numpy对如下构造的矩阵<span class="math notranslate nohighlight">\(A\)</span>计算相应的卡方统计量<span class="math notranslate nohighlight">\(\chi^2\)</span>。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">A</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="p">((</span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">B</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.842696601945802
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>三、统计某商店的月度销量情况<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>在文件夹data/ch1/shop_sales下存放了200类货品从2001年1月至2020年12月的月度销量数组，每个数组的大小为<span class="math notranslate nohighlight">\(Y\times M\)</span>，其中<span class="math notranslate nohighlight">\(Y=20\)</span>表示年维度，<span class="math notranslate nohighlight">\(M=12\)</span>表示月维度。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用np.load能够加载npy数组</span>
+<span class="c1"># 使用np.save(&quot;文件路径/my_arr.npy&quot;)能够将数组保存到本地</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch1/shop_sales/product_1.npy&quot;</span><span class="p">)</span>
+<span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20, 12)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>计算各季度（从1月至12月，每3个月表示一个季度）的销售总量，输出结果为<span class="math notranslate nohighlight">\(Y\times Q\)</span>的数组，其中<span class="math notranslate nohighlight">\(Q=4\)</span>表示季度维度。</p></li>
+<li><p>计算各月不同种类货品销量的方差，输出结果为<span class="math notranslate nohighlight">\(Y\times M\)</span>的数组。</p></li>
+<li><p>在文件data/ch1/increase_rate.npy中记录了各类货品每月关于上月的单价涨幅，数组大小为<span class="math notranslate nohighlight">\(200\times 20*12\)</span>，其中<span class="math notranslate nohighlight">\(20*12\)</span>表示20年且每年12个月，共计240个月。在文件data/ch1/unit_price.npy中记录了各类货品在2015年1月的单价，数组长度为<span class="math notranslate nohighlight">\(200\)</span>。请计算所有货品从2001年1月至2020年12月的单价，输出结果为<span class="math notranslate nohighlight">\(Y\times M\times 200\)</span>。</p></li>
+<li><p>结合上一小问的结果，求出各类货品最大月度销售额的所在月份，输出结果为长度为<span class="math notranslate nohighlight">\(200\)</span>的1维数组，其中每个元素为相应月份的字符串表示，例如“2008-05”。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;data/ch1/shop_sales/product_</span><span class="si">%d</span><span class="s2">.npy&quot;</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="o">%</span><span class="k">i</span>) for i in range(1, 201)], axis=0)
+<span class="n">res_1</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_2</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">res_2</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20, 12)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch1/increase_rate.npy&quot;</span><span class="p">)</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch1/unit_price.npy&quot;</span><span class="p">)</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="o">*</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">14</span> <span class="o">*</span> <span class="mi">12</span> <span class="c1"># 2015年对应的索引位置</span>
+<span class="n">price</span><span class="p">[:,</span> <span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">base</span>
+<span class="n">price</span><span class="p">[:,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span><span class="n">rate</span><span class="p">[:,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">base</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">price</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">rate</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">cumprod</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">base</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">price</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">price</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20, 12, 200)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>4</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">price</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">year</span><span class="p">,</span> <span class="n">month</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">//</span> <span class="mi">12</span> <span class="o">+</span> <span class="mi">2001</span><span class="p">,</span> <span class="n">idx</span> <span class="o">%</span> <span class="mi">12</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">-</span><span class="si">%02d</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)]</span>
+<span class="n">L</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># 展示前5个</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;2018-12&#39;, &#39;2003-11&#39;, &#39;2020-11&#39;, &#39;2006-11&#39;, &#39;2003-01&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">pandas数据处理与分析 - 参考答案</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="solution2.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">第二章</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 耿远昊<br/>
+    
+        &copy; 版权 2021, 耿远昊.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

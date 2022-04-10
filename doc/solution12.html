@@ -1,0 +1,1635 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第十二章</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="第十三章" href="solution13.html" />
+    <link rel="prev" title="第十一章" href="solution11.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  章节
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution1.html">
+   第一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution2.html">
+   第二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution3.html">
+   第三章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution4.html">
+   第四章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution5.html">
+   第五章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution6.html">
+   第六章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution7.html">
+   第七章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution8.html">
+   第八章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution9.html">
+   第九章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution10.html">
+   第十章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution11.html">
+   第十一章
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   第十二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution13.html">
+   第十三章
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solution12.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、卡方分箱
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、基于标签的特征构造
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   三、信用卡诈骗数据的特征工程
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>第十二章</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   一、卡方分箱
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   二、基于标签的特征构造
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   三、信用卡诈骗数据的特征工程
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove_input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>第十二章<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>零、练一练<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在阅读归一化方法的内容后，思考以下问题：</p>
+<ul class="simple">
+<li><p>上述案例中只在单侧添加了极端值，对于双侧都含有极端值的分布如何将其合理变换至<span class="math notranslate nohighlight">\([0,1]\)</span>区间？</p></li>
+<li><p>如何修改上文归一至<span class="math notranslate nohighlight">\([−1,1]\)</span>区间的方法，使其归一化不易受极端值影响？</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution12_2_0.png" src="_images/solution12_2_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_fix</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">clip</span><span class="p">((</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">s_fix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution12_3_0.png" src="_images/solution12_3_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 还可以通过异常检测来做，预测为异常的离群点进行剔除</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LocalOutlierFactor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">])</span>
+<span class="n">s_fix2</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">label</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">s_fix2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution12_4_0.png" src="_images/solution12_4_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 直接用上面的去除异常后再操作</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">s_fix</span> <span class="o">-</span> <span class="n">s_fix</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">new_data</span> <span class="o">/</span> <span class="n">new_data</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution12_6_0.png" src="_images/solution12_6_0.png" />
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>阅读上述关于上凸变换的内容，完成以下任务：</p>
+<ul class="simple">
+<li><p>请模仿图12.5对土地面积进行类似绘制。</p></li>
+<li><p>当对数变换的底数变化时，新数据的偏度会变化吗？为什么？</p></li>
+<li><p>请构造1个上凸变换并将其应用于人口的特征列使其偏度尽可能接近0。</p></li>
+<li><p>在自变量<span class="math notranslate nohighlight">\(x\)</span>非负时，幂变换<span class="math notranslate nohighlight">\(x\rightarrow x^\lambda\)</span>在<span class="math notranslate nohighlight">\(\lambda\)</span>取何值为下凸变换（二阶导数恒大于0）？它一定是关于自变量的单调递增变换吗？</p></li>
+<li><p>鉴于上凸变换能够将右偏分布的偏度减小，那么也就不难想到下凸变换能够提高左偏分布的偏度，请构造1个相应的例子来说明。（偏态分布可以选择从scipy.stats.skewnorm.rvs中生成）</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch12/area-pop.csv&quot;</span><span class="p">)</span>
+<span class="n">my_lambda</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">,</span> <span class="mf">1e0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">skew</span> <span class="o">=</span> <span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">LandArea</span> <span class="o">**</span> <span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">my_lambda</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">my_lambda</span><span class="p">,</span> <span class="n">skew</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$\lambda$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Skewness of Land Area&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<p>由于对随机变量进行数乘不会改变偏度（参见偏度公式易得），且<span class="math notranslate nohighlight">\(Skew[\log_a(X)] = Skew[\frac{\log_b(X)}{\log_b(a)}]=Skew[\log_b(X)]\)</span>，因此不变。</p>
+<ul class="simple">
+<li><p>3</p></li>
+</ul>
+<p>观察到<span class="math notranslate nohighlight">\(\lambda\)</span>与偏度是单调关系，因此考虑使用二分法：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch12/area-pop.csv&quot;</span><span class="p">)</span>
+<span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mf">1e-15</span><span class="p">:</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">mid_skew</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Population</span> <span class="o">**</span> <span class="n">mid</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">mid_skew</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span>
+<span class="n">mid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.42813584913391733
+</pre></div>
+</div>
+</div>
+</div>
+<p>因此可取<span class="math notranslate nohighlight">\(x\rightarrow x^{0.428}\)</span></p>
+<ul class="simple">
+<li><p>4</p></li>
+</ul>
+<p>当<span class="math notranslate nohighlight">\(\lambda\in (-\infty, 0)\cup(1,\infty)\)</span>时为下凸变换，且当取大于1的部分时关于自变量单调递增。</p>
+<ul class="simple">
+<li><p>5</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">skewnorm</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">skewnorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution12_10_0.png" src="_images/solution12_10_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">skewnorm</span>
+<span class="n">arr_transformed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">arr_transformed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution12_11_0.png" src="_images/solution12_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">(),</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr_transformed</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0.9270804770609488, 0.20833973262593455)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>scipy中的stats模块封装了许多与分布有关的生成函数，通过from scipy import stats导入后，对于不同的c值，stats.loggamma.rvs(c, size=500)能够产生不同偏态的对数伽马分布。请利用这个函数构造一些实数区间上的偏态分布，分别使用Box-Cox方法和Yeo-Johnson方法（处理含负值的数据）来进行数据变换，并观察变换前后的数据分布变化情况以及偏度变化。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">loggamma</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="o">-</span><span class="n">loggamma</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">))</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3973251898008774
+</pre></div>
+</div>
+<img alt="_images/solution12_14_1.png" src="_images/solution12_14_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">boxcox</span>
+<span class="n">arr_boxcox</span><span class="p">,</span> <span class="n">Lambda</span> <span class="o">=</span> <span class="n">boxcox</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">arr_boxcox</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr_boxcox</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.05967809812317035
+</pre></div>
+</div>
+<img alt="_images/solution12_15_1.png" src="_images/solution12_15_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">yeojohnson</span>
+<span class="n">arr_yeojohnson</span><span class="p">,</span> <span class="n">Lambda</span> <span class="o">=</span> <span class="n">yeojohnson</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">arr_yeojohnson</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr_yeojohnson</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.008792036144633997
+</pre></div>
+</div>
+<img alt="_images/solution12_16_1.png" src="_images/solution12_16_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">loggamma</span>
+<span class="n">arr_neg</span> <span class="o">=</span> <span class="n">loggamma</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">arr_neg</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr_neg</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.891705548089777
+</pre></div>
+</div>
+<img alt="_images/solution12_17_1.png" src="_images/solution12_17_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">yeojohnson</span>
+<span class="n">arr_neg_yeojohnson</span><span class="p">,</span> <span class="n">Lambda</span> <span class="o">=</span> <span class="n">yeojohnson</span><span class="p">(</span><span class="n">arr_neg</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">arr_neg_yeojohnson</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr_neg_yeojohnson</span><span class="p">)</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.00037076210222004364
+</pre></div>
+</div>
+<img alt="_images/solution12_18_1.png" src="_images/solution12_18_1.png" />
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在data/ch12/passage_ch文件夹下包含了若干篇中文文档，结合jieba分词工具和sklearn中的tf-idf计算模块，提取每篇文章的主题特征。（提示：在TfidfVectorizer构造器中指定tokenizer参数为jieba.cut）</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TfidfVectorizer</span><span class="p">,</span> <span class="n">TfidfTransformer</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">jieba</span>
+<span class="n">passages</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/ch12/passage_ch/</span><span class="si">%d</span><span class="s2">.txt&quot;</span><span class="o">%</span><span class="k">i</span>, encoding=&quot;utf8&quot;) as f:
+        <span class="n">passage</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+        <span class="n">passages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">passage</span><span class="p">)</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">=</span><span class="n">jieba</span><span class="o">.</span><span class="n">cut</span><span class="p">)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">passages</span><span class="p">)</span>
+<span class="n">transformer</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">transformer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())[</span><span class="n">result</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building prefix dict from the default dictionary ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading model from cache C:\Users\gyh\AppData\Local\Temp\jieba.cache
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading model cost 0.672 seconds.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prefix dict has been built successfully.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;地震&#39;, &#39;代谢&#39;, &#39;王安石&#39;, &#39;素描&#39;, &#39;函数&#39;, &#39;计算机&#39;, &#39;微积分&#39;, &#39;上海&#39;, &#39;奥运会&#39;, &#39;哈佛&#39;,
+       &#39;味道&#39;, &#39;鳄鱼&#39;, &#39;冥王星&#39;, &#39;麦克斯韦&#39;, &#39;雕塑&#39;, &#39;智商&#39;, &#39;鲨鱼&#39;, &#39;冰壶&#39;, &#39;钢琴&#39;, &#39;高斯&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请封装一个函数best_ks()，其输入参数为需要分箱的Series、目标变量的Series、分箱的个数，输出结果为best-ks分箱的结果Series，每个元素值为原序列对应元素所属的箱子（Interval）。此处规定，当箱子中只有一个类别或只有一个元素时则不进行分箱，因此最终箱子的个数可能与给定的分箱个数可能不同。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bisect</span>
+<span class="k">def</span> <span class="nf">best_ks</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">bin_left</span><span class="p">,</span> <span class="n">bin_right</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mf">0.001</span>
+    <span class="n">cut_points</span> <span class="o">=</span> <span class="p">[</span><span class="n">bin_left</span><span class="p">,</span> <span class="n">bin_right</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">_helper_find</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">data_sorted</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;s&quot;</span><span class="p">:</span><span class="n">s</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="n">y</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+        <span class="n">y_0</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_sorted</span><span class="o">.</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">data_sorted</span><span class="o">.</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">y_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_sorted</span><span class="o">.</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">data_sorted</span><span class="o">.</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">cut_point</span> <span class="o">=</span> <span class="n">data_sorted</span><span class="o">.</span><span class="n">iloc</span><span class="p">[(</span><span class="n">y_1</span> <span class="o">-</span> <span class="n">y_0</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">argmax</span><span class="p">()][</span><span class="s2">&quot;s&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">cut_point</span>
+    <span class="k">def</span> <span class="nf">_helper_bin</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">y</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span> <span class="c1"># 只有一个类别了</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># 只有一个元素了</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">cut_point</span> <span class="o">=</span> <span class="n">_helper_find</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">bisect</span><span class="o">.</span><span class="n">insort</span><span class="p">(</span><span class="n">cut_points</span><span class="p">,</span> <span class="n">cut_point</span><span class="p">)</span> <span class="c1"># 插入有序数组</span>
+        <span class="n">bool_left</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="o">&gt;=</span><span class="n">left</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">s</span><span class="o">&lt;</span><span class="n">cut_point</span><span class="p">)</span>
+        <span class="n">bool_right</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="o">&gt;=</span><span class="n">cut_point</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">s</span><span class="o">&lt;</span><span class="n">bin_right</span><span class="p">)</span>
+        <span class="n">_helper_bin</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">bool_left</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">bool_left</span><span class="p">],</span> <span class="n">left</span><span class="p">,</span> <span class="n">cut_point</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">_helper_bin</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">bool_right</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">bool_right</span><span class="p">],</span> <span class="n">right</span><span class="p">,</span> <span class="n">cut_point</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">_helper_bin</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bin_left</span><span class="p">,</span> <span class="n">bin_right</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">cut_points</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">duplicates</span><span class="o">=</span><span class="s2">&quot;drop&quot;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">best_ks</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [8.859, 50.996)
+1     [8.859, 50.996)
+2    [73.897, 99.967)
+3      [0.104, 8.859)
+4     [8.859, 50.996)
+dtype: category
+Categories (4, interval[float64, left]): [[0.104, 8.859) &lt; [8.859, 50.996) &lt; [50.996, 73.897) &lt; [73.897, 99.967)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请模拟生成1个时序Series，对上文提及的所有时间戳特征与时间差特征进行构造。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;20200101&quot;</span><span class="p">,</span> <span class="s2">&quot;20211231&quot;</span><span class="p">))</span>
+<span class="c1"># 是否为双休日</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="c1"># 是否处于节假日</span>
+<span class="n">holiday</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;20201001&quot;</span><span class="p">,</span> <span class="s2">&quot;20201007&quot;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">holiday</span><span class="p">)</span>
+<span class="c1"># 是否处于月初或月末</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">is_month_start</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">is_month_end</span>
+<span class="c1"># 是否处于白天或夜晚</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="c1"># 是否处于特定时间段（如早上八点至十点或每月第一周的周末）</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day_of_week</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span><span class="o">&lt;=</span><span class="mi">7</span><span class="p">))</span>
+<span class="c1"># 样本所处月的工作天数</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">bdate_range</span><span class="p">(</span><span class="s2">&quot;20200101&quot;</span><span class="p">,</span> <span class="s2">&quot;20201231&quot;</span><span class="p">)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;index&quot;</span><span class="p">:</span><span class="s2">&quot;month&quot;</span><span class="p">})</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s2">&quot;month&quot;</span><span class="p">})</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s2">&quot;val&quot;</span><span class="p">})</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">val</span>
+<span class="n">res</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">values</span>
+<span class="c1"># 样本所处日期的年/月/日/小时/分钟/星期</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">second</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span>
+<span class="c1"># k分钟/小时/天/前时间戳对应的元素值和当前时间戳对应的元素值的差</span>
+<span class="n">s_val</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">index</span><span class="o">=</span><span class="n">s</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s_val</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s2">&quot;3D&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">s_val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">timedelta_range</span><span class="p">(</span><span class="s2">&quot;0s&quot;</span><span class="p">,</span> <span class="s2">&quot;10000000s&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;4min 30s&quot;</span><span class="p">))</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span> <span class="c1"># 天数</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span> <span class="o">//</span> <span class="mi">60</span> <span class="c1"># 分钟数</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span> <span class="c1"># 总秒数</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">seconds</span> <span class="c1"># 对天数取余的秒数</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>阅读上述WoE的材料，完成以下问题：</p>
+<ul class="simple">
+<li><p>在WoE的计算中，如果某个组内没有负样本时会导致分母为0，而没有正样本会导致<span class="math notranslate nohighlight">\(\log\)</span>函数的输入值非法，请设计1种方案来处理这2类情况。</p></li>
+<li><p>请构造1个序列及其标签<span class="math notranslate nohighlight">\(y\)</span>，分别使用best-ks分箱和节点分箱2种策略得到序列的WoE特征。</p></li>
+<li><p>对于不同的分箱策略而言，我们可以通过计算信息值（Information Value）<span class="math notranslate nohighlight">\(IV=\sum_i (\frac{P^i}{P^T}-\frac{N^i}{N^T})*WoE_i\)</span>的大小来比较分箱方案的优劣，请对第（2）问中的分箱结果进行比较。一般而言，当IV值超过0.1时，可认为分箱策略是有意义的，当超过0.3时表示分箱效果较好，得分越高则效果越显著。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<p>可将计算公式调整为</p>
+<div class="math notranslate nohighlight">
+\[
+WoE_i=\log[\frac{(P^i+1)/(N^i+1)}{(P^T+1)/(N^T+1)}]
+\]</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span>
+    <span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">n_informative</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_redundant</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">n_classes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_clusters_per_class</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span>
+<span class="n">s</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">)),</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mf">0.5</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)),</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-1.0, 1.0)
+</pre></div>
+</div>
+<img alt="_images/solution12_27_1.png" src="_images/solution12_27_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="k">def</span> <span class="nf">node_cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">cut_edge</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">tree_</span><span class="o">.</span><span class="n">threshold</span><span class="p">)</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="n">cut_edge</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">+</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+    <span class="n">bins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">duplicates</span><span class="o">=</span><span class="s2">&quot;drop&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_ks</span> <span class="o">=</span> <span class="n">best_ks</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">res_node</span> <span class="o">=</span> <span class="n">node_cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">x</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="n">WoE_ks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">res_ks</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="n">WoE_node</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">res_node</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WoE_ks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-3.208, -0.251)   -4.638729
+[-0.251, 0.183)    -0.610136
+[0.183, 0.605)      1.298913
+[0.605, 2.557)      3.048428
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WoE_node</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-inf, -0.239)    -4.641153
+[-0.239, 0.109)   -0.781705
+[0.109, 0.347)     0.296105
+[0.347, inf)       2.744596
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Pt</span><span class="p">,</span> <span class="n">Nt</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">IV_ks</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">WoE_ks</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">bool_s</span> <span class="o">=</span> <span class="n">res_ks</span> <span class="o">==</span> <span class="n">idx</span>
+    <span class="n">WoE</span> <span class="o">=</span> <span class="n">WoE_ks</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="n">IV_ks</span> <span class="o">+=</span> <span class="p">(</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">bool_s</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Pt</span> 
+        <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="n">bool_s</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Nt</span>
+    <span class="p">)</span> <span class="o">*</span> <span class="n">WoE</span>
+<span class="n">IV_ks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.098410522709232
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IV_node</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">WoE_node</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">bool_s</span> <span class="o">=</span> <span class="n">res_node</span> <span class="o">==</span> <span class="n">idx</span>
+    <span class="n">WoE</span> <span class="o">=</span> <span class="n">WoE_node</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="n">IV_ks</span> <span class="o">+=</span> <span class="p">(</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">bool_s</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Pt</span> 
+        <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="n">bool_s</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Nt</span>
+    <span class="p">)</span> <span class="o">*</span> <span class="n">WoE</span>
+<span class="n">IV_ks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.178057847331045
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请对城市面积和人口数据集（即data/ch12/area-pop.csv）中的两个特征进行对数变换和标准化变换后降维，选取第一个主成分。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch12/area-pop.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 取第一主成分</span>
+<span class="n">new_feature</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">new_feature</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># 降维特征的维度</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(120, 1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请根据上述的检验思想和代码完成以下问题：</p>
+<ul class="simple">
+<li><p>将<span class="math notranslate nohighlight">\(2\times 2\)</span>的卡方检验推广至<span class="math notranslate nohighlight">\(r\times c\)</span>。同时，给出特征重要性选择函数chi2_choose()的构造，它接收的参数为2维的离散特征数组<span class="math notranslate nohighlight">\(X\)</span>和1维的目标数组<span class="math notranslate nohighlight">\(y\)</span>，输出值为这些特征的<span class="math notranslate nohighlight">\(p\)</span>值排名。统计量的计算可参考第一章习题二，也可直接使用chi2_contingency()。</p></li>
+<li><p>虽然连续型的特征和目标变量无法直接进行卡方检验，但是可以将特征和目标进行分箱从而转化为类别，请利用这个想法对df_reg的特征<span class="math notranslate nohighlight">\(f_1\)</span>关于<span class="math notranslate nohighlight">\(y\)</span>进行卡方检验。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">chi2_contingency</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+        <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+        <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">chi2_choose</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">ps</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">chi2_contingency</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">y</span><span class="p">))[:</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">ps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;Cols&quot;</span><span class="p">:</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+            <span class="s2">&quot;Rank&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">ps</span><span class="p">)</span><span class="o">.</span><span class="n">rank</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+<span class="n">chi2_choose</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cols</th>
+      <th>Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span>
+        <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span>
+        <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">chi2_choose_continuous</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">ps</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span><span class="p">:</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">chi2_contingency</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">y</span><span class="p">))[:</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">ps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;Cols&quot;</span><span class="p">:</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+            <span class="s2">&quot;Rank&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">ps</span><span class="p">)</span><span class="o">.</span><span class="n">rank</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+<span class="n">chi2_choose_continuous</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cols</th>
+      <th>Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请构造1个3分类的数据集（在make_classification()中指定n_classes为3），选取其中的1个变量进行F检验，再调用f_classif核对是否与其输出结果一致。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+<span class="n">cls_X</span><span class="p">,</span> <span class="n">cls_y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_informative</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df_cls</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">cls_X</span><span class="p">,</span> <span class="n">cls_y</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;f</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">i</span> for i in range(1, 11)]+[&quot;y&quot;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group</span> <span class="o">=</span> <span class="n">df_cls</span><span class="p">[[</span><span class="s2">&quot;f1&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">W</span> <span class="o">=</span> <span class="p">((</span><span class="n">group</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df_cls</span><span class="p">[</span><span class="s2">&quot;f1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">group</span><span class="o">.</span><span class="n">count</span><span class="p">())</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="s2">&quot;f1&quot;</span><span class="p">]</span>
+<span class="n">E</span> <span class="o">=</span> <span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">var</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="s2">&quot;f1&quot;</span><span class="p">]</span>
+<span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="n">W</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">E</span><span class="o">/</span><span class="p">(</span><span class="n">df_cls</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">F</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.014934961909982
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">f</span> <span class="k">as</span> <span class="n">f_distribution</span>
+<span class="n">f_distribution</span><span class="o">.</span><span class="n">sf</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">df_cls</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3628001419102242
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">f_classif</span>
+<span class="n">F</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">f_classif</span><span class="p">(</span><span class="n">df_cls</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">df_cls</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<span class="n">F</span><span class="p">,</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([1.01493496]), array([0.36280014]))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>sklearn中svm模块下的分类模型LinearSVC也支持使用<span class="math notranslate nohighlight">\(L_1\)</span>正则化来训练模型，请阅读相应的官方文档页面并仿照上述LASSO或逻辑回归的例子，对df_cls数据集进行变量选择。（提示：参考文档并尝试调节SelectFromModel的threshold参数）</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectFromModel</span>
+<span class="n">cls_X</span><span class="p">,</span> <span class="n">cls_y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_informative</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_cls</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">cls_X</span><span class="p">,</span> <span class="n">cls_y</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;f</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">i</span> for i in range(1, 11)]+[&quot;y&quot;])
+<span class="n">model_cls</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s2">&quot;l1&quot;</span><span class="p">,</span> <span class="n">dual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">model_cls</span> <span class="o">=</span> <span class="n">model_cls</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_cls</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">df_cls</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">SelectFromModel</span><span class="p">(</span><span class="n">model_cls</span><span class="p">,</span> <span class="n">prefit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">X_cls_new</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_cls</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">X_cls_new</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10000, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>如何修改上述代码以合理估计未被剔除列的特征重要性排名（需要考虑hit数相同时特征重要性的比较）？</p>
+</div>
+<p>只需计算每个特征平均每轮的1-p_accept（当p_accept小表示接收概率大）后排序即可：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
+<span class="n">reg_X</span><span class="p">,</span> <span class="n">reg_y</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_informative</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_targets</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_reg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">reg_X</span><span class="p">,</span> <span class="n">reg_y</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;f</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">i</span> for i in range(1, 11)]+[&quot;y&quot;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingRegressor</span>
+<span class="n">alpha</span><span class="p">,</span> <span class="n">max_iter</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">10</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">GradientBoostingRegressor</span><span class="p">(</span>
+    <span class="n">n_estimators</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">hit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cur_iter</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">status</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">()</span> <span class="ow">and</span> <span class="n">cur_iter</span> <span class="o">&lt;=</span> <span class="n">max_iter</span><span class="p">:</span>
+    <span class="n">df_shuffled</span> <span class="o">=</span> <span class="n">df_reg</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">)</span> 
+    <span class="n">df_shuffled</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sf_f</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">m</span> for m in range(1,11)]
+    <span class="n">df_concat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_reg</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">df_shuffled</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_concat</span><span class="p">,</span> <span class="n">df_reg</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">fi</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">feature_importances_</span>
+    <span class="n">original_importance</span> <span class="o">=</span> <span class="n">fi</span><span class="p">[:</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">shuffled_importance</span> <span class="o">=</span> <span class="n">fi</span><span class="p">[</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">F_max</span> <span class="o">=</span> <span class="n">shuffled_importance</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">original_importance</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">F_max</span><span class="p">:</span>
+            <span class="n">hit</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">status</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">p_accept</span> <span class="o">=</span> <span class="n">binom</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">cur_iter</span> <span class="o">-</span> <span class="n">hit</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cur_iter</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">p_reject</span> <span class="o">=</span> <span class="n">binom</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">hit</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cur_iter</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="c1"># 为什么需要判断？前面几轮实际上还不稳定，得出的概率值方差很大</span>
+        <span class="k">if</span> <span class="n">cur_iter</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">ps</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">p_accept</span>
+            <span class="n">counts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">threshold</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">/</span> <span class="p">(</span><span class="n">df_reg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">p_accept</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">:</span>
+            <span class="n">status</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">p_reject</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">:</span>
+            <span class="n">status</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">cur_iter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">proba</span> <span class="o">=</span> <span class="n">ps</span> <span class="o">/</span> <span class="n">counts</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Column&quot;</span><span class="p">:</span> <span class="n">df_cls</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;Rank&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">proba</span><span class="p">)</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;first&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Proba of Accept&quot;</span><span class="p">:</span> <span class="n">proba</span>
+<span class="p">})</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Column</th>
+      <th>Rank</th>
+      <th>Proba of Accept</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>f1</td>
+      <td>5</td>
+      <td>0.771875</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>f2</td>
+      <td>4</td>
+      <td>0.907813</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>f3</td>
+      <td>8</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>f4</td>
+      <td>7</td>
+      <td>0.020313</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>f5</td>
+      <td>1</td>
+      <td>0.988281</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>f6</td>
+      <td>9</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>f7</td>
+      <td>2</td>
+      <td>0.988281</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>f8</td>
+      <td>3</td>
+      <td>0.988281</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>f9</td>
+      <td>6</td>
+      <td>0.673438</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>f10</td>
+      <td>10</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>一、卡方分箱<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>卡方分箱是一种利用卡方值来分箱的方法，其核心思想是：对于2个相邻的箱子（实际表示区间），如果目标<span class="math notranslate nohighlight">\(y\)</span>和箱子所属编号（即按照属于左边的箱子还是右边的箱子划分类别）之间的卡方值较小，说明这2个箱子的边界划分无法有效区分目标<span class="math notranslate nohighlight">\(y\)</span>的情况，因此需要对这2个箱子进行合并。其分箱流程为：事先指定最大分箱数量<span class="math notranslate nohighlight">\(Bin_{max}\)</span>、最小分箱数量<span class="math notranslate nohighlight">\(Bin_{min}\)</span>和阈值<span class="math notranslate nohighlight">\(\chi_0^2\)</span>，首先对数据按照最大分箱数量进行qcut得到<span class="math notranslate nohighlight">\(Bin_{max}\)</span>个箱子，接着每一轮计算所有2个相邻箱子（特征需要排序）的卡方值，合并这一轮中卡方值最小的1组相邻箱子，算法终止条件为某一轮剩余的箱子个数达到了最小分箱数量<span class="math notranslate nohighlight">\(Bin_{min}\)</span>或者所有相邻箱子的卡方值都高于给定的阈值<span class="math notranslate nohighlight">\(\chi_0^2\)</span>。sklearn内置的鸢尾花数据集是一个3分类任务的数据集，请根据上述卡方分箱的原理对于“sepal length (cm)”列进行分箱。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_chi2</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bins</span><span class="p">):</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">y</span><span class="p">[(</span><span class="n">s</span><span class="o">&gt;=</span><span class="n">bins</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">&amp;</span><span class="p">(</span><span class="n">s</span><span class="o">&lt;</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="n">y</span><span class="p">[(</span><span class="n">s</span><span class="o">&gt;=</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">&amp;</span><span class="p">(</span><span class="n">s</span><span class="o">&lt;</span><span class="n">bins</span><span class="p">[</span><span class="mi">2</span><span class="p">])]</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">y1</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">y2</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">y1</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">y2</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">chi2_contingency</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">chi2_cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">max_nbins</span><span class="p">,</span> <span class="n">min_nbins</span><span class="p">,</span> <span class="n">chi2_0</span><span class="p">):</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">max_nbins</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">to_tuples</span><span class="p">()</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="n">bins</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bins</span><span class="p">))]</span> <span class="o">+</span> <span class="p">[</span><span class="n">bins</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="n">cur_bins</span><span class="p">,</span> <span class="n">cur_chi2</span> <span class="o">=</span> <span class="n">max_nbins</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+    <span class="k">while</span> <span class="n">cur_bins</span> <span class="o">&gt;</span> <span class="n">min_nbins</span> <span class="ow">and</span> <span class="n">cur_chi2</span> <span class="o">&lt;=</span> <span class="n">chi2_0</span><span class="p">:</span>
+        <span class="n">merge_i</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">min_chi2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">adj_bin</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">chi2</span> <span class="o">=</span> <span class="n">get_chi2</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">adj_bin</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">chi2</span> <span class="o">&lt;</span> <span class="n">min_chi2</span><span class="p">:</span>
+                <span class="n">merge_i</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="n">min_chi2</span> <span class="o">=</span> <span class="n">chi2</span>
+        <span class="n">cur_chi2</span> <span class="o">=</span> <span class="n">min_chi2</span>
+        <span class="n">bins</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">merge_i</span><span class="p">)</span>
+        <span class="n">cur_bins</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">bins</span>
+
+<span class="n">s</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal length (cm)&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">]</span>
+<span class="n">chi2_cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">)</span> <span class="c1"># 返回箱子边界</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.296, 5.38, 5.74, 6.1, 7.9]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>二、基于标签的特征构造<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>本章中大多介绍的特征构造方法都是无监督方式，即不利用任何<span class="math notranslate nohighlight">\(y\)</span>中的信息来构造特征，而本章中介绍的分箱方法都是有监督方法，它们利用了<span class="math notranslate nohighlight">\(y\)</span>的信息来进行分箱的节点切割。事实上，还有很多其他利用标签的特征构造方法，请读者阅读如下的2种构建思路并完成相应任务。</p>
+<ul class="simple">
+<li><p>伪标签方法是一种半监督学习方法，它将一部分可信的标签作为真实样本参与模型训练。例如对于二分类问题，许多模型都可以输出<span class="math notranslate nohighlight">\(y=1\)</span>或<span class="math notranslate nohighlight">\(y=0\)</span>的概率，当某一些测试样本输出的预测概率很高时，说明模型很有把握其被归为某一个类别，此时我们可以直接将这些样本赋予伪标签，即当<span class="math notranslate nohighlight">\(y=1\)</span>的概率为0.9998时，直接将其视为<span class="math notranslate nohighlight">\(y=1\)</span>，重新训练模型。请利用上题中提到的鸢尾花数据集，使用逻辑回归模型进行基于伪标签方法的预测。sklearn中逻辑回归的使用方法在下面的代码块中给出。</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:])</span> <span class="c1"># 前2个样本的预测类别</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:])</span> <span class="c1"># 前2个样本属于每个类别的概率</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.98158201, 0.01841798, 0.00000001],
+       [0.9713355 , 0.02866447, 0.00000003]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>在回归问题中，模型预测值与真实标签值的残差有时也能作为重要特征，例如某些模型在不同的特征集合上会对真实值存在高估、低估或某种模式的有偏估计，此时可以加入残差特征来获得这种模式的信息。事实上，虽然在训练集上能够获得残差，但是在测试集上由于标签未知，我们无法知道真实的残差值，此时可以使用2阶段的方式进行模型训练。在第一阶段中，在训练集上使用模型<span class="math notranslate nohighlight">\(A\)</span>来拟合特征<span class="math notranslate nohighlight">\(X\)</span>和真实标签<span class="math notranslate nohighlight">\(y\)</span>，把该模型<span class="math notranslate nohighlight">\(A\)</span>的样本预测结果记作<span class="math notranslate nohighlight">\(\hat{y}\)</span>，将残差记作<span class="math notranslate nohighlight">\(e=y-\hat{y}\)</span>。在第二阶段中，在训练集上使用模型<span class="math notranslate nohighlight">\(B\)</span>来拟合特征<span class="math notranslate nohighlight">\(X\)</span>和残差<span class="math notranslate nohighlight">\(e\)</span>。在测试集上，我们把特征<span class="math notranslate nohighlight">\(x_{test}\)</span>输入模型<span class="math notranslate nohighlight">\(A\)</span>得到<span class="math notranslate nohighlight">\(\hat{y}_{test}\)</span>，再把特征<span class="math notranslate nohighlight">\(x_{test}\)</span>输入模型<span class="math notranslate nohighlight">\(B\)</span>得到<span class="math notranslate nohighlight">\(\hat{e}_{test}\)</span>，最后把<span class="math notranslate nohighlight">\(\hat{y}_{test}\)</span>和<span class="math notranslate nohighlight">\(\hat{e}_{test}\)</span>相加得到正式的预测输出。由于2个模型的输入部分只用了特征本身而不涉及真实标签，因此整个流程是可训练的并且利用到了残差的信息。请使用sklearn中的make_regression()函数构造1个回归数据集，选择任意一个回归模型按照上述流程进行2阶段预测。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">acc1</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span> <span class="c1"># 准确率</span>
+<span class="n">proba</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">high_confidence</span> <span class="o">=</span> <span class="p">(</span><span class="n">proba</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X_train_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">[</span><span class="n">high_confidence</span><span class="p">]])</span>
+<span class="n">y_train_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">y_train</span><span class="p">,</span> <span class="n">proba</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="n">high_confidence</span><span class="p">]])</span>
+<span class="n">model_new</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">X_train_new</span><span class="p">,</span> <span class="n">y_train_new</span><span class="p">)</span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="n">y_predict</span><span class="p">[</span><span class="n">high_confidence</span><span class="p">]</span> <span class="o">=</span> <span class="n">proba</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="n">high_confidence</span><span class="p">]</span>
+<span class="n">y_predict</span><span class="p">[</span><span class="o">~</span><span class="n">high_confidence</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_new</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="o">~</span><span class="n">high_confidence</span><span class="p">])</span>
+<span class="n">acc2</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span> <span class="c1"># 再次计算准确率</span>
+<span class="n">acc1</span><span class="p">,</span> <span class="n">acc2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9333333333333333, 0.9466666666666667)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_informative</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_targets</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>594.5708462639824
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_A</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">model_A</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_hat_train</span> <span class="o">=</span> <span class="n">model_A</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">e_train</span> <span class="o">=</span> <span class="n">y_train</span> <span class="o">-</span> <span class="n">y_hat_train</span>
+<span class="n">model_B</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">model_B</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">e_train</span><span class="p">)</span>
+<span class="n">y_hat_test</span> <span class="o">=</span> <span class="n">model_A</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">e_hat_test</span> <span class="o">=</span> <span class="n">model_B</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">y_hat_test</span> <span class="o">+</span> <span class="n">e_hat_test</span>
+<span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>511.7823781216827
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>三、信用卡诈骗数据的特征工程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>信用卡消费已经成为当今大众生活的重要消费方式之一，但目前利用信用卡诈骗交易的非法事件也越来越多，这增加了用户、银行以及金融机构的风险，因此通过交易订单的特征来预测其是否为诈骗交易是金融风控中的重要任务。现有1个信用卡诈骗交易情况的数据集（data/ch12/creditcard.csv），其中包含了28个匿名特征，1个时间特征（Time列中的数字代表自2013年9月1日0点以来的秒数）、1个交易金额特征（Amount）以及1个目标特征（Class为1代表是诈骗交易），请按照下面的思路，结合本章所学知识逐步进行特征工程。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch12/creditcard.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Time</th>
+      <th>V1</th>
+      <th>V2</th>
+      <th>V28</th>
+      <th>Amount</th>
+      <th>Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>-1.359807</td>
+      <td>-0.072781</td>
+      <td>-0.021053</td>
+      <td>149.62</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>1.191857</td>
+      <td>0.266151</td>
+      <td>0.014724</td>
+      <td>2.69</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>-1.358354</td>
+      <td>-1.340163</td>
+      <td>-0.059752</td>
+      <td>378.66</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.0</td>
+      <td>-0.966272</td>
+      <td>-0.185226</td>
+      <td>0.061458</td>
+      <td>123.50</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.0</td>
+      <td>-1.158233</td>
+      <td>0.877737</td>
+      <td>0.215153</td>
+      <td>69.99</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>将Time列还原至时间戳序列。</p></li>
+<li><p>基于分箱技术对特征进行变换。</p></li>
+<li><p>通过Time列构造尽可能丰富的时序特征。</p></li>
+<li><p>利用分组技术构造尽可能丰富的交叉特征。</p></li>
+<li><p>对所有变量进行特征降维。</p></li>
+<li><p>使用本章介绍的各类特征选择方法进行特征选择。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch12/creditcard.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;20130901&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2-6</p></li>
+</ul>
+<p>略</p>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="solution11.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">第十一章</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="solution13.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">第十三章</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 耿远昊<br/>
+    
+        &copy; 版权 2021, 耿远昊.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

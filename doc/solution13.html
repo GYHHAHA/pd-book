@@ -1,0 +1,2638 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第十三章</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="第十二章" href="solution12.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  章节
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution1.html">
+   第一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution2.html">
+   第二章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution3.html">
+   第三章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution4.html">
+   第四章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution5.html">
+   第五章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution6.html">
+   第六章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution7.html">
+   第七章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution8.html">
+   第八章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution9.html">
+   第九章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution10.html">
+   第十章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution11.html">
+   第十一章
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution12.html">
+   第十二章
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   第十三章
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solution13.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dna">
+   一、DNA链的碱基序列处理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   二、捕捉电信号的激活态区间
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   三、药物靶点的关联性分析
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   四、物质浓度的指标检测
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   五、设计滑窗类
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>第十三章</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   零、练一练
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dna">
+   一、DNA链的碱基序列处理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   二、捕捉电信号的激活态区间
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   三、药物靶点的关联性分析
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   四、物质浓度的指标检测
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   五、设计滑窗类
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove_input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>第十三章<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>零、练一练<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请单独对df2.Date的优化步骤进行计时比较，即剔除df2.Company处理的消耗时间，并比较astype操作和rename_categories操作的耗时量。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch13/company.csv&#39;</span><span class="p">)</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/ch13/company-data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> df2.Date.str[:4]
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>223 ms ± 4.93 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> df2.Date.astype(&quot;category&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>54.2 ms ± 691 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">timeit</span> temp.cat.rename_categories(dict(zip(temp.cat.categories, [i for i in range(2008,2017)])))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>220 µs ± 6.8 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>思考“把大象放进冰箱”案例的打印输出，完成以下任务：</p>
+<ul class="simple">
+<li><p>反复执行上述代码中map()处理的一行，其打印内容的顺序是否会变化？请解释原因。</p></li>
+<li><p>修改put_into_refrigerator()方法，使得打开2号大象冰箱门的时间早于打开1号冰箱门的时间，并且关闭2号门的时间晚于1号门。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<p>可能会变化，因为第一个大象装进冰箱的操作和第二个大象装进冰箱的操作是独立的，谁先完成某个操作（一共有三种操作）就谁先打印。但是需要注意，同一个进程内的打印顺序是确定的。</p>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">put_into_refrigerator</span><span class="p">(</span><span class="n">elephant</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">elephant</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;打开冰箱门，准备把&quot;</span><span class="o">+</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">elephant</span><span class="o">+</span><span class="s2">&quot;装到冰箱&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;把&quot;</span><span class="o">+</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">elephant</span><span class="o">+</span><span class="s2">&quot;装进冰箱&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">elephant</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;关闭</span><span class="si">%s</span><span class="s2">的冰箱门&quot;</span><span class="o">%</span><span class="n">elephant</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">elephant</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>观察图13.1结果，回答以下问题：</p>
+<ul class="simple">
+<li><p>上述代码生成的图中，红色线和蓝色线的交叉点代表了什么含义？</p></li>
+<li><p>随着N的增加，蓝色线会一直保持水平吗？请用实验说明。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<p>若N_iter增加，则多进程的效率将超过单进程。</p>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<p>不会，实验如下：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">N_iter</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1e3</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">,</span> <span class="mf">5e5</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">,</span> <span class="mf">5e6</span><span class="p">,</span> <span class="mf">1e7</span><span class="p">]],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">N</span> <span class="ow">in</span> <span class="n">N_iter</span><span class="p">:</span>
+    <span class="n">input_para</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">([</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)],</span> <span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">container</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">put_into_refrigerator_new</span><span class="p">,</span> <span class="n">input_para</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">temp</span> <span class="o">+=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="o">/</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N_iter</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>绘制多进程版本蒙特卡洛估计消耗时间关于选取不同分块数量block_num的折线图，并在图上添加单进程耗时的水平基准线。</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">),</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">block_nums</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">500000</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">block_num</span> <span class="ow">in</span> <span class="n">block_nums</span><span class="p">:</span>
+    <span class="n">array_new</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">block_num</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">generate_block_y</span><span class="p">,</span> <span class="n">array_new</span><span class="p">)</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">array</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="n">generate_y</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">no_mp_time</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">block_nums</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">no_mp_time</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">block_nums</span><span class="p">),</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>上述案例中，主进程虽然被join()阻塞，但事实上此时仍然可以在异步函数的下方执行主进程自己的计算任务，而不是单纯地进行等待。当主进程计算任务较大时，可以设置分配个子进程的最大进程数为CPU核数减去1，这样能够为主进程的计算保留资源。请结合该情景，构造1个主进程和子进程同步计算的例子。</p>
+</div>
+<p>子进程计算前七个数组的同时，主进程计算第八个数组：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_something_async</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">res</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">map_async</span><span class="p">(</span><span class="n">do_something_async</span><span class="p">,</span> <span class="n">arr</span><span class="p">[:</span><span class="mi">7</span><span class="p">])</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="n">res</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>与Manager中的Array类似，Value对象能够进行单个变量的状态共享，例如mgr_val = mgr.Value('d', 0.0)即定义了1个初始值为0.0的浮点变量，通过mgr_val.value可以访问并修改它的值。现有一个由np.random.rand(1000)生成的浮点数组，请利用多进程的方式，调用函数将数组内的值累加到共享变量mgr_val中并保证进程安全。</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">value_sum</span><span class="p">(</span><span class="n">mgr_value</span><span class="p">,</span> <span class="n">lock</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
+        <span class="n">mgr_value</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="n">val</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 省略导包</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">mgr</span> <span class="o">=</span> <span class="n">Manager</span><span class="p">()</span>
+<span class="n">mgr_lock</span> <span class="o">=</span> <span class="n">mgr</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+<span class="n">mgr_value</span> <span class="o">=</span> <span class="n">mgr</span><span class="o">.</span><span class="n">Value</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="c1"># 整型Array</span>
+<span class="n">partial_value_sum</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">value_sum</span><span class="p">,</span> <span class="n">mgr_value</span><span class="p">,</span> <span class="n">mgr_lock</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">partial_value_sum</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">mgr_value</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-8</span> <span class="c1"># 浮点数比较</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>阅读并理解在多进程中修改ns.my_list的例子，完成以下问题：</p>
+<ul class="simple">
+<li><p>change_ns_list函数中的锁能否去除？请解释原因。</p></li>
+<li><p>仿照ns.list的案例，修改ns.np_arr和ns.my_df的相应操作。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<p>不能去除，如果不加锁，那么多个进程可能同时获取一个数组进行修改，从而慢进程的修改就会覆盖快进程的修改。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">change_list</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">lst</span>
+    <span class="n">temp</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">temp</span>
+
+<span class="k">def</span> <span class="nf">change_ns_list</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">change_list_idx</span><span class="p">):</span>
+    <span class="n">ns</span><span class="o">.</span><span class="n">my_list</span> <span class="o">=</span> <span class="n">change_list</span><span class="p">(</span><span class="n">ns</span><span class="o">.</span><span class="n">my_list</span><span class="p">,</span> <span class="n">change_list_idx</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 省略导包</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">mgr</span> <span class="o">=</span> <span class="n">Manager</span><span class="p">()</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="n">mgr</span><span class="o">.</span><span class="n">Namespace</span><span class="p">()</span> <span class="c1"># 实例化</span>
+<span class="n">ns</span><span class="o">.</span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">partial_change_ns_list</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">change_ns_list</span><span class="p">,</span> <span class="n">ns</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">partial_change_ns_list</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">ns</span><span class="o">.</span><span class="n">my_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span> <span class="c1"># 不相等</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">change_element</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="n">temp_arr</span> <span class="o">=</span> <span class="n">arr</span>
+    <span class="n">temp_arr</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">temp_df</span> <span class="o">=</span> <span class="n">df</span>
+    <span class="n">temp_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">temp_arr</span><span class="p">,</span> <span class="n">temp_df</span>
+
+<span class="k">def</span> <span class="nf">change_ns_arr_and_df</span><span class="p">(</span><span class="n">lock</span><span class="p">,</span> <span class="n">ns</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
+        <span class="n">ns</span><span class="o">.</span><span class="n">np_arr</span><span class="p">,</span> <span class="n">ns</span><span class="o">.</span><span class="n">my_df</span> <span class="o">=</span> <span class="n">change_element</span><span class="p">(</span><span class="n">ns</span><span class="o">.</span><span class="n">np_arr</span><span class="p">,</span> <span class="n">ns</span><span class="o">.</span><span class="n">my_df</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">mgr</span> <span class="o">=</span> <span class="n">Manager</span><span class="p">()</span>
+<span class="n">mgr_lock</span> <span class="o">=</span> <span class="n">mgr</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="n">mgr</span><span class="o">.</span><span class="n">Namespace</span><span class="p">()</span>
+<span class="n">ns</span><span class="o">.</span><span class="n">np_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">ns</span><span class="o">.</span><span class="n">my_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;A&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;B&quot;</span><span class="p">:[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]})</span>
+<span class="n">partial_change_ns_arr_and_df</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">change_ns_arr_and_df</span><span class="p">,</span> <span class="n">mgr_lock</span><span class="p">,</span> <span class="n">ns</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">partial_change_ns_arr_and_df</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ns</span><span class="o">.</span><span class="n">np_arr</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ns</span><span class="o">.</span><span class="n">my_df</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在对大型共享数组进行写入时，期间占用的内存量会如何变化？请设计实验说明。</p>
+</div>
+<p>与读取时相似，内存平稳。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">shared_memory</span><span class="p">,</span> <span class="n">Lock</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">my_sm</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">my_sm</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">part_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1.25e8</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">part_len</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="n">part_len</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)):</span>
+        <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">init_shared_numpy</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">lock</span>
+    <span class="n">lock</span> <span class="o">=</span> <span class="n">l</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">lock</span> <span class="o">=</span> <span class="n">Lock</span><span class="p">()</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">initializer</span><span class="o">=</span><span class="n">init_shared_numpy</span><span class="p">,</span> <span class="n">initargs</span><span class="o">=</span><span class="p">[</span><span class="n">lock</span><span class="p">])</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">1.25e8</span><span class="p">))</span>
+    <span class="n">shm</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+    <span class="n">shm_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">shm</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+    <span class="n">shm_arr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:]</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">del</span> <span class="n">arr</span>
+    <span class="n">f_</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">shm_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">shm_arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">shm</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">f_</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请通过实验证明在上述“企图共享”DataFrame的操作中，各进程的rec共享内存，且DataFrame彼此独立。</p>
+</div>
+<p>通过性能监视器可以发现内存在构造DataFrame时大量增加，但子进程内构造rec时几乎无增幅。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">shared_memory</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="k">def</span> <span class="nf">recover_df</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">my_sm</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">rec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">recarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buf</span><span class="o">=</span><span class="n">my_sm</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">2e7</span><span class="p">))})</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_records</span><span class="p">()</span>
+    <span class="n">shm</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+    <span class="n">shm_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">shm</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+    <span class="n">shm_arr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:]</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">del</span> <span class="n">arr</span>
+    <span class="n">f_</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">recover_df</span><span class="p">,</span> <span class="n">shm_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">shm_arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">shm</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">f_</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>实现外连接（how=&quot;outer&quot;）版本的多进程连接。</p>
+</div>
+<p>外连接和左连接是不同的，不能直接把多进程里面的left改为outer，原因如下代码结果所示：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]})</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">]})</span>
+<span class="n">part1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+<span class="n">part2</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">part1</span><span class="p">,</span> <span class="n">part2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>D</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>D</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>D</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>但是可以如下拆分：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">part1_1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">part1_2</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="n">part2</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df2</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">key</span><span class="p">)]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span>
+    <span class="n">part1_1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">),</span>
+    <span class="n">part1_2</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">),</span>
+    <span class="n">part1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">part2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+<span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>D</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outer_merge</span><span class="p">(</span><span class="n">df_a</span><span class="p">,</span> <span class="n">df_b</span><span class="p">,</span> <span class="n">how</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df_a</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_b</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="n">how</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:],</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df2</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">key</span><span class="p">)]],</span>
+    <span class="p">[</span><span class="n">df2</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">part2</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">outer_merge</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在第10章中我们学习了resample，并了解到它本质上是一种特殊的分组。请构造1个利用多进程解决resample操作的例子。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">366</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;20200101&quot;</span><span class="p">,</span> <span class="s2">&quot;20201231&quot;</span><span class="p">))</span>
+<span class="n">s</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2020-01-31    0.570909
+2020-02-29    0.458160
+2020-03-31    0.415039
+2020-04-30    0.550043
+2020-05-31    0.555079
+2020-06-30    0.468469
+2020-07-31    0.469930
+2020-08-31    0.465624
+2020-09-30    0.533202
+2020-10-31    0.546478
+2020-11-30    0.391546
+2020-12-31    0.471282
+Freq: M, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">resample_multiprocessing</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">resample_multiprocessing</span><span class="p">,</span> <span class="p">[</span><span class="n">s</span><span class="p">[:</span><span class="s2">&quot;2020-06&quot;</span><span class="p">],</span> <span class="n">s</span><span class="p">[:</span><span class="s2">&quot;2020-06&quot;</span><span class="p">:]])</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在4进程下，重做上述时序滑窗的例子，尽可能简洁地处理滑窗的边界情况。</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">dr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;20190101&quot;</span><span class="p">,</span> <span class="s2">&quot;20201231&quot;</span><span class="p">)</span>
+<span class="n">dr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">dr</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mi">400</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">dr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dr</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">dr</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rolling_multi</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="s2">&quot;10D&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="n">start</span><span class="p">:]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cut_start</span> <span class="o">=</span> <span class="p">[</span><span class="n">dr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dr</span><span class="p">[</span><span class="mi">100</span><span class="p">],</span> <span class="n">dr</span><span class="p">[</span><span class="mi">200</span><span class="p">],</span> <span class="n">dr</span><span class="p">[</span><span class="mi">300</span><span class="p">]]</span>
+<span class="n">cut_end</span> <span class="o">=</span> <span class="p">[</span><span class="n">dr</span><span class="p">[</span><span class="mi">99</span><span class="p">],</span> <span class="n">dr</span><span class="p">[</span><span class="mi">199</span><span class="p">],</span> <span class="n">dr</span><span class="p">[</span><span class="mi">299</span><span class="p">],</span> <span class="n">dr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">ofst</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s2">&quot;10D&quot;</span><span class="p">)</span> <span class="c1"># offset</span>
+<span class="n">adjust</span> <span class="o">=</span> <span class="p">[</span><span class="n">dr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dr</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="o">-</span><span class="n">ofst</span><span class="p">,</span> <span class="n">dr</span><span class="p">[</span><span class="mi">200</span><span class="p">]</span><span class="o">-</span><span class="n">ofst</span><span class="p">,</span> <span class="n">dr</span><span class="p">[</span><span class="mi">300</span><span class="p">]</span><span class="o">-</span><span class="n">ofst</span><span class="p">,</span> <span class="n">dr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">([</span><span class="n">s</span><span class="p">[</span><span class="n">adjust</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span><span class="n">cut_end</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span> <span class="n">cut_start</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">rolling_multi</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+<span class="n">res</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="s2">&quot;10D&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>结合上述类型声明的例子，完成以下任务：</p>
+<ul class="simple">
+<li><p>数组参数声明为float64_t的函数能否接收dtype=&quot;float32&quot;的numpy数组？反之是否可行？请用实验说明。</p></li>
+<li><p>若当前的输入数组为test_array = np.random.randint(0, 10, int(1e6))，且用户希望输出的数组类型和输入类型一致，请修改代码实现。（提示：查看np.empty返回数组的类型）</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<p>不能，且反之也不能</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> cython
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span>
+cimport numpy as np
+import numpy as np
+
+def cy_multiply_64(np.ndarray[np.float64_t, ndim=1] np_array):
+    cdef:
+        int length = np_array.shape[0]
+        np.ndarray[np.float64_t, ndim=1] res = np.empty(length)
+        Py_ssize_t i
+    for i in range(length):
+        res[i] = np_array[i] * 2
+    return res
+
+def cy_multiply_32(np.ndarray[np.float32_t, ndim=1] np_array):
+    cdef:
+        int length = np_array.shape[0]
+        np.ndarray[np.float64_t, ndim=1] res = np.empty(length)
+        Py_ssize_t i
+    for i in range(length):
+        res[i] = np_array[i] * 2
+    return res
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy_multiply_64</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cy_multiply_64</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">))</span>
+
+<span class="nn">File _cython_magic_7abce65eea69a2adce452f237f62b933.pyx:4,</span> in <span class="ni">_cython_magic_7abce65eea69a2adce452f237f62b933.cy_multiply_64</span><span class="nt">()</span>
+
+<span class="ne">ValueError</span>: Buffer dtype mismatch, expected &#39;float64_t&#39; but got &#39;float&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy_multiply_32</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cy_multiply_32</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">))</span>
+
+<span class="nn">File _cython_magic_7abce65eea69a2adce452f237f62b933.pyx:13,</span> in <span class="ni">_cython_magic_7abce65eea69a2adce452f237f62b933.cy_multiply_32</span><span class="nt">()</span>
+
+<span class="ne">ValueError</span>: Buffer dtype mismatch, expected &#39;float32_t&#39; but got &#39;double&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span>
+cimport numpy as np
+import numpy as np
+
+def cy_multiply_int(np.ndarray[np.int32_t, ndim=1] np_array):
+    cdef:
+        int length = np_array.shape[0]
+        np.ndarray[np.int32_t, ndim=1] res = np.empty(length, dtype=&quot;int32&quot;)
+        Py_ssize_t i
+    for i in range(length):
+        res[i] = np_array[i] * 2
+    return res
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">))</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">cy_multiply_int</span><span class="p">(</span><span class="n">test_array</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;int32&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请用cython实现第八章中str对象上的contains方法（不要求正则）、len方法和zfill方法，并进行性能对比。（提示：对于布尔类型的一维NumPy数组，可以使用np.ndarray[np.npy_bool, ndim=1]声明类型）</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span>
+import numpy as np
+cimport numpy as np
+
+def str_contains(np.ndarray[np.str, ndim=1] arr, np.str s):
+    cdef:
+        Py_ssize_t i
+        int n = arr.shape[0]
+        np.ndarray[np.uint8_t, ndim = 1, cast=True] res = np.empty(n, dtype=&quot;bool&quot;)
+    for i in range(n):
+        res[i] = s in arr[i]
+    return res
+
+def str_len(np.ndarray[np.str, ndim=1] arr):
+    cdef:
+        Py_ssize_t i
+        int n = arr.shape[0]
+        np.ndarray[int, ndim=1] res = np.empty(n, dtype=&quot;int32&quot;)
+    for i in range(n):
+        res[i] = len(arr[i])
+    return res
+
+
+def str_zfill(np.ndarray[np.str, ndim=1] arr, int pad):
+    cdef:
+        Py_ssize_t i
+        int n = arr.shape[0]
+        np.ndarray[np.str, ndim=1] res = np.empty(n, dtype=object)
+    for i in range(n):
+        res[i] = &quot;0&quot;*max(0, pad-len(arr[i])) + arr[i]
+    return res
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cycle&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">)</span>
+<span class="n">str_contains</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True, False])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">str_len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 6, 5])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">str_zfill</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;000apple&#39;, &#39;00banana&#39;, &#39;000cycle&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;1234567890&quot;</span><span class="p">),</span> <span class="mi">5</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e5</span><span class="p">))])</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> str_contains(arr, &quot;1&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.96 ms ± 46 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> s.str.contains(&quot;1&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39.1 ms ± 542 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> str_len(arr)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>441 µs ± 4.69 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> s.str.len()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.4 ms ± 571 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> str_zfill(arr, 10)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.6 ms ± 154 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> s.str.zfill(10)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.1 ms ± 466 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>在数组倍乘的例子中，事实上最耗时的部分在于对结果数组的内存分配，因此此处的多线程性能提高程度有限。如果进行的是无需分配内存或分配少量内存的并行操作，那么就可以获得更为可观的性能提升。请利用构造一个函数计算一个二维（1000*1000）数组的元素和，并与numpy比较性能。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span> --compile-args=-fopenmp --link-args=-fopenmp
+
+cimport numpy as np
+import numpy as np
+import cython
+from cython.parallel import prange
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+def sum_2d_array(np.ndarray[double, ndim=2] np_array):
+    cdef:
+        int n = np_array.shape[0]
+        double res = 0.0
+        Py_ssize_t i, j
+    for i in prange(n, nogil=True):
+        for j in range(n):
+            res += np_array[i, j]
+    return res
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="o">%</span><span class="k">timeit</span> sum_2d_array(arr)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>350 µs ± 6.44 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> arr.sum()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>691 µs ± 11.2 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>结合上述知识，完成如下练习：</p>
+<ul class="simple">
+<li><p>构造一个翻转图片的函数，翻转方式turn_type包括上下翻转和左右翻转，其调用方式为turn(img_arr, turn_type)。</p></li>
+<li><p>构造一个旋转图片的函数，其调用方式为rotate(img_arr, angle)，其中angle为顺时针的旋转角度，仅取能够被90整除的整数，即<span class="math notranslate nohighlight">\(0,\pm 90,\pm 180,\pm 270,...\)</span>等。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span> --compile-args=-fopenmp --link-args=-fopenmp
+from cython.parallel import prange
+cimport numpy as np
+import numpy as np
+import cython
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+def cy_picture_flip(int[:, :, :] arr, np.str turn_type):
+    cdef:
+        int axis_1, axis_2
+        int height = arr.shape[0]
+        int width = arr.shape[1]
+        int[:, :, :] result = np.empty((height, width, 3), dtype=&quot;int32&quot;)
+        Py_ssize_t i, j
+    if turn_type == &quot;up-down&quot;:
+        for i in prange(width, nogil=True):
+            for j in range(height):
+                result[i, j, :] = arr[height-i-1, j, :]
+    elif turn_type == &quot;left-right&quot;:
+        for i in prange(height, nogil=True):
+            for j in range(width):
+                result[i, j, :] = arr[i, width-j-1, :]
+    else:
+        raise ValueError(&quot;turn_type is wrong!&quot;)
+    return np.asarray(result)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;data/ch13/piano.png&quot;</span><span class="p">)</span>
+<span class="n">img_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)[:,:,:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr_flip</span> <span class="o">=</span> <span class="n">cy_picture_flip</span><span class="p">(</span><span class="n">img_arr</span><span class="p">,</span> <span class="s2">&quot;up-down&quot;</span><span class="p">)</span>
+<span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr_flip</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution13_41_0.png" src="_images/solution13_41_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr_flip</span> <span class="o">=</span> <span class="n">cy_picture_flip</span><span class="p">(</span><span class="n">img_arr</span><span class="p">,</span> <span class="s2">&quot;left-right&quot;</span><span class="p">)</span>
+<span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr_flip</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution13_42_0.png" src="_images/solution13_42_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span> --compile-args=-fopenmp --link-args=-fopenmp
+from cython.parallel import prange
+cimport numpy as np
+import numpy as np
+import cython
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+def cy_picture_rotate(int[:, :, :] arr):
+    cdef:
+        int height = arr.shape[0]
+        int width = arr.shape[1]
+        int[:, :, :] result = np.empty((width, height, 3), dtype=&quot;int32&quot;)
+        Py_ssize_t i, j
+    for i in prange(width, nogil=True):
+        for j in range(height):
+            result[i, j, :] = arr[width-j-1, i, :]
+    return np.asarray(result)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">angle</span> <span class="o">%</span> <span class="mi">90</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;wrong angle!&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">angle</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">cy_picture_rotate</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+        <span class="n">angle</span> <span class="o">+=</span> <span class="mi">90</span> <span class="k">if</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">90</span>
+    <span class="k">return</span> <span class="n">img</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr_flip</span> <span class="o">=</span> <span class="n">rotate</span><span class="p">(</span><span class="n">img_arr</span><span class="p">,</span> <span class="mi">270</span><span class="p">)</span>
+<span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr_flip</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/solution13_46_0.png" src="_images/solution13_46_0.png" />
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>若字符串为my_string，则my_string.count(&quot;x&quot;)可以统计字符串中字符x的个数。现有一个长度为<span class="math notranslate nohighlight">\(10^7\)</span>的字符串，其中的字符仅包含a、b、c、d、e、f、g，请使用Cython的多线程操作统计字符a的个数，并与Python字符串上的内置函数count比较性能。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span> --compile-args=-fopenmp --link-args=-fopenmp
+#distutils: language = c++
+import numpy as np
+cimport numpy as np
+from cython.parallel import prange
+from libcpp.string cimport string
+from libcpp.vector cimport vector
+
+cdef extern from &quot;Python.h&quot;:
+    const char* PyUnicode_AsUTF8(object unicode)
+
+def multi_thread_count(np.str _s, np.str _c):
+    cdef:
+        Py_ssize_t i
+        int n = len(_s)
+        int count = 0
+        string s = &lt;string&gt;PyUnicode_AsUTF8(_s)
+        string c = &lt;string&gt;PyUnicode_AsUTF8(_c)
+    for i in prange(n, nogil=True):
+        if s[i] == c[0]:
+            count += 1
+    return count
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;abcdefg&quot;</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e7</span><span class="p">)))</span>
+<span class="n">multi_thread_count</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> s.count(&quot;a&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19.8 ms ± 602 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> multi_thread_count(s, &quot;a&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.6 ms ± 82 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>给定一个含有缺失值的一维数组，假设其首元素非缺失值，请按照如下规则从头到尾依次进行填充：</p>
+<ul class="simple">
+<li><p>若当前元素非缺失值，则直接保留。</p></li>
+<li><p>若当前元素为缺失值且元素在数组中的索引（从0计数）小于k（<span class="math notranslate nohighlight">\(k&gt;=2\)</span>），则使用当前位置前所有元素的均值填充，如果之前元素在原数组为缺失值，则使用其填充的值。</p></li>
+<li><p>若当前元素为缺失值且元素在数组中的索引不小于k，则使用当前元素之前k个位置的元素均值进行填充，如果之前元素在原数组为缺失值，则使用其填充的值。
+下面给出了两个例子：</p></li>
+</ul>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fill_arr</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+<span class="go">array([1.        , 1.        , 1.        , 4.        , 5.        ,</span>
+<span class="go">       3.33333333, 4.11111111, 7.        , 4.81481481])</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">k</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fill_arr</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+<span class="go">array([2.        , 2.        , 4.        , 2.66666667, 6.        ,</span>
+<span class="go">       3.33333333, 8.        , 4.8       ])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">njit</span>
+<span class="nd">@njit</span>
+<span class="k">def</span> <span class="nf">fill_arr</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="n">temp_sum</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">),</span> <span class="n">i</span><span class="p">):</span>
+                <span class="n">temp_sum</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_sum</span> <span class="o">/</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">arr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>完成如下问题：</p>
+<ul class="simple">
+<li><p>请基于numba实现与本小节开头np.add案例功能类似的vectorize版本。</p></li>
+<li><p>请再构造1个利用向量化装饰器自定义ufunc进行广播操作的例子。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">vectorize</span>
+<span class="nd">@vectorize</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">vec_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">vec_add</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[2, 3],
+       [3, 4]], dtype=int64)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">vectorize</span>
+<span class="nd">@vectorize</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">vec_power_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">vec_power_sum</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[2, 5],
+       [5, 8]], dtype=int64)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
+<p>请用向量化装饰器对n对矩阵同时进行矩阵乘法的操作，即给定<span class="math notranslate nohighlight">\(n\times k_1\times k_2\)</span>和<span class="math notranslate nohighlight">\(n\times k_2\times k_3\)</span>的2个数组，按照外层维度对2个数组相应位置的矩阵进行矩阵乘法，返回结果为<span class="math notranslate nohighlight">\(n\times k_1\times k_3\)</span>的数组。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">guvectorize</span>
+<span class="nd">@guvectorize</span><span class="p">([</span><span class="s2">&quot;(float64[:, :], float64[:, :], float64[:, :])&quot;</span><span class="p">],</span>
+              <span class="s2">&quot;(n,p),(p,m)-&gt;(n,m)&quot;</span><span class="p">,</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">numba_matrix_multiply</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
+    <span class="n">res</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">nb_res</span> <span class="o">=</span> <span class="n">numba_matrix_multiply</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">np_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">nb_res</span><span class="p">,</span> <span class="n">np_res</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> numba_matrix_multiply(A, B)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>240 ms ± 11.5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> np.matmul(A, B)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>228 ms ± 6.62 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dna">
+<h2>一、DNA链的碱基序列处理<a class="headerlink" href="#dna" title="永久链接至标题">¶</a></h2>
+<p>DNA是由脱氧核苷酸组成的大分子聚合物。其中，构成脱氧核苷酸的碱基种类有：腺嘌呤（A）、鸟嘌呤（G）、胸腺嘧啶（T）和胞嘧啶（C）。DNA具有双链结构，对于其中的某一条链而言，可用字符串代表其碱基序列的组成，例如：“AAGGTTCC”、“GGGGTTTTAGATCCC”等。现有若干DNA单链的字符串序列存储在data/ch13/DNA目录下，请依次按照如下的多进程方案统计每个碱基序列字符串中各种碱基的占序列总长度的比例，其结果按如下格式保存在DataFrame中：</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>C</th>
+      <th>G</th>
+      <th>T</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DNA_0001</th>
+      <td>0.1</td>
+      <td>0.3</td>
+      <td>0.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>DNA_0002</th>
+      <td>0.3</td>
+      <td>0.4</td>
+      <td>0.2</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>DNA_0200</th>
+      <td>0.3</td>
+      <td>0.1</td>
+      <td>0.2</td>
+      <td>0.4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>对文件使用多进程，即同时处理多个文件。</p></li>
+<li><p>对每个文件中的字符串使用多进程，即每次处理1个文件，但同时处理单链的不同部分。</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># Windows放到独立py文件中再导入multi_DNA_file函数</span>
+<span class="k">def</span> <span class="nf">multi_DNA_file</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;data/ch13/DNA/</span><span class="si">%s</span><span class="s2">.txt&quot;</span><span class="o">%</span><span class="n">file</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;G&quot;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)])</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">/</span> <span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">file</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ACGT&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;DNA_</span><span class="si">%04d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">201</span><span class="p">)]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">multi_DNA_file</span><span class="p">,</span> <span class="n">files</span><span class="p">))</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>2</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">multi_DNA_seq</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;G&quot;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+<span class="n">df_res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">201</span><span class="p">):</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;DNA_</span><span class="si">%04d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">i</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;data/ch13/DNA/</span><span class="si">%s</span><span class="s2">.txt&quot;</span><span class="o">%</span><span class="n">file</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">cut</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="n">cut</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cut</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">cut</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">cut_s</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">cut</span><span class="p">]</span>
+    <span class="n">ACGT_res</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">multi_DNA_seq</span><span class="p">,</span> <span class="n">cut_s</span><span class="p">)</span>
+    <span class="n">temp_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ACGT_res</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="n">temp_res</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">r</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">temp_res</span> <span class="o">=</span> <span class="n">temp_res</span> <span class="o">/</span> <span class="n">temp_res</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df_res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">temp_res</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">file</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ACGT&quot;</span><span class="p">)))</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">df_res</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>二、捕捉电信号的激活态区间<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在电子原件中，电信号的激活与失活是一种常见现象，下面在arr中给出了某信号指标的时序数据，从图13.15可以明显看出信号只会在一小段时间区域内被激活，随后又归于失活状态。</p>
+<div class="cell tag_remove_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch13/signal.npy&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3000</span><span class="p">),</span> <span class="n">arr</span><span class="p">[:</span><span class="mi">3000</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_output tag_remove_input docutils container">
+</div>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/13-15.svg"><img alt="_images/13-15.svg" src="_images/13-15.svg" width="250px" /></a>
+<p class="caption"><span class="caption-text">图13.15 某段电信号的时序图</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
+</div>
+<p>对于某个信号而言，如果它自身的信号值小于1，但其后面的连续5个值大于1，则认为当前时刻为激活态的开始时刻；如果它自身的信号值小于1，但其之前的连续5个值大于1，则认为当前时刻为激活态的结束时刻。现在想要统计所有激活状态信号段的开始时刻和结束时刻，并将结果以如下格式保存在df_result中，其中第一列是表示信号段编号，第二和第三列表示开始和结束时的数组索引。</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Signal Number</th>
+      <th>Start Index</th>
+      <th>End Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>100</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>300</td>
+      <td>400</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>方法一</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch13/signal.npy&quot;</span><span class="p">)</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">arr</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)])</span>
+<span class="n">start_res</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">start_res</span><span class="p">[</span><span class="n">start_res</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">arr</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)])</span>
+<span class="n">end_res</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">end_res</span><span class="p">[</span><span class="n">start_res</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Signal Number&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start_res</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
+    <span class="s2">&quot;Start Index&quot;</span><span class="p">:</span> <span class="n">idx</span><span class="p">[</span><span class="n">start_res</span><span class="p">],</span>
+    <span class="s2">&quot;End Index&quot;</span><span class="p">:</span> <span class="n">idx</span><span class="p">[</span><span class="n">end_res</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Signal Number</th>
+      <th>Start Index</th>
+      <th>End Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>848</td>
+      <td>848</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1158</td>
+      <td>1158</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1818</td>
+      <td>1818</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>2098</td>
+      <td>2098</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>2702</td>
+      <td>2702</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>方法二</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">njit</span>
+
+<span class="nd">@njit</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">count_signal</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="c1"># 预分配内存，但事实上arr.shape[0]位置的值可以利用一些方法</span>
+    <span class="c1"># 得到大幅的减少，从而加快分配速度，请读者自行思考</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">pointer</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">cur</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">start_res</span> <span class="o">=</span> <span class="n">cur</span> <span class="o">&lt;</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+            <span class="n">start_res</span> <span class="o">&amp;=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">start_res</span><span class="p">:</span>
+            <span class="n">start</span><span class="p">[</span><span class="n">pointer</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">end_res</span> <span class="o">=</span> <span class="n">cur</span> <span class="o">&lt;</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+            <span class="n">end_res</span> <span class="o">&amp;=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">end_res</span><span class="p">:</span>
+            <span class="n">end</span><span class="p">[</span><span class="n">pointer</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="n">pointer</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">start</span><span class="p">[:</span><span class="n">pointer</span><span class="p">],</span> <span class="n">end</span><span class="p">[:</span><span class="n">pointer</span><span class="p">]</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch13/signal.npy&quot;</span><span class="p">)</span>
+<span class="n">start_res</span><span class="p">,</span> <span class="n">end_res</span> <span class="o">=</span> <span class="n">count_signal</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Signal Number&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start_res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+    <span class="s2">&quot;Start Index&quot;</span><span class="p">:</span> <span class="n">start_res</span><span class="p">,</span>
+    <span class="s2">&quot;End Index&quot;</span><span class="p">:</span> <span class="n">end_res</span>
+<span class="p">})</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Signal Number</th>
+      <th>Start Index</th>
+      <th>End Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>848</td>
+      <td>916</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1158</td>
+      <td>1221</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1818</td>
+      <td>1890</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>2098</td>
+      <td>2167</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>2702</td>
+      <td>2764</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>Numba中虽然支持list相关的操作，但是尽量用预分配的数组加指针操作来代替，这样会有较大的性能优势。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>三、药物靶点的关联性分析<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>药物与靶点间的关联性分析是生物信息学中重要的研究课题，图分析是其常见的分析手段之一，将药物和靶点都看作图的节点，若已知某些药物和靶点间存在关联，那么就将它们之间用边连接，记图中边的集合为<span class="math notranslate nohighlight">\(E\)</span>。图能够用邻接矩阵表示，如果2个节点有连接则记为1，否则记为0，从而我们能够得到drug-target的邻接矩阵。同样地，药物和药物之间、靶点和靶点之间也有关联性作用，我们也用边将关联的节点进行连接，得到drug-drug邻接矩阵、target-target邻接矩阵。2个相连的节点被称为邻居，某一个节点A的邻居集合可以用<span class="math notranslate nohighlight">\(N(A)\)</span>表示，其邻居个数用<span class="math notranslate nohighlight">\(\vert N(A)\vert\)</span>表示。在定义了3类连接关系之后，现在需要对所有药物和所有靶点间的相关性进行度量，定义药物<span class="math notranslate nohighlight">\(i\)</span>（用<span class="math notranslate nohighlight">\(D_i\)</span>表示）和靶点<span class="math notranslate nohighlight">\(j\)</span>（用<span class="math notranslate nohighlight">\(T_i\)</span>表示）之间的关联性指数<span class="math notranslate nohighlight">\(S\)</span>：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S(D_i, T_j) = \begin{cases}  
+1 &amp; D_iT_j \in E \\
+\frac{\sum_{Node\in N(D_i)}\mathbb{I}_{\{Node\in N(T_j)\}}}{2\vert N(D_i)\vert}  + 
+\frac{\sum_{Node\in N(T_j)}\mathbb{I}_{\{Node\in N(D_i)\}}}{2\vert N(T_j)\vert} 
+&amp; Otherwise
+\end{cases}
+\end{split}\]</div>
+<p>其中，<span class="math notranslate nohighlight">\(\mathbb{I}_{\{Node\in N(T_j)\}}\)</span>表示事件“节点Node是否为<span class="math notranslate nohighlight">\(T_j\)</span>邻居”的示性函数，当Node为<span class="math notranslate nohighlight">\(T_j\)</span>的邻居时取1，否则取0。请根据drug-drug关联图、target-target关联图以及drug-target关联图，计算与所有药物与靶点间的关联性指数。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch13/drug-drug.npy&quot;</span><span class="p">)</span>
+<span class="n">t_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch13/target-target.npy&quot;</span><span class="p">)</span>
+<span class="n">d_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/ch13/drug-target.npy&quot;</span><span class="p">)</span>
+<span class="n">d_d</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">t_t</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">d_t</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((1285, 1285), (947, 947), (1285, 947))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span>
+# distutils: language = c++
+from libcpp.set cimport set
+from libcpp.vector cimport vector
+import numpy as np
+cimport numpy as np
+from cython import boundscheck, wraparound
+
+@boundscheck(False)
+@wraparound(False)
+def get_S(int[:, :] d_d, int[:, :] t_t, int[:, :] d_t):
+
+    cdef:
+        int i, j, d, t, status, d_count, t_count
+        double d_val, t_val
+        int d_dim = d_d.shape[0]
+        int t_dim = t_t.shape[0]
+        double[:, :] S = np.empty_like(d_t, dtype=&quot;float64&quot;)
+        vector[set[int]] drug_adj, target_adj
+        
+    for i in range(d_dim):
+        drug_adj.push_back(set[int]())
+        for j in range(d_dim):
+            if d_d[i][j] == 1:
+                drug_adj[i].insert(j)
+
+    for i in range(t_dim):
+        target_adj.push_back(set[int]())
+        for j in range(t_dim):
+            if t_t[i][j] == 1:
+                target_adj[i].insert(j)
+
+    for i in range(d_dim):
+        for j in range(t_dim):
+            if d_t[i][j] != 1:
+                d_count = 0
+                for d in drug_adj[i]:
+                    status = target_adj[j].find(d) != target_adj[j].end()
+                    d_count = d_count + status
+                d_val = d_count / 2 / drug_adj[i].size()
+                t_count = 0
+                for t in target_adj[j]:
+                    status = drug_adj[i].find(t) != drug_adj[i].end()
+                    t_count = t_count + status
+                t_val = t_count / 2 / target_adj[j].size()
+                S[i][j] = d_val + t_val
+            else:
+                S[i][j] = 1.0
+    return np.asarray(S)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">get_S</span><span class="p">(</span><span class="n">d_d</span><span class="p">,</span> <span class="n">t_t</span><span class="p">,</span> <span class="n">d_t</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1285, 947)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.        , 1.        , 0.49382489, ..., 1.        , 0.48400228,
+        0.46562896],
+       [1.        , 1.        , 0.43233035, ..., 1.        , 0.47512593,
+        0.48020263],
+       [1.        , 0.47275641, 1.        , ..., 0.47479795, 1.        ,
+        0.46192308],
+       ...,
+       [1.        , 1.        , 0.4585027 , ..., 1.        , 0.44824454,
+        1.        ],
+       [1.        , 0.46980228, 1.        , ..., 0.48324323, 0.48054512,
+        1.        ],
+       [0.44290555, 0.45630646, 0.47551222, ..., 0.46900691, 0.45473435,
+        1.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>四、物质浓度的指标检测<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>某种目标物质（Target）的浓度可能会随环境中其他化合物的浓度而变化，现有某种仪器可以估计溶液中的各类化合物（Compound）浓度和该种目标物质（Target）的浓度。但由于技术原因，无法对这些化合物的浓度给出精确值，只能给出其浓度上界（CUB）与浓度下界（CLB），这些信息被记录在df1中：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch13/compounds.csv&quot;</span><span class="p">)</span>
+<span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Compound</th>
+      <th>CLB</th>
+      <th>CUB</th>
+      <th>Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>9.050615e+08</td>
+      <td>9.050625e+08</td>
+      <td>683757.555164</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>9.017325e+08</td>
+      <td>9.017341e+08</td>
+      <td>814346.610163</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>9.039452e+08</td>
+      <td>9.039458e+08</td>
+      <td>719260.326997</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>9.041625e+08</td>
+      <td>9.041632e+08</td>
+      <td>240696.203722</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>9.045420e+08</td>
+      <td>9.045422e+08</td>
+      <td>133284.734789</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>现想要根据compounds表中的信息，推断某些化合物浓度下的Target浓度：对于predict表中的每一行数据，找到compounds表中相同化合物，且浓度区间包含该行中给定化合物浓度的所在记录，当记录条数为0时，predict表中该行的Target_Prediction保持缺失值，当记录条数非0时，predict表中的Target_Prediction用这些记录中目标物质Target的浓度均值进行填充。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch13/predict-target.csv&quot;</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Compound</th>
+      <th>Concentration</th>
+      <th>Target_Prediction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>9.055589e+08</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>9.024043e+08</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>8.997355e+08</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>9.014674e+08</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>9.048319e+08</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">shared_memory</span><span class="p">,</span> <span class="n">Array</span><span class="p">,</span> <span class="n">Value</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">njit</span><span class="p">,</span> <span class="n">prange</span>
+<span class="nd">@njit</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_compute</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">prange</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">low</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">and</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">up</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">temp</span> <span class="o">+=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">/</span> <span class="n">count</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="k">def</span> <span class="nf">helper</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+    <span class="n">my_sm</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">my_sm</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+    <span class="c1"># 用书上的手工传入lock来锁也是可以的，Value和Array上都可以用get_lock()来加锁</span>
+    <span class="k">with</span> <span class="n">visited</span><span class="o">.</span><span class="n">get_lock</span><span class="p">():</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">visited</span><span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">]:</span>
+            <span class="n">visited</span><span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">with</span> <span class="n">counter</span><span class="o">.</span><span class="n">get_lock</span><span class="p">():</span>
+                <span class="n">counter</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;当前已完成：</span><span class="si">%d</span><span class="s2">/347&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">_compute</span><span class="p">(</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+        <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+        <span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+        <span class="n">arr</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">compound_compute</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">df2</span><span class="p">):</span>
+    <span class="n">partial_helper</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">helper</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Compound&quot;</span><span class="p">)[</span><span class="s2">&quot;Concentration&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">partial_helper</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">init_shared</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">visited</span><span class="p">,</span> <span class="n">counter</span>
+    <span class="n">visited</span><span class="p">,</span> <span class="n">counter</span> <span class="o">=</span> <span class="n">v</span><span class="p">,</span> <span class="n">c</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch13/compounds.csv&quot;</span><span class="p">)</span>
+    <span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ch13/predict-target.csv&quot;</span><span class="p">)</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">347</span><span class="p">)</span> <span class="c1"># 共有347类</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">initializer</span><span class="o">=</span><span class="n">init_shared</span><span class="p">,</span> <span class="n">initargs</span><span class="o">=</span><span class="p">[</span><span class="n">visited</span><span class="p">,</span> <span class="n">counter</span><span class="p">])</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">shm</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+    <span class="n">shm_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">shm</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+    <span class="n">shm_arr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:]</span>
+    <span class="k">del</span> <span class="n">arr</span>
+    <span class="n">partial_compound_compute</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span>
+        <span class="n">compound_compute</span><span class="p">,</span> <span class="n">shm_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">shm_arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">shm</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">cut</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">17</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">df2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">cut</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span> <span class="n">cut</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">partial_compound_compute</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+    <span class="c1"># res.to_csv(&quot;my_result.csv&quot;, index=False)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>五、设计滑窗类<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>请分别用cython的cdef class和numba的jitclass设计1个滑窗类，支持滑动均值、滑动标准差以及滑动最大值的计算，无需考虑时序数据（即普通滑窗），且满足如下要求：</p>
+<ul class="simple">
+<li><p>注意边界值与缺失值的处理。</p></li>
+<li><p>性能上接近甚至超过Pandas中的滑窗函数。</p></li>
+<li><p>按以下方式调用对象：</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># s是需要操作的序列</span>
+<span class="n">roller</span> <span class="o">=</span> <span class="n">rolling</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">roller</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">roller</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">roller</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【解答】
+</pre></div>
+</div>
+<p>在这个问题上Numba速度慢于Cython，但具体问题需要具体分析，实际运用时需要通过实验对比才能定量地说明它们之间的性能优劣。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">cython</span> --compile-args=-fopenmp --link-args=-fopenmp
+# cython: boundscheck=False, wraparound=False
+
+import numpy as np
+import cython
+from cython.parallel import prange
+from libc.math cimport INFINITY, NAN, sqrt
+
+cdef class cy_rolling:
+    cdef:
+        double[:] data
+        int window
+    def __init__(self, data, window):
+        self.data = data
+        self.window = window
+    def max(self):
+        cdef:
+            int n = self.data.shape[0]
+            int k = self.window
+            double temp
+            double[:] res = np.empty(n, dtype=&quot;float64&quot;)
+            Py_ssize_t i, j
+        res[:k-1] = NAN
+        for i in prange(k-1, n, nogil=True):
+            temp = -INFINITY
+            for j in range(k):
+                if self.data[i-j] &gt; temp:
+                    temp = self.data[i-j]
+            res[i] = temp
+        return np.asarray(res)
+    def mean(self):
+        cdef:
+            int n = self.data.shape[0]
+            int k = self.window
+            double temp
+            double[:] res = np.empty(n, dtype=&quot;float64&quot;)
+            Py_ssize_t i, j
+        res[:k-1] = NAN
+        for i in prange(k-1, n, nogil=True):
+            temp = 0.0
+            for j in range(k):
+                temp = temp + self.data[i-j]
+            res[i] = temp / k
+        return np.asarray(res)
+    def std(self):
+        cdef:
+            int n = self.data.shape[0]
+            int k = self.window
+            double sum_val, square_val
+            double[:] res = np.empty(n, dtype=&quot;float64&quot;)
+            Py_ssize_t i, j
+        res[:k-1] = NAN
+        for i in prange(k-1, n, nogil=True):
+            sum_val = 0.0
+            square_val = 0.0
+            for j in range(k):
+                sum_val = sum_val + self.data[i-j]
+                square_val = square_val + self.data[i-j] * self.data[i-j]
+            sum_val = sum_val / k
+            res[i] = sqrt(square_val / k - sum_val * sum_val)
+        return np.asarray(res)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba.experimental</span> <span class="kn">import</span> <span class="n">jitclass</span>
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">int64</span><span class="p">,</span> <span class="n">float64</span>
+
+<span class="n">spec</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;window&#39;</span><span class="p">,</span> <span class="n">int64</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">float64</span><span class="p">[:])]</span>
+<span class="nd">@jitclass</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">nb_rolling</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">window</span>
+    <span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[:</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">temp</span><span class="p">:</span>
+                    <span class="n">temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+        <span class="k">return</span> <span class="n">res</span>
+    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[:</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">res</span>
+    <span class="k">def</span> <span class="nf">std</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[:</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e7</span><span class="p">)))</span>
+<span class="c1"># 可能有计算的浮点误差，此处仅看前5位小数</span>
+<span class="n">pd_roller</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pd_res_max</span> <span class="o">=</span> <span class="n">pd_roller</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">pd_res_mean</span> <span class="o">=</span> <span class="n">pd_roller</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">pd_res_std</span> <span class="o">=</span> <span class="n">pd_roller</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">cy_roller</span> <span class="o">=</span> <span class="n">cy_rolling</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">cy_res_max</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">cy_roller</span><span class="o">.</span><span class="n">max</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">cy_res_mean</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">cy_roller</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">cy_res_std</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">cy_roller</span><span class="o">.</span><span class="n">std</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">nb_roller</span> <span class="o">=</span> <span class="n">nb_rolling</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">nb_res_max</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">nb_roller</span><span class="o">.</span><span class="n">max</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">nb_res_mean</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">nb_roller</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">nb_res_std</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">nb_roller</span><span class="o">.</span><span class="n">std</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy_res_max</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">pd_res_max</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy_res_mean</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">pd_res_mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy_res_std</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">pd_res_std</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb_res_max</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">pd_res_max</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb_res_mean</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">pd_res_mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb_res_std</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">pd_res_std</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> pd_roller.max()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>657 ms ± 5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> cy_roller.max()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>444 ms ± 6.33 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> nb_roller.max()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.28 s ± 76.6 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> pd_roller.mean()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>270 ms ± 3.48 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> cy_roller.mean()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>298 ms ± 6.69 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> nb_roller.mean()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>862 ms ± 13.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> pd_roller.std()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>337 ms ± 6.13 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> cy_roller.std()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>342 ms ± 10.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> nb_roller.std()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.23 s ± 8.18 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="solution12.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">第十二章</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 耿远昊<br/>
+    
+        &copy; 版权 2021, 耿远昊.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
