@@ -82,8 +82,9 @@ df.loc[:, (df.dtypes=="int32")
 
 
 df = pd.read_csv('data/learn_pandas.csv')
-res = df.query("(Grade in ['Freshman', 'Sophomore']) and"
-               "(Gender == 'Female')")
+res = df.query("(School in ['A', 'B']) and"
+               "(Gender == 'Female') and"
+               "(Grade == 'Freshman')")
 res.head()
 
 
