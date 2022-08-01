@@ -244,7 +244,227 @@
             
               <div>
                 
-  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/learn_pandas.csv&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">School</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Gender</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Grade</span> <span class="o">==</span> <span class="s1">&#39;Freshman&#39;</span><span class="p">)]</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>School</th>
+      <th>Grade</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Transfer</th>
+      <th>Test_Number</th>
+      <th>Test_Date</th>
+      <th>Time_Record</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Gaopeng Yang</td>
+      <td>Female</td>
+      <td>158.9</td>
+      <td>46.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/10/5</td>
+      <td>0:04:34</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Qiang Chu</td>
+      <td>Female</td>
+      <td>162.5</td>
+      <td>52.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/12/12</td>
+      <td>0:03:53</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>B</td>
+      <td>Freshman</td>
+      <td>Gaopeng Shi</td>
+      <td>Female</td>
+      <td>162.9</td>
+      <td>48.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/9/12</td>
+      <td>0:04:58</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>B</td>
+      <td>Freshman</td>
+      <td>Quan Chu</td>
+      <td>Female</td>
+      <td>154.7</td>
+      <td>43.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/11/28</td>
+      <td>0:04:47</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>B</td>
+      <td>Freshman</td>
+      <td>Changquan Chu</td>
+      <td>Female</td>
+      <td>159.6</td>
+      <td>45.0</td>
+      <td>N</td>
+      <td>2</td>
+      <td>2019/12/9</td>
+      <td>0:04:18</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/learn_pandas.csv&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;(School in [&#39;A&#39;, &#39;B&#39;]) and&quot;</span>
+               <span class="s2">&quot;(Gender == &#39;Female&#39;) and&quot;</span>
+               <span class="s2">&quot;(Grade == &#39;Freshman&#39;)&quot;</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>School</th>
+      <th>Grade</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Transfer</th>
+      <th>Test_Number</th>
+      <th>Test_Date</th>
+      <th>Time_Record</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Gaopeng Yang</td>
+      <td>Female</td>
+      <td>158.9</td>
+      <td>46.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/10/5</td>
+      <td>0:04:34</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>A</td>
+      <td>Freshman</td>
+      <td>Qiang Chu</td>
+      <td>Female</td>
+      <td>162.5</td>
+      <td>52.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/12/12</td>
+      <td>0:03:53</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>B</td>
+      <td>Freshman</td>
+      <td>Gaopeng Shi</td>
+      <td>Female</td>
+      <td>162.9</td>
+      <td>48.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/9/12</td>
+      <td>0:04:58</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>B</td>
+      <td>Freshman</td>
+      <td>Quan Chu</td>
+      <td>Female</td>
+      <td>154.7</td>
+      <td>43.0</td>
+      <td>N</td>
+      <td>1</td>
+      <td>2019/11/28</td>
+      <td>0:04:47</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>B</td>
+      <td>Freshman</td>
+      <td>Changquan Chu</td>
+      <td>Female</td>
+      <td>159.6</td>
+      <td>45.0</td>
+      <td>N</td>
+      <td>2</td>
+      <td>2019/12/9</td>
+      <td>0:04:18</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+
 
               </div>
               

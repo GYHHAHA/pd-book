@@ -174,7 +174,7 @@ df_temp # 构造方式与书上相同
 
 
 df_temp.columns = df_temp.columns.map(lambda x: (x[0]+"_"+x[2], x[1], x[2]))
-df_temp.droplevel(-1, axis=1).rename(columns={"Big": "Big_Other"})
+df_temp.droplevel(-1, axis=1).rename_axis(columns={"Big": "Big_Other"})
 
 
 # ## 一、实现sample()函数
