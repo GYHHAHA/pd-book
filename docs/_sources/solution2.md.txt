@@ -148,6 +148,21 @@ s.where(s<=3, big).where(s>=1, small)
 ```
 
 ```{admonition} 练一练
+在Numpy中也有一个同名函数np.diff()，它与pandas中的diff功能相同吗？请查阅文档说明。
+```
+
+不同，Numpy中是指n阶差分：
+
+```{code-cell} ipython3
+s = pd.Series([1,3,7,5,3])
+np.diff(s.values, 3)
+```
+
+```{code-cell} ipython3
+s.diff(3).values
+```
+
+```{admonition} 练一练
 rolling对象的默认窗口方向都是向下滑动的，某些情况下用户需要逆向滑动的窗口，例如对[1,2,3]设定窗口为2的逆向sum操作，结果为[3,5,NaN]，此时应该如何实现？
 ```
 
@@ -155,16 +170,6 @@ rolling对象的默认窗口方向都是向下滑动的，某些情况下用户�
 s = pd.Series([1,2,3])
 s[::-1].rolling(2).sum()[::-1]
 ```
-
-```{admonition} 练一练
-expanding窗口上也有与rolling窗口类似的apply方法，请用在apply方法中传入自定义函数的方式来完成上述扩张窗口的均值计算操作。
-```
-
-```{code-cell} ipython3
-s = pd.Series([1, 3, 6, 10])
-s.expanding().apply(lambda x: x.mean())
-```
-
 
 ## 一、整理某服装店的商品情况
 

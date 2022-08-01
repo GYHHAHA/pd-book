@@ -100,7 +100,7 @@ _ = plt.plot(data, linewidth=1.0, color="skyblue", marker="*", linestyle="-.")
 
 s = pd.Series(np.random.choice(list("ABCD"), size=100, p=[0.1,0.2,0.5,0.2]))
 data = s.value_counts().sort_index()
-_ = plt.pie(data.values, labels=data.index, autopct=lambda p: "%.2f%% (%d)"%(p,p*s.shape[0]/100))
+_ = plt.pie(data.values, labels=data.index, autopct=lambda p: "%.2f%% (%d)"%(p,round(p*s.shape[0]/100)))
 
 
 # ```{admonition} 练一练
@@ -482,35 +482,22 @@ ax.add_patch(Rectangle((0.25,0.25),0.75,0.75,facecolor='#EE5C5C'))
 # In[28]:
 
 
-np.random.seed(0)
 from matplotlib.path import Path
 from matplotlib.collections import PolyCollection
-points = np.array([[1,2], [2.5,2.5], [2,1], [1,1]])
-p1 = [[10,0], [10,8], [8.5, 7], [8.5,0]]
-p2 = [[6,0], [6,2], [8,3], [8,0]]
-p3 = [[6,10], [10,10], [10,9], [8.5,8]]
-p4 = [[6,3], [6,9], [8,7.5], [8,4]]
-p5 = [[0,0], [0,3.7], [0.5,3.7], [3,1], [3,0]]
-p6 = [[0,5], [0,8], [2,8], [3,6], [3,2]]
-p7 = [[0,10], [5.5,10], [5.5,8.5], [0,8.5]]
-p8 = [[2.5,8], [3.5,6.5], [5.5,6.5], [5.5,8]]
-p9 = [[3.5,4],[5.5,4],[5.5,6],[3.5,6]]
-p10 = [[3.5,0],[5.5,0],[5.5,3.5],[3.5,3.5]]
 fig, ax = plt.subplots(figsize=(4,4))
-val = np.round(np.sqrt(np.random.randn(500) ** 2) * 50 + 50)
-x = np.random.uniform(0, 10, 500)
-y = np.random.uniform(0, 10, 500)
-p = Path(p1)
-mask = p.contains_points(np.stack([x, y], -1))
-for p in [p2,p3,p4,p5,p6,p7,p8,p9,p10]:
-    p = Path(p)
-    mask = mask | p.contains_points(np.stack([x, y], -1))
-val, x, y = val[mask], x[mask], y[mask]
+with open("data/ch11/field.txt") as f:
+    points = [i.split() for i in f.readlines()]
+    points = [list(zip(i[0::2], i[1::2])) for i in points]
 L = []
-for p in [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]:
+for p in points:
     mask = Path(p).contains_points(np.stack([x, y], -1))
     L.append(val[mask].sum())
-poly_collections = PolyCollection([p1,p2,p3,p4,p5,p6,p7,p8,p9,p10], array=L, cmap="coolwarm", edgecolors='black')
+poly_collections = PolyCollection(
+    points,
+    array=L,
+    cmap="coolwarm",
+    edgecolors='black',
+)
 plt.colorbar(poly_collections, ax=ax)
 ax.add_collection(poly_collections)
 plt.scatter(x, y, s=val**3/500000, c="black")

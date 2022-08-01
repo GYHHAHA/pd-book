@@ -164,25 +164,33 @@ s.where(s<=3, big).where(s>=1, small)
 
 
 # ```{admonition} 练一练
-# rolling对象的默认窗口方向都是向下滑动的，某些情况下用户需要逆向滑动的窗口，例如对[1,2,3]设定窗口为2的逆向sum操作，结果为[3,5,NaN]，此时应该如何实现？
+# 在Numpy中也有一个同名函数np.diff()，它与pandas中的diff功能相同吗？请查阅文档说明。
 # ```
+# 
+# 不同，Numpy中是指n阶差分：
 
 # In[15]:
 
 
-s = pd.Series([1,2,3])
-s[::-1].rolling(2).sum()[::-1]
+s = pd.Series([1,3,7,5,3])
+np.diff(s.values, 3)
 
-
-# ```{admonition} 练一练
-# expanding窗口上也有与rolling窗口类似的apply方法，请用在apply方法中传入自定义函数的方式来完成上述扩张窗口的均值计算操作。
-# ```
 
 # In[16]:
 
 
-s = pd.Series([1, 3, 6, 10])
-s.expanding().apply(lambda x: x.mean())
+s.diff(3).values
+
+
+# ```{admonition} 练一练
+# rolling对象的默认窗口方向都是向下滑动的，某些情况下用户需要逆向滑动的窗口，例如对[1,2,3]设定窗口为2的逆向sum操作，结果为[3,5,NaN]，此时应该如何实现？
+# ```
+
+# In[17]:
+
+
+s = pd.Series([1,2,3])
+s[::-1].rolling(2).sum()[::-1]
 
 
 # ## 一、整理某服装店的商品情况
@@ -198,7 +206,7 @@ s.expanding().apply(lambda x: x.mean())
 # 【解答】
 # ```
 
-# In[17]:
+# In[18]:
 
 
 df = pd.read_csv("data/ch2/clothing_store.csv")
@@ -206,7 +214,7 @@ df = pd.read_csv("data/ch2/clothing_store.csv")
 
 # - 1
 
-# In[18]:
+# In[19]:
 
 
 (df.sale_price - df.buy_price).mean()
@@ -214,7 +222,7 @@ df = pd.read_csv("data/ch2/clothing_store.csv")
 
 # - 2
 
-# In[19]:
+# In[20]:
 
 
 # *符号是序列解包，读者如果不熟悉相关内容可在网上查询
@@ -224,7 +232,7 @@ res = df.apply(
 res.head()
 
 
-# In[20]:
+# In[21]:
 
 
 # 如果不用*符号，可以一个个手动传入，完全等价
@@ -240,14 +248,14 @@ res.head()
 # 
 # 通过去重可以发现，最后一个类别显然是错的
 
-# In[21]:
+# In[22]:
 
 
 df_dup = df.drop_duplicates(["type_1", "type_2"])
 df_dup
 
 
-# In[22]:
+# In[23]:
 
 
 df_dup.product_id[6023]
@@ -257,7 +265,7 @@ df_dup.product_id[6023]
 # 
 # 方法一：
 
-# In[23]:
+# In[24]:
 
 
 temp = df.copy() # 为了不影响后续代码，先拷贝一份，读者可自行决定是否拷贝
@@ -270,7 +278,7 @@ temp.sort_values(
 
 # 方法二：
 
-# In[24]:
+# In[25]:
 
 
 # 使用groupby方法，建议学完第四章后着重理解一下这种方案
@@ -291,7 +299,7 @@ df.set_index("product_id").groupby("type_2")[['sale_price', 'buy_price']].apply(
 # 【解答】
 # ```
 
-# In[25]:
+# In[26]:
 
 
 df = pd.read_csv("data/ch2/student_grade.csv")
@@ -301,7 +309,7 @@ df = pd.read_csv("data/ch2/student_grade.csv")
 # 
 # 方法一：
 
-# In[26]:
+# In[27]:
 
 
 s = df.sort_values(list(df.columns[-2:]), ascending=[False, True]).Student_ID
@@ -310,7 +318,7 @@ s[s.index[0]]
 
 # 方法二：
 
-# In[27]:
+# In[28]:
 
 
 # 时间上而言，方法二效率更高，因为方法一需要排序
@@ -321,7 +329,7 @@ temp.iloc[0]
 
 # - 2
 
-# In[28]:
+# In[29]:
 
 
 s = df.Mid_Term_Grade * 0.4 + df.Final_Grade * 0.6 
@@ -335,7 +343,7 @@ df.总评.head()
 # 
 # 方法一：
 
-# In[29]:
+# In[30]:
 
 
 grade_dict = {0:"不及格", 1:"及格", 2:"良好", 3:"优秀"}
@@ -344,7 +352,7 @@ df["grade"] = ((df.总评 >= 90)*1 + (df.总评 >= 80)*1 + (df.总评 >= 60)*1).
 df.grade.head()
 
 
-# In[30]:
+# In[31]:
 
 
 df.grade.value_counts(normalize=True)
@@ -352,7 +360,7 @@ df.grade.value_counts(normalize=True)
 
 # 方法二：
 
-# In[31]:
+# In[32]:
 
 
 # 与方法一grade生成方法不同，使用apply
@@ -367,7 +375,7 @@ df.grade.head()
 
 # 方法三：
 
-# In[32]:
+# In[33]:
 
 
 # 见第九章第三节
@@ -405,7 +413,7 @@ df.grade.head()
 # 
 # 对于Series而言，可以用ewm对象如下计算指数平滑后的序列：
 
-# In[33]:
+# In[34]:
 
 
 np.random.seed(0)
@@ -413,7 +421,7 @@ s = pd.Series(np.random.randint(-1,2,30).cumsum())
 s.head()
 
 
-# In[34]:
+# In[35]:
 
 
 s.ewm(alpha=0.2).mean().head()
@@ -431,7 +439,7 @@ s.ewm(alpha=0.2).mean().head()
 # 
 # - 1
 
-# In[35]:
+# In[36]:
 
 
 def ewm_func(x, alpha=0.2):
@@ -441,7 +449,7 @@ def ewm_func(x, alpha=0.2):
     return res
 
 
-# In[36]:
+# In[37]:
 
 
 s.expanding().apply(ewm_func).head()
@@ -462,7 +470,7 @@ s.expanding().apply(ewm_func).head()
 # 
 # 事实上，无需对窗口函数进行任何改动，其本身就已经和上述公式完全对应：
 
-# In[37]:
+# In[38]:
 
 
 # 假设窗口大小为4

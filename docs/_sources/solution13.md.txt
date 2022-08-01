@@ -926,10 +926,8 @@ arr = np.load("data/ch13/signal.npy")
 idx = np.arange(arr.shape[0])
 start = np.stack([arr<1] + [np.roll(arr, -i)>1 for i in range(1,6)])
 start_res = start.all(0)
-start_res[start_res].sum()
 end = np.stack([arr<1] + [np.roll(arr, i)>1 for i in range(1,6)])
-end_res = start.all(0)
-end_res[start_res].sum()
+end_res = end.all(0)
 res = pd.DataFrame({
     "Signal Number": np.arange(start_res.sum()),
     "Start Index": idx[start_res],

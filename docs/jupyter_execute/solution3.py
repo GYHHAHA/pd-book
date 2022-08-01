@@ -40,7 +40,7 @@ np.set_printoptions(suppress = True)
 
 
 df = pd.read_csv('data/learn_pandas.csv')
-res = df.loc[(df.Grade.isin(["Freshman", "Sophomore"])) & (df.Gender=="Female")]
+res = df.loc[(df.School.isin(['A', 'B'])) & (df.Gender == 'Female') & (df.Grade == 'Freshman')]
 res.head()
 
 

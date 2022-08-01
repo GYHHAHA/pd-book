@@ -287,7 +287,7 @@ interval_avg.length.to_series().reset_index(drop=True).head(3)
 # 逻辑斯蒂回归是经典的分类模型，它将无序的类别作为目标值来进行模型的参数训练。对于有序类别的目标值，虽然我们仍然可以将其作为无序类别来输入模型，但这样做显然损失了类别之间的顺序关系，而有序类别下的逻辑斯蒂回归（Ordinal Logistic Regression）就能够对此类问题进行处理。
 # 
 # 
-# 设样本数据为$X=(x_1,...,x_n),x_i\in R^d(1\leq i \leq n)$，$d$是数据特征的维度，标签值为$y=(y_1,...,y_n), y_i\in \{C_1,...,C_k\}(1\leq i\leq n)$，$C_i$是有序类别，$k$是有序类别的数量，记$P(y\leq C_0)=0$。设参数$w=(w_1,...,w_d),\theta=(\theta_0,\theta_1,...,\theta_k)$，其中$\theta_0=-\infty,\theta_k=\infty$，则OLR模型为：
+# 设样本数据为$X=(x_1,...,x_n),x_i\in R^d(1\leq i \leq n)$，$d$是数据特征的维度，标签值为$y=(y_1,...,y_n), y_i\in \{C_1,...,C_k\}(1\leq i\leq n)$，$C_i$是有序类别，$k$是有序类别的数量，记$P(y\leq C_0\vert x_i)=0(1\leq i\leq n)$。设参数$w=(w_1,...,w_d),\theta=(\theta_0,\theta_1,...,\theta_k)$，其中$\theta_0=-\infty,\theta_k=\infty$，则OLR模型为：
 # 
 # $$P(y_i\leq C_j\vert x_i)=\frac{1}{1+\exp^{-(\theta_j-w^Tx_i)}}, 1\leq i \leq n, 1\leq j \leq k$$
 # 

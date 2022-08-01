@@ -585,7 +585,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\AppData\Local\Temp\ipykernel_20020\2736907453.py:1: FutureWarning: reindexing with a non-unique Index is deprecated and will raise in a future version.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gyh\AppData\Local\Temp\ipykernel_23120\2736907453.py:1: FutureWarning: reindexing with a non-unique Index is deprecated and will raise in a future version.
   df = pd.DataFrame(
 </pre></div>
 </div>
@@ -809,6 +809,36 @@ dtype: int32
 </div>
 <div class="admonition- admonition">
 <p class="admonition-title">练一练</p>
+<p>在Numpy中也有一个同名函数np.diff()，它与pandas中的diff功能相同吗？请查阅文档说明。</p>
+</div>
+<p>不同，Numpy中是指n阶差分：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-8,  6], dtype=int64)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([nan, nan, nan,  4.,  0.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">练一练</p>
 <p>rolling对象的默认窗口方向都是向下滑动的，某些情况下用户需要逆向滑动的窗口，例如对[1,2,3]设定窗口为2的逆向sum操作，结果为[3,5,NaN]，此时应该如何实现？</p>
 </div>
 <div class="cell docutils container">
@@ -822,27 +852,6 @@ dtype: int32
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    3.0
 1    5.0
 2    NaN
-dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition- admonition">
-<p class="admonition-title">练一练</p>
-<p>expanding窗口上也有与rolling窗口类似的apply方法，请用在apply方法中传入自定义函数的方式来完成上述扩张窗口的均值计算操作。</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
-<span class="n">s</span><span class="o">.</span><span class="n">expanding</span><span class="p">()</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1.000000
-1    2.000000
-2    3.333333
-3    5.000000
 dtype: float64
 </pre></div>
 </div>
