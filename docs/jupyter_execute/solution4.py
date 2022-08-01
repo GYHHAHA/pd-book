@@ -74,8 +74,8 @@ gb.agg({"Height": ['max', 'min'], "Weight": ['max', 'min']})
 gb = df.groupby('Gender')[["Height", "Weight"]]
 gb.agg(["count", "mean", "std", "min",
        ("25%", lambda x: x.quantile(0.25)),
-       ("25%", lambda x: x.quantile(0.5)),
-       ("25%", lambda x: x.quantile(0.75)), "max"])
+       ("50%", lambda x: x.quantile(0.5)),
+       ("75%", lambda x: x.quantile(0.75)), "max"])
 
 
 # ```{admonition} 练一练

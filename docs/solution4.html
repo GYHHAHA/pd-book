@@ -448,8 +448,8 @@ Name: Height, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gb</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Gender&#39;</span><span class="p">)[[</span><span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="s2">&quot;Weight&quot;</span><span class="p">]]</span>
 <span class="n">gb</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;std&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">,</span>
        <span class="p">(</span><span class="s2">&quot;25%&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)),</span>
-       <span class="p">(</span><span class="s2">&quot;25%&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)),</span>
-       <span class="p">(</span><span class="s2">&quot;25%&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)),</span> <span class="s2">&quot;max&quot;</span><span class="p">])</span>
+       <span class="p">(</span><span class="s2">&quot;50%&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)),</span>
+       <span class="p">(</span><span class="s2">&quot;75%&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)),</span> <span class="s2">&quot;max&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -486,16 +486,16 @@ Name: Height, dtype: float64
       <th>std</th>
       <th>min</th>
       <th>25%</th>
-      <th>25%</th>
-      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
       <th>max</th>
       <th>count</th>
       <th>mean</th>
       <th>std</th>
       <th>min</th>
       <th>25%</th>
-      <th>25%</th>
-      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
       <th>max</th>
     </tr>
     <tr>
