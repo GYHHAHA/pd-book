@@ -1665,6 +1665,79 @@
 </table>
 </div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">department</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dpt</span><span class="p">))</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">gender</span> <span class="o">==</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
+<span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeID</th>
+      <th>birthdate_key</th>
+      <th>age</th>
+      <th>city_name</th>
+      <th>department</th>
+      <th>job_title</th>
+      <th>gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3611</th>
+      <td>5791</td>
+      <td>1/14/1975</td>
+      <td>40</td>
+      <td>Kelowna</td>
+      <td>Dairy</td>
+      <td>Dairy Person</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3613</th>
+      <td>5793</td>
+      <td>1/22/1975</td>
+      <td>40</td>
+      <td>Richmond</td>
+      <td>Bakery</td>
+      <td>Baker</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3615</th>
+      <td>5795</td>
+      <td>1/30/1975</td>
+      <td>40</td>
+      <td>Nanaimo</td>
+      <td>Dairy</td>
+      <td>Dairy Person</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 <ul class="simple">
 <li><p>2</p></li>
 </ul>

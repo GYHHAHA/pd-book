@@ -229,6 +229,14 @@ dpt = ['Dairy', 'Bakery']
 df.query("(age <= 40)&(department == @dpt)&(gender=='M')").head(3)
 ```
 
+```{code-cell} ipython3
+df.loc[
+    (df.age <= 40)
+    & (df.department.isin(dpt))
+    & (df.gender == "M")
+].head(3)
+```
+
 - 2
 
 ```{code-cell} ipython3

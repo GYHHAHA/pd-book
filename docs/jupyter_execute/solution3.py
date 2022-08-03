@@ -258,9 +258,19 @@ dpt = ['Dairy', 'Bakery']
 df.query("(age <= 40)&(department == @dpt)&(gender=='M')").head(3)
 
 
+# In[20]:
+
+
+df.loc[
+    (df.age <= 40)
+    & (df.department.isin(dpt))
+    & (df.gender == "M")
+].head(3)
+
+
 # - 2
 
-# In[20]:
+# In[21]:
 
 
 df.iloc[(df.EmployeeID%2==1).values,[0,2,-2]].head()
@@ -268,7 +278,7 @@ df.iloc[(df.EmployeeID%2==1).values,[0,2,-2]].head()
 
 # - 3
 
-# In[21]:
+# In[22]:
 
 
 df_op = df.copy()
@@ -286,7 +296,7 @@ df_op.equals(df)
 # 
 # 现有一份关于巧克力评价的数据集：
 
-# In[22]:
+# In[23]:
 
 
 df = pd.read_csv('data/ch3/chocolate.csv')
@@ -298,7 +308,7 @@ df = pd.read_csv('data/ch3/chocolate.csv')
 # 
 # - 1
 
-# In[23]:
+# In[24]:
 
 
 df = pd.read_csv('data/ch3/chocolate.csv')
@@ -308,7 +318,7 @@ df.head()
 
 # - 2
 
-# In[24]:
+# In[25]:
 
 
 df['Cocoa Percent'] = df['Cocoa Percent'].apply(lambda x:float(x[:-1])/100)
@@ -318,7 +328,7 @@ res.head(3)
 
 # - 3
 
-# In[25]:
+# In[26]:
 
 
 res = df.loc[
